@@ -4,7 +4,7 @@ var height = 700 - margin.top - margin.bottom;
 
 // pre-cursors
 var sizeForCircle = function(d) {
-  return 6;
+  return 0.1 * d[document.getElementById("dotSize").value];
 }
 
 // setup x
@@ -159,7 +159,7 @@ d3.csv("pokemon_stats.csv", function(error, data) {
 
           // fill to the tool tip with the appropriate data
           tooltip.html("<strong>" + d["Name"] + "</strong><br/>"+document.getElementById("XAxis").value+ " " + xValue(d)
-          + "<br/>" + document.getElementById("YAxis").value + " " + yValue(d))
+          + "<br/>" + document.getElementById("YAxis").value + " " + yValue(d) + "<br/>" + document.getElementById("dotSize").value + " " + sizeForCircle(d))
                .style("left", (d3.event.pageX + 5) + "px")
                .style("top", (d3.event.pageY - 28) + "px");
 
@@ -195,6 +195,8 @@ d3.csv("pokemon_stats.csv", function(error, data) {
 		.append("p2")
 	d3.select("body")
 		.append("p3")
+	d3.select("body")
+		.append("p4")
 	})
 	function filterType() {
 	svg.selectAll(".dot")
