@@ -3,9 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Document styling -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/stylesheets/styles.css">
+<link rel="stylesheet" href="assets/stylesheets/style.css">
 <script src="d3/d3.min.js"></script>
-<script src="library.js"></script>
+<script src="assets/scripts/library.js"></script>
+ <script src="assets/scripts/scatter.js"></script>
 
 <body>
     <nav class="navbar navbar-default">
@@ -25,7 +27,7 @@
             </div>
         </div>
     </nav>
-    <div class="containter-fluid" style="padding-left: 35px; padding-right: 25px;">
+    <div class="container-fluid" style="padding-left: 35px; padding-right: 25px;">
         <div class="row">
             <div class="col-lg-9">
                 <h3 style="margin-top:0px;">Displaying ALL Pokemon</h3>
@@ -36,11 +38,55 @@
         <div class="row">
             <div class="col-lg-2">
                 <p>
-                    [Y axis dropdown]
+                    <select id="XAxis">
+                        <option value="Attack">Attack</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Health">Health</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                    <select id="YAxis">
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Health">Health</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Attack">Attack</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                    <select id="dotSize">
+                        <option value="Health">Health</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Attack">Attack</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                    <select id="TypeSelector"> 
+                        <option value="All">All</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Water">Water</option> 
+                        <option value="Grass">Grass</option> 
+                        <option value="Electric">Electric</option>
+                        <option value="Ground">Ground</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Bug">Bug</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Psychic">Psychic</option>
+                        <option value="Ghost">Ghost</option>
+                        <option value="Flying">Flying</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Steel">Steel</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Fairy">Fairy</option>
+                        <option value="Ice">Ice</option>
+                    </select>
                 </p>
             </div>
-            <div class="col-lg-7">
-                <img alt="Graph" src="placeholdergraph.gif">
+            <div class="col-lg-7 wrap">
+                <div class = "scatterplot"></div>
             </div>
             <div class="col-lg-3">
                 <div class="list-group">

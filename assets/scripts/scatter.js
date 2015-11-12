@@ -40,7 +40,7 @@ var infobox = d3.select("body").append("div")
 
 	
 // load data
-d3.csv("pokemon_stats.csv", function(error, data) {
+d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 	data = data.filter(function(d){
 		if("All" == document.getElementById("TypeSelector").value) {return true}
 		else if(d["Type1"] != document.getElementById("TypeSelector").value && d["Type2"] != document.getElementById("TypeSelector").value) {return false}
@@ -225,7 +225,7 @@ d3.csv("pokemon_stats.csv", function(error, data) {
 	function updateData() {
 	svg.selectAll(".dot").remove();
 	svg.selectAll("g").remove();
-	d3.csv("pokemon_stats.csv", function(error, data) {
+	d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 	data = data.filter(function(d){
 		if("All" == document.getElementById("TypeSelector").value) {return true}
 		else if(d["Type1"] != document.getElementById("TypeSelector").value && d["Type2"] != document.getElementById("TypeSelector").value) {return false}
