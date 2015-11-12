@@ -26,3 +26,13 @@
     padding: 5px;
     padding-left: 15px;
 }
+
+.input-group .nav-search {
+    width: 250px;
+    float:right;
+}
+
+.nav-search {
+    padding: 5px;
+    padding-right: 15px;
+}
