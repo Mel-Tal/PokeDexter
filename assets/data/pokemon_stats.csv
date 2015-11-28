@@ -2,27 +2,27 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 1,Bulbasaur,45,49,49,65,65,45,318,53,Grass,Poison,1,No,http://img.pokemondb.net/artwork/bulbasaur.jpg
 2,Ivysaur,60,62,63,80,80,60,405,67.5,Grass,Poison,1,No,http://img.pokemondb.net/artwork/ivysaur.jpg
 3,Venusaur,80,82,83,100,100,80,525,87.5,Grass,Poison,1,No,http://img.pokemondb.net/artwork/venusaur.jpg
-003M,Venusaur (Mega Venusaur),80,100,123,122,120,80,625,104.17,Grass,none,1,Yes,http://img.pokemondb.net/artwork/venusaur-mega.jpg
+003M,Venusaur (Mega Venusaur),80,100,123,122,120,80,625,104.17,Grass,none,1,Yes,http://img.pokemondb.net/artwork/venusaur-mega.jpg
 4,Charmander,39,52,43,60,50,65,309,51.5,Fire,none,1,No,http://img.pokemondb.net/artwork/charmander.jpg
 5,Charmeleon,58,64,58,80,65,80,405,67.5,Fire,none,1,No,http://img.pokemondb.net/artwork/charmeleon.jpg
 6,Charizard,78,84,78,109,85,100,534,89,Fire,Flying,1,No,http://img.pokemondb.net/artwork/charizard.jpg
-006MX,Charizard (Mega Charizard X),78,130,111,130,85,100,634,105.67,Fire,Flying,1,Yes,http://img.pokemondb.net/artwork/charizard-mega-x.jpg
-006MY,Charizard (Mega Charizard Y),78,104,78,159,115,100,634,105.67,Fire,Flying,1,Yes,http://img.pokemondb.net/artwork/charizard-mega-y.jpg
+006MX,Charizard (Mega Charizard X),78,130,111,130,85,100,634,105.67,Fire,Flying,1,Yes,http://img.pokemondb.net/artwork/charizard-mega-x.jpg
+006MY,Charizard (Mega Charizard Y),78,104,78,159,115,100,634,105.67,Fire,Flying,1,Yes,http://img.pokemondb.net/artwork/charizard-mega-y.jpg
 7,Squirtle,44,48,65,50,64,43,314,52.33,Water,none,1,No,http://img.pokemondb.net/artwork/squirtle.jpg
 8,Wartortle,59,63,80,65,80,58,405,67.5,Water,none,1,No,http://img.pokemondb.net/artwork/wartortle.jpg
 9,Blastoise,79,83,100,85,105,78,530,88.33,Water,none,1,No,http://img.pokemondb.net/artwork/blastoise.jpg
-009M,Blastoise (Mega Blastoise),79,103,120,135,115,78,630,105,Water,none,1,Yes,http://img.pokemondb.net/artwork/blastoise-mega.jpg
+009M,Blastoise (Mega Blastoise),79,103,120,135,115,78,630,105,Water,none,1,Yes,http://img.pokemondb.net/artwork/blastoise-mega.jpg
 10,Caterpie,45,30,35,20,20,45,195,32.5,Bug,none,1,No,http://img.pokemondb.net/artwork/caterpie.jpg
 11,Metapod,50,20,55,25,25,30,205,34.17,Bug,none,1,No,http://img.pokemondb.net/artwork/metapod.jpg
 12,Butterfree,60,45,50,90,80,70,395,65.83,Bug,Flying,1,No,http://img.pokemondb.net/artwork/butterfree.jpg
 13,Weedle,40,35,30,20,20,50,195,32.5,Bug,Poison,1,No,http://img.pokemondb.net/artwork/weedle.jpg
 14,Kakuna,45,25,50,25,25,35,205,34.17,Bug,Poison,1,No,http://img.pokemondb.net/artwork/kakuna.jpg
 15,Beedrill,65,90,40,45,80,75,395,65.83,Bug,Poison,1,No,http://img.pokemondb.net/artwork/beedrill.jpg
-015M,Beedrill (Mega Beedrill),65,150,40,15,80,145,495,82.5,Bug,Poison,1,Yes,http://img.pokemondb.net/artwork/beedrill-mega.jpg
+015M,Beedrill (Mega Beedrill),65,150,40,15,80,145,495,82.5,Bug,Poison,1,Yes,http://img.pokemondb.net/artwork/beedrill-mega.jpg
 16,Pidgey,40,45,40,35,35,56,251,41.83,Normal,Flying,1,No,http://img.pokemondb.net/artwork/pidgey.jpg
 17,Pidgeotto,63,60,55,50,50,71,349,58.17,Normal,Flying,1,No,http://img.pokemondb.net/artwork/pidgeotto.jpg
 18,Pidgeot,83,80,75,70,70,101,479,79.83,Normal,Flying,1,No,http://img.pokemondb.net/artwork/pidgeot.jpg
-018M,Pidgeot (Mega Pidgeot),83,80,80,135,80,121,579,96.5,Normal,Flying,1,Yes,http://img.pokemondb.net/artwork/weedle.jpg
+018M,Pidgeot (Mega Pidgeot),83,80,80,135,80,121,579,96.5,Normal,Flying,1,Yes,http://img.pokemondb.net/artwork/weedle.jpg
 19,Rattata,30,56,35,25,35,72,253,42.17,Normal,none,1,No,http://img.pokemondb.net/artwork/rattata.jpg
 20,Raticate,55,81,60,50,70,97,413,68.83,Normal,none,1,No,http://img.pokemondb.net/artwork/raticate.jpg
 21,Spearow,40,60,30,31,31,70,262,43.67,Normal,Flying,1,No,http://img.pokemondb.net/artwork/spearow.jpg
@@ -70,7 +70,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 63,Abra,25,20,15,105,55,90,310,51.67,Psychic,none,1,No,http://img.pokemondb.net/artwork/abra.jpg
 64,Kadabra,40,35,30,120,70,105,400,66.67,Psychic,none,1,No,http://img.pokemondb.net/artwork/kadabra.jpg
 65,Alakazam,55,50,45,135,95,120,500,83.33,Psychic,none,1,No,http://img.pokemondb.net/artwork/alakazam.jpg
-065M,Alakazam (Mega Alakazam),55,50,65,175,95,150,590,98.33,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/alakazam-mega.jpg
+065M,Alakazam (Mega Alakazam),55,50,65,175,95,150,590,98.33,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/alakazam-mega.jpg
 66,Machop,70,80,50,35,35,35,305,50.83,Fighting,none,1,No,http://img.pokemondb.net/artwork/machop.jpg
 67,Machoke,80,100,70,50,60,45,405,67.5,Fighting,none,1,No,http://img.pokemondb.net/artwork/machoke.jpg
 68,Machamp,90,130,80,65,85,55,505,84.17,Fighting,none,1,No,http://img.pokemondb.net/artwork/machamp.jpg
@@ -86,7 +86,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 78,Rapidash,65,100,70,80,80,105,500,83.33,Fire,none,1,No,http://img.pokemondb.net/artwork/rapidash.jpg
 79,Slowpoke,90,65,65,40,40,15,315,52.5,Water,Psychic,1,No,http://img.pokemondb.net/artwork/slowpoke.jpg
 80,Slowbro,95,75,110,100,80,30,490,81.67,Water,Psychic,1,No,http://img.pokemondb.net/artwork/slowbro.jpg
-080M,Slowbro (Mega Slowbro),95,75,180,130,80,30,590,98.33,Water,Psychic,1,Yes,http://img.pokemondb.net/artwork/slowbro-mega.jpg
+080M,Slowbro (Mega Slowbro),95,75,180,130,80,30,590,98.33,Water,Psychic,1,Yes,http://img.pokemondb.net/artwork/slowbro-mega.jpg
 81,Magnemite,25,35,70,95,55,45,325,54.17,Electric,Steel,1,No,http://img.pokemondb.net/artwork/magnemite.jpg
 82,Magneton,50,60,95,120,70,70,465,77.5,Electric,Steel,1,No,http://img.pokemondb.net/artwork/magneton.jpg
 83,Farfetch'd,52,65,55,58,62,60,352,58.67,Normal,Flying,1,No,http://img.pokemondb.net/artwork/farfetchd.jpg
@@ -101,7 +101,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 92,Gastly,30,35,30,100,35,80,310,51.67,Ghost,Poison,1,No,http://img.pokemondb.net/artwork/gastly.jpg
 93,Haunter,45,50,45,115,55,95,405,67.5,Ghost,Poison,1,No,http://img.pokemondb.net/artwork/haunter.jpg
 94,Gengar,60,65,60,130,75,110,500,83.33,Ghost,Poison,1,No,http://img.pokemondb.net/artwork/gengar.jpg
-094M,Gengar (Mega Gengar),60,65,80,170,95,130,600,100,Ghost,Poison,1,Yes,http://img.pokemondb.net/artwork/gengar-mega.jpg
+094M,Gengar (Mega Gengar),60,65,80,170,95,130,600,100,Ghost,Poison,1,Yes,http://img.pokemondb.net/artwork/gengar-mega.jpg
 95,Onix,35,45,160,30,45,70,385,64.17,Rock,Ground,1,No,http://img.pokemondb.net/artwork/onix.jpg
 96,Drowzee,60,48,45,43,90,42,328,54.67,Psychic,none,1,No,http://img.pokemondb.net/artwork/drowzee.jpg
 97,Hypno,85,73,70,73,115,67,483,80.5,Psychic,none,1,No,http://img.pokemondb.net/artwork/hypno.jpg
@@ -123,7 +123,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 113,Chansey,250,5,5,35,105,50,450,75,Normal,none,1,No,http://img.pokemondb.net/artwork/chansey.jpg
 114,Tangela,65,55,115,100,40,60,435,72.5,Grass,none,1,No,http://img.pokemondb.net/artwork/tangela.jpg
 115,Kangaskhan,105,95,80,40,80,90,490,81.67,Normal,none,1,No,http://img.pokemondb.net/artwork/kangaskhan.jpg
-115M,Kangaskhan (Mega Kangaskhan),105,125,100,60,100,100,590,98.33,Normal,none,1,Yes,http://img.pokemondb.net/artwork/kangaskhan-mega.jpg
+115M,Kangaskhan (Mega Kangaskhan),105,125,100,60,100,100,590,98.33,Normal,none,1,Yes,http://img.pokemondb.net/artwork/kangaskhan-mega.jpg
 116,Horsea,30,40,70,70,25,60,295,49.17,Water,none,1,No,http://img.pokemondb.net/artwork/horsea.jpg
 117,Seadra,55,65,95,95,45,85,440,73.33,Water,none,1,No,http://img.pokemondb.net/artwork/seadra.jpg
 118,Goldeen,45,67,60,35,50,63,320,53.33,Water,none,1,No,http://img.pokemondb.net/artwork/goldeen.jpg
@@ -136,11 +136,11 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 125,Electabuzz,65,83,57,95,85,105,490,81.67,Electric,none,1,No,http://img.pokemondb.net/artwork/electabuzz.jpg
 126,Magmar,65,95,57,100,85,93,495,82.5,Fire,none,1,No,http://img.pokemondb.net/artwork/magmar.jpg
 127,Pinsir,65,125,100,55,70,85,500,83.33,Bug,none,1,No,http://img.pokemondb.net/artwork/pinsir.jpg
-127M,Pinsir (Mega Pinsir),65,155,120,65,90,105,600,100,Bug,none,1,Yes,http://img.pokemondb.net/artwork/pinsir-mega.jpg
+127M,Pinsir (Mega Pinsir),65,155,120,65,90,105,600,100,Bug,none,1,Yes,http://img.pokemondb.net/artwork/pinsir-mega.jpg
 128,Tauros,75,100,95,40,70,110,490,81.67,Normal,none,1,No,http://img.pokemondb.net/artwork/tauros.jpg
 129,Magikarp,20,10,55,15,20,80,200,33.33,Water,none,1,No,http://img.pokemondb.net/artwork/magikarp.jpg
 130,Gyarados,95,125,79,60,100,81,540,90,Water,Flying,1,No,http://img.pokemondb.net/artwork/gyarados.jpg
-130M,Gyarados (Mega Gyarados),95,155,109,70,130,81,640,106.67,Water,Flying,1,Yes,http://img.pokemondb.net/artwork/gyarados-mega.jpg
+130M,Gyarados (Mega Gyarados),95,155,109,70,130,81,640,106.67,Water,Flying,1,Yes,http://img.pokemondb.net/artwork/gyarados-mega.jpg
 131,Lapras,130,85,80,85,95,60,535,89.17,Water,Ice,1,No,http://img.pokemondb.net/artwork/lapras.jpg
 132,Ditto,48,48,48,48,48,48,288,48,Normal,none,1,No,http://img.pokemondb.net/artwork/ditto.jpg
 133,Eevee,55,55,50,45,65,55,325,54.17,Normal,none,1,No,http://img.pokemondb.net/artwork/eevee.jpg
@@ -153,7 +153,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 140,Kabuto,30,80,90,55,45,55,355,59.17,Rock,Water,1,No,http://img.pokemondb.net/artwork/kabuto.jpg
 141,Kabutops,60,115,105,65,70,80,495,82.5,Rock,Water,1,No,http://img.pokemondb.net/artwork/kabutops.jpg
 142,Aerodactyl,80,105,65,60,75,130,515,85.83,Rock,Flying,1,No,http://img.pokemondb.net/artwork/aerodactyl.jpg
-142M,Aerodactyl (Mega Aerodactyl),80,135,85,70,95,150,615,102.5,Rock,Flying,1,Yes,http://img.pokemondb.net/artwork/aerodactyl-mega.jpg
+142M,Aerodactyl (Mega Aerodactyl),80,135,85,70,95,150,615,102.5,Rock,Flying,1,Yes,http://img.pokemondb.net/artwork/aerodactyl-mega.jpg
 143,Snorlax,160,110,65,65,110,30,540,90,Normal,none,1,No,http://img.pokemondb.net/artwork/snorlax.jpg
 144,Articuno,90,85,100,95,125,85,580,96.67,Ice,Flying,1,No,http://img.pokemondb.net/artwork/articuno.jpg
 145,Zapdos,90,90,85,125,90,100,580,96.67,Electric,Flying,1,No,http://img.pokemondb.net/artwork/zapdos.jpg
@@ -162,8 +162,8 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 148,Dragonair,61,84,65,70,70,70,420,70,Dragon,none,1,No,http://img.pokemondb.net/artwork/dragonair.jpg
 149,Dragonite,91,134,95,100,100,80,600,100,Dragon,Flying,1,No,http://img.pokemondb.net/artwork/dragonite.jpg
 150,Mewtwo,106,110,90,154,90,130,680,113.33,Psychic,none,1,No,http://img.pokemondb.net/artwork/mewtwo.jpg
-150MX,Mewtwo (Mega Mewtwo X),106,190,100,154,100,130,780,130,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/mewtwo-mega-x.jpg
-150MY,Mewtwo (Mega Mewtwo Y),106,150,70,194,120,140,780,130,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/mewtwo-mega-y.jpg
+150MX,Mewtwo (Mega Mewtwo X),106,190,100,154,100,130,780,130,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/mewtwo-mega-x.jpg
+150MY,Mewtwo (Mega Mewtwo Y),106,150,70,194,120,140,780,130,Psychic,none,1,Yes,http://img.pokemondb.net/artwork/mewtwo-mega-y.jpg
 151,Mew,100,100,100,100,100,100,600,100,Psychic,none,1,No,http://img.pokemondb.net/artwork/mew.jpg
 152,Chikorita,45,49,65,49,65,45,318,53,Grass,none,2,No,http://img.pokemondb.net/artwork/chikorita.jpg
 153,Bayleef,60,62,80,63,80,60,405,67.5,Grass,none,2,No,http://img.pokemondb.net/artwork/bayleef.jpg
@@ -195,7 +195,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 179,Mareep,55,40,40,65,45,35,280,46.67,Electric,none,2,No,http://img.pokemondb.net/artwork/mareep.jpg
 180,Flaaffy,70,55,55,80,60,45,365,60.83,Electric,none,2,No,http://img.pokemondb.net/artwork/flaaffy.jpg
 181,Ampharos,90,75,85,115,90,55,510,85,Electric,none,2,No,http://img.pokemondb.net/artwork/ampharos.jpg
-181M,Ampharos (Mega Ampharos),90,95,105,165,110,45,610,101.67,Electric,none,2,Yes,http://img.pokemondb.net/artwork/ampharos-mega.jpg
+181M,Ampharos (Mega Ampharos),90,95,105,165,110,45,610,101.67,Electric,none,2,Yes,http://img.pokemondb.net/artwork/ampharos-mega.jpg
 182,Bellossom,75,80,95,90,100,50,490,81.67,Grass,none,2,No,http://img.pokemondb.net/artwork/bellossom.jpg
 183,Marill,70,20,50,20,50,40,250,41.67,Water,Fairy,2,No,http://img.pokemondb.net/artwork/marill.jpg
 184,Azumarill,100,50,80,60,80,50,420,70,Water,Fairy,2,No,http://img.pokemondb.net/artwork/azumarill.jpg
@@ -223,15 +223,15 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 206,Dunsparce,100,70,70,65,65,45,415,69.17,Normal,none,2,No,http://img.pokemondb.net/artwork/dunsparce.jpg
 207,Gligar,65,75,105,35,65,85,430,71.67,Ground,Flying,2,No,http://img.pokemondb.net/artwork/gligar.jpg
 208,Steelix,75,85,200,55,65,30,510,85,Steel,Ground,2,No,http://img.pokemondb.net/artwork/steelix.jpg
-208M,Steelix (Mega Steelix),75,125,230,55,95,30,610,101.67,Steel,Ground,2,Yes,http://img.pokemondb.net/artwork/steelix-mega.jpg
+208M,Steelix (Mega Steelix),75,125,230,55,95,30,610,101.67,Steel,Ground,2,Yes,http://img.pokemondb.net/artwork/steelix-mega.jpg
 209,Snubbull,60,80,50,40,40,30,300,50,Fairy,none,2,No,http://img.pokemondb.net/artwork/snubbull.jpg
 210,Granbull,90,120,75,60,60,45,450,75,Fairy,none,2,No,http://img.pokemondb.net/artwork/granbull.jpg
 211,Qwilfish,65,95,75,55,55,85,430,71.67,Water,Poison,2,No,http://img.pokemondb.net/artwork/qwilfish.jpg
 212,Scizor,70,130,100,55,80,65,500,83.33,Bug,Steel,2,No,http://img.pokemondb.net/artwork/scizor.jpg
-212M,Scizor (Mega Scizor),70,150,140,65,100,75,600,100,Bug,Steel,2,Yes,http://img.pokemondb.net/artwork/scizor-mega.jpg
+212M,Scizor (Mega Scizor),70,150,140,65,100,75,600,100,Bug,Steel,2,Yes,http://img.pokemondb.net/artwork/scizor-mega.jpg
 213,Shuckle,20,10,230,10,230,5,505,84.17,Bug,Rock,2,No,http://img.pokemondb.net/artwork/shuckle.jpg
 214,Heracross,80,125,75,40,95,85,500,83.33,Bug,Fighting,2,No,http://img.pokemondb.net/artwork/heracross.jpg
-214M,Heracross (Mega Heracross),80,185,115,40,105,75,600,100,Bug,Fighting,2,Yes,http://img.pokemondb.net/artwork/heracross-mega.jpg
+214M,Heracross (Mega Heracross),80,185,115,40,105,75,600,100,Bug,Fighting,2,Yes,http://img.pokemondb.net/artwork/heracross-mega.jpg
 215,Sneasel,55,95,55,35,75,115,430,71.67,Dark,Ice,2,No,http://img.pokemondb.net/artwork/sneasel.jpg
 216,Teddiursa,60,80,50,50,50,40,330,55,Normal,none,2,No,http://img.pokemondb.net/artwork/teddiursa.jpg
 217,Ursaring,90,130,75,75,75,55,500,83.33,Normal,none,2,No,http://img.pokemondb.net/artwork/ursaring.jpg
@@ -247,7 +247,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 227,Skarmory,65,80,140,40,70,70,465,77.5,Steel,Flying,2,No,http://img.pokemondb.net/artwork/skarmory.jpg
 228,Houndour,45,60,30,80,50,65,330,55,Dark,Fire,2,No,http://img.pokemondb.net/artwork/houndour.jpg
 229,Houndoom,75,90,50,110,80,95,500,83.33,Dark,Fire,2,No,http://img.pokemondb.net/artwork/houndoom.jpg
-229M,Houndoom (Mega Houndoom),75,90,90,140,90,115,600,100,Dark,Fire,2,Yes,http://img.pokemondb.net/artwork/houndoom-mega.jpg
+229M,Houndoom (Mega Houndoom),75,90,90,140,90,115,600,100,Dark,Fire,2,Yes,http://img.pokemondb.net/artwork/houndoom-mega.jpg
 230,Kingdra,75,95,95,95,95,85,540,90,Water,Dragon,2,No,http://img.pokemondb.net/artwork/kingdra.jpg
 231,Phanpy,90,60,60,40,40,40,330,55,Ground,none,2,No,http://img.pokemondb.net/artwork/phanpy.jpg
 232,Donphan,90,120,120,60,60,50,500,83.33,Ground,none,2,No,http://img.pokemondb.net/artwork/donphan.jpg
@@ -267,22 +267,22 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 246,Larvitar,50,64,50,45,50,41,300,50,Rock,Ground,2,No,http://img.pokemondb.net/artwork/larvitar.jpg
 247,Pupitar,70,84,70,65,70,51,410,68.33,Rock,Ground,2,No,http://img.pokemondb.net/artwork/pupitar.jpg
 248,Tyranitar,100,134,110,95,100,61,600,100,Rock,Dark,2,No,http://img.pokemondb.net/artwork/tyranitar.jpg
-248M,Tyranitar (Mega Tyranitar),100,164,150,95,120,71,700,116.67,Rock,Dark,2,Yes,http://img.pokemondb.net/artwork/tyranitar-mega.jpg
+248M,Tyranitar (Mega Tyranitar),100,164,150,95,120,71,700,116.67,Rock,Dark,2,Yes,http://img.pokemondb.net/artwork/tyranitar-mega.jpg
 249,Lugia,106,90,130,90,154,110,680,113.33,Psychic,Flying,2,No,http://img.pokemondb.net/artwork/lugia.jpg
 250,Ho-Oh,106,130,90,110,154,90,680,113.33,Fire,Flying,2,No,http://img.pokemondb.net/artwork/ho-oh.jpg
 251,Celebi,100,100,100,100,100,100,600,100,Psychic,Grass,2,No,http://img.pokemondb.net/artwork/celebi.jpg
 252,Treecko,40,45,35,65,55,70,310,51.67,Grass,none,3,No,http://img.pokemondb.net/artwork/treecko.jpg
 253,Grovyle,50,65,45,85,65,95,405,67.5,Grass,none,3,No,http://img.pokemondb.net/artwork/grovyle.jpg
 254,Sceptile,70,85,65,105,85,120,530,88.33,Grass,none,3,No,http://img.pokemondb.net/artwork/sceptile.jpg
-254M,Sceptile (Mega Sceptile),70,110,75,145,85,145,630,105,Grass,none,3,Yes,http://img.pokemondb.net/artwork/sceptile-mega.jpg
+254M,Sceptile (Mega Sceptile),70,110,75,145,85,145,630,105,Grass,none,3,Yes,http://img.pokemondb.net/artwork/sceptile-mega.jpg
 255,Torchic,45,60,40,70,50,45,310,51.67,Fire,none,3,No,http://img.pokemondb.net/artwork/torchic.jpg
 256,Combusken,60,85,60,85,60,55,405,67.5,Fire,Fighting,3,No,http://img.pokemondb.net/artwork/combusken.jpg
 257,Blaziken,80,120,70,110,70,80,530,88.33,Fire,Fighting,3,No,http://img.pokemondb.net/artwork/blaziken.jpg
-257M,Blaziken (Mega Blaziken),80,160,80,130,80,100,630,105,Fire,Fighting,3,Yes,http://img.pokemondb.net/artwork/blaziken-mega.jpg
+257M,Blaziken (Mega Blaziken),80,160,80,130,80,100,630,105,Fire,Fighting,3,Yes,http://img.pokemondb.net/artwork/blaziken-mega.jpg
 258,Mudkip,50,70,50,50,50,40,310,51.67,Water,none,3,No,http://img.pokemondb.net/artwork/mudkip.jpg
 259,Marshtomp,70,85,70,60,70,50,405,67.5,Water,Ground,3,No,http://img.pokemondb.net/artwork/marshtomp.jpg
 260,Swampert,100,110,90,85,90,60,535,89.17,Water,Ground,3,No,http://img.pokemondb.net/artwork/swampert.jpg
-260M,Swampert (Mega Swampert),100,150,110,95,110,70,635,105.83,Water,Ground,3,Yes,http://img.pokemondb.net/artwork/swampert-mega.jpg
+260M,Swampert (Mega Swampert),100,150,110,95,110,70,635,105.83,Water,Ground,3,Yes,http://img.pokemondb.net/artwork/swampert-mega.jpg
 261,Poochyena,35,55,35,30,30,35,220,36.67,Dark,none,3,No,http://img.pokemondb.net/artwork/poochyena.jpg
 262,Mightyena,70,90,70,60,60,70,420,70,Dark,none,3,No,http://img.pokemondb.net/artwork/mightyena.jpg
 263,Zigzagoon,38,30,41,30,41,60,240,40,Normal,none,3,No,http://img.pokemondb.net/artwork/zigzagoon.jpg
@@ -305,7 +305,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 280,Ralts,28,25,25,45,35,40,198,33,Psychic,Fairy,3,No,http://img.pokemondb.net/artwork/ralts.jpg
 281,Kirlia,38,35,35,65,55,50,278,46.33,Psychic,Fairy,3,No,http://img.pokemondb.net/artwork/kirlia.jpg
 282,Gardevoir,68,65,65,125,115,80,518,86.33,Psychic,Fairy,3,No,http://img.pokemondb.net/artwork/gardevoir.jpg
-282M,Gardevoir (Mega Gardevoir),68,85,65,165,135,100,618,103,Psychic,Fairy,3,Yes,http://img.pokemondb.net/artwork/gardevoir-mega.jpg
+282M,Gardevoir (Mega Gardevoir),68,85,65,165,135,100,618,103,Psychic,Fairy,3,Yes,http://img.pokemondb.net/artwork/gardevoir-mega.jpg
 283,Surskit,40,30,32,50,52,65,269,44.83,Bug,Water,3,No,http://img.pokemondb.net/artwork/surskit.jpg
 284,Masquerain,70,60,62,80,82,60,414,69,Bug,Flying,3,No,http://img.pokemondb.net/artwork/masquerain.jpg
 285,Shroomish,60,40,60,40,60,35,295,49.17,Grass,none,3,No,http://img.pokemondb.net/artwork/shroomish.jpg
@@ -326,19 +326,19 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 300,Skitty,50,45,45,35,35,50,260,43.33,Normal,none,3,No,http://img.pokemondb.net/artwork/skitty.jpg
 301,Delcatty,70,65,65,55,55,70,380,63.33,Normal,none,3,No,http://img.pokemondb.net/artwork/delcatty.jpg
 302,Sableye,50,75,75,65,65,50,380,63.33,Dark,Ghost,3,No,http://img.pokemondb.net/artwork/sableye.jpg
-302M,Sableye (Mega Sableye),50,85,125,85,115,20,480,80,Dark,Ghost,3,Yes,http://img.pokemondb.net/artwork/sableye-mega.jpg
+302M,Sableye (Mega Sableye),50,85,125,85,115,20,480,80,Dark,Ghost,3,Yes,http://img.pokemondb.net/artwork/sableye-mega.jpg
 303,Mawile,50,85,85,55,55,50,380,63.33,Steel,Fairy,3,No,http://img.pokemondb.net/artwork/mawile.jpg
-303M,Mawile (Mega Mawile),50,105,125,55,95,50,480,80,Steel,Fairy,3,Yes,http://img.pokemondb.net/artwork/mawile-mega.jpg
+303M,Mawile (Mega Mawile),50,105,125,55,95,50,480,80,Steel,Fairy,3,Yes,http://img.pokemondb.net/artwork/mawile-mega.jpg
 304,Aron,50,70,100,40,40,30,330,55,Steel,Rock,3,No,http://img.pokemondb.net/artwork/aron.jpg
 305,Lairon,60,90,140,50,50,40,430,71.67,Steel,Rock,3,No,http://img.pokemondb.net/artwork/lairon.jpg
 306,Aggron,70,110,180,60,60,50,530,88.33,Steel,Rock,3,No,http://img.pokemondb.net/artwork/aggron.jpg
-306M,Aggron (Mega Aggron),70,140,230,60,80,50,630,105,Steel,Rock,3,Yes,http://img.pokemondb.net/artwork/aggron-mega.jpg
+306M,Aggron (Mega Aggron),70,140,230,60,80,50,630,105,Steel,Rock,3,Yes,http://img.pokemondb.net/artwork/aggron-mega.jpg
 307,Meditite,30,40,55,40,55,60,280,46.67,Fighting,Psychic,3,No,http://img.pokemondb.net/artwork/meditite.jpg
 308,Medicham,60,60,75,60,75,80,410,68.33,Fighting,Psychic,3,No,http://img.pokemondb.net/artwork/medicham.jpg
-308M,Medicham (Mega Medicham),60,100,85,80,85,100,510,85,Electric,Psychic,3,Yes,http://img.pokemondb.net/artwork/medicham-mega.jpg
+308M,Medicham (Mega Medicham),60,100,85,80,85,100,510,85,Electric,Psychic,3,Yes,http://img.pokemondb.net/artwork/medicham-mega.jpg
 309,Electrike,40,45,40,65,40,65,295,49.17,Electric,none,3,No,http://img.pokemondb.net/artwork/electrike.jpg
 310,Manectric,70,75,60,105,60,105,475,79.17,Electric,none,3,No,http://img.pokemondb.net/artwork/manectric.jpg
-310M,Manectric (Mega Manectric),70,75,80,135,80,135,575,95.83,Electric,none,3,Yes,http://img.pokemondb.net/artwork/manectric-mega.jpg
+310M,Manectric (Mega Manectric),70,75,80,135,80,135,575,95.83,Electric,none,3,Yes,http://img.pokemondb.net/artwork/manectric-mega.jpg
 311,Plusle,60,50,40,85,75,95,405,67.5,Electric,none,3,No,http://img.pokemondb.net/artwork/plusle.jpg
 312,Minun,60,40,50,75,85,95,405,67.5,Electric,none,3,No,http://img.pokemondb.net/artwork/minun.jpg
 313,Volbeat,65,73,55,47,75,85,400,66.67,Bug,none,3,No,http://img.pokemondb.net/artwork/volbeat.jpg
@@ -348,12 +348,12 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 317,Swalot,100,73,83,73,83,55,467,77.83,Poison,none,3,No,http://img.pokemondb.net/artwork/swalot.jpg
 318,Carvanha,45,90,20,65,20,65,305,50.83,Water,Dark,3,No,http://img.pokemondb.net/artwork/carvanha.jpg
 319,Sharpedo,70,120,40,95,40,95,460,76.67,Water,Dark,3,No,http://img.pokemondb.net/artwork/sharpedo.jpg
-319M,Sharpedo (Mega Sharpedo),70,140,70,110,65,105,560,93.33,Water,Dark,3,Yes,http://img.pokemondb.net/artwork/sharpedo-mega.jpg
+319M,Sharpedo (Mega Sharpedo),70,140,70,110,65,105,560,93.33,Water,Dark,3,Yes,http://img.pokemondb.net/artwork/sharpedo-mega.jpg
 320,Wailmer,130,70,35,70,35,60,400,66.67,Water,none,3,No,http://img.pokemondb.net/artwork/wailmer.jpg
 321,Wailord,170,90,45,90,45,60,500,83.33,Water,none,3,No,http://img.pokemondb.net/artwork/wailord.jpg
 322,Numel,60,60,40,65,45,35,305,50.83,Fire,Ground,3,No,http://img.pokemondb.net/artwork/numel.jpg
 323,Camerupt,70,100,70,105,75,40,460,76.67,Fire,Ground,3,No,http://img.pokemondb.net/artwork/camerupt.jpg
-323M,Camerupt (Mega Camerupt),70,120,100,145,105,20,560,93.33,Fire,Ground,3,Yes,http://img.pokemondb.net/artwork/camerupt-mega.jpg
+323M,Camerupt (Mega Camerupt),70,120,100,145,105,20,560,93.33,Fire,Ground,3,Yes,http://img.pokemondb.net/artwork/camerupt-mega.jpg
 324,Torkoal,70,85,140,85,70,20,470,78.33,Fire,none,3,No,http://img.pokemondb.net/artwork/torkoal.jpg
 325,Spoink,60,25,35,70,80,60,330,55,Psychic,none,3,No,http://img.pokemondb.net/artwork/spoink.jpg
 326,Grumpig,80,45,65,90,110,80,470,78.33,Psychic,none,3,No,http://img.pokemondb.net/artwork/grumpig.jpg
@@ -365,7 +365,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 332,Cacturne,70,115,60,115,60,55,475,79.17,Grass,Dark,3,No,http://img.pokemondb.net/artwork/cacturne.jpg
 333,Swablu,45,40,60,40,75,50,310,51.67,Normal,Flying,3,No,http://img.pokemondb.net/artwork/swablu.jpg
 334,Altaria,75,70,90,70,105,80,490,81.67,Dragon,Flying,3,No,http://img.pokemondb.net/artwork/altaria.jpg
-334M,Altaria (Mega Altaria),75,110,110,110,105,80,590,98.33,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/altaria-mega.jpg
+334M,Altaria (Mega Altaria),75,110,110,110,105,80,590,98.33,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/altaria-mega.jpg
 335,Zangoose,73,115,60,60,60,90,458,76.33,Normal,none,3,No,http://img.pokemondb.net/artwork/zangoose.jpg
 336,Seviper,73,100,60,100,60,65,458,76.33,Poison,none,3,No,http://img.pokemondb.net/artwork/seviper.jpg
 337,Lunatone,70,55,65,95,85,70,440,73.33,Rock,Psychic,3,No,http://img.pokemondb.net/artwork/lunatone.jpg
@@ -386,17 +386,17 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 352,Kecleon,60,90,70,60,120,40,440,73.33,Normal,none,3,No,http://img.pokemondb.net/artwork/kecleon.jpg
 353,Shuppet,44,75,35,63,33,45,295,49.17,Ghost,none,3,No,http://img.pokemondb.net/artwork/shuppet.jpg
 354,Banette,64,115,65,83,63,65,455,75.83,Ghost,none,3,No,http://img.pokemondb.net/artwork/banette.jpg
-354M,Banette (Mega Banette),64,165,75,93,83,75,555,92.5,Ghost,none,3,Yes,http://img.pokemondb.net/artwork/banette-mega.jpg
+354M,Banette (Mega Banette),64,165,75,93,83,75,555,92.5,Ghost,none,3,Yes,http://img.pokemondb.net/artwork/banette-mega.jpg
 355,Duskull,20,40,90,30,90,25,295,49.17,Ghost,none,3,No,http://img.pokemondb.net/artwork/duskull.jpg
 356,Dusclops,40,70,130,60,130,25,455,75.83,Ghost,none,3,No,http://img.pokemondb.net/artwork/dusclops.jpg
 357,Tropius,99,68,83,72,87,51,460,76.67,Grass,Flying,3,No,http://img.pokemondb.net/artwork/tropius.jpg
 358,Chimecho,65,50,70,95,80,65,425,70.83,Psychic,none,3,No,http://img.pokemondb.net/artwork/chimecho.jpg
 359,Absol,65,130,60,75,60,75,465,77.5,Dark,none,3,No,http://img.pokemondb.net/artwork/absol.jpg
-359M,Absol (Mega Absol),65,150,60,115,60,115,565,94.17,Dark,none,3,Yes,http://img.pokemondb.net/artwork/absol-mega.jpg
+359M,Absol (Mega Absol),65,150,60,115,60,115,565,94.17,Dark,none,3,Yes,http://img.pokemondb.net/artwork/absol-mega.jpg
 360,Wynaut,95,23,48,23,48,23,260,43.33,Psychic,none,3,No,http://img.pokemondb.net/artwork/wynaut.jpg
 361,Snorunt,50,50,50,50,50,50,300,50,Ice,none,3,No,http://img.pokemondb.net/artwork/snorunt.jpg
 362,Glalie,80,80,80,80,80,80,480,80,Ice,none,3,No,http://img.pokemondb.net/artwork/glalie.jpg
-362M,Glalie (Mega Glalie),80,120,80,120,80,100,580,96.67,Ice,none,3,Yes,http://img.pokemondb.net/artwork/glalie-mega.jpg
+362M,Glalie (Mega Glalie),80,120,80,120,80,100,580,96.67,Ice,none,3,Yes,http://img.pokemondb.net/artwork/glalie-mega.jpg
 363,Spheal,70,40,50,55,50,25,290,48.33,Ice,Water,3,No,http://img.pokemondb.net/artwork/spheal.jpg
 364,Sealeo,90,60,70,75,70,45,410,68.33,Ice,Water,3,No,http://img.pokemondb.net/artwork/sealeo.jpg
 365,Walrein,110,80,90,95,90,65,530,88.33,Ice,Water,3,No,http://img.pokemondb.net/artwork/walrein.jpg
@@ -408,29 +408,29 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 371,Bagon,45,75,60,40,30,50,300,50,Dragon,none,3,No,http://img.pokemondb.net/artwork/bagon.jpg
 372,Shelgon,65,95,100,60,50,50,420,70,Dragon,none,3,No,http://img.pokemondb.net/artwork/shelgon.jpg
 373,Salamence,95,135,80,110,80,100,600,100,Dragon,Flying,3,No,http://img.pokemondb.net/artwork/salamence.jpg
-373M,Salamence (Mega Salamence),95,145,130,120,90,120,700,116.67,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/salamence-mega.jpg
+373M,Salamence (Mega Salamence),95,145,130,120,90,120,700,116.67,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/salamence-mega.jpg
 374,Beldum,40,55,80,35,60,30,300,50,Steel,Psychic,3,No,http://img.pokemondb.net/artwork/beldum.jpg
 375,Metang,60,75,100,55,80,50,420,70,Steel,Psychic,3,No,http://img.pokemondb.net/artwork/metang.jpg
 376,Metagross,80,135,130,95,90,70,600,100,Steel,Psychic,3,No,http://img.pokemondb.net/artwork/metagross.jpg
-376M,Metagross (Mega Metagross),80,145,150,105,110,110,700,116.67,Steel,Psychic,3,Yes,http://img.pokemondb.net/artwork/metagross-mega.jpg
+376M,Metagross (Mega Metagross),80,145,150,105,110,110,700,116.67,Steel,Psychic,3,Yes,http://img.pokemondb.net/artwork/metagross-mega.jpg
 377,Regirock,80,100,200,50,100,50,580,96.67,Rock,none,3,No,http://img.pokemondb.net/artwork/regirock.jpg
 378,Regice,80,50,100,100,200,50,580,96.67,Ice,none,3,No,http://img.pokemondb.net/artwork/regice.jpg
 379,Registeel,80,75,150,75,150,50,580,96.67,Steel,none,3,No,http://img.pokemondb.net/artwork/registeel.jpg
 380,Latias,80,80,90,110,130,110,600,100,Dragon,Psychic,3,No,http://img.pokemondb.net/artwork/latias.jpg
-380M,Latias (Mega Latias),80,100,120,140,150,110,700,116.67,Dragon,Psychic,3,Yes,http://img.pokemondb.net/artwork/latias-mega.jpg
+380M,Latias (Mega Latias),80,100,120,140,150,110,700,116.67,Dragon,Psychic,3,Yes,http://img.pokemondb.net/artwork/latias-mega.jpg
 381,Latios,80,90,80,130,110,110,600,100,Dragon,Psychic,3,No,http://img.pokemondb.net/artwork/latios.jpg
-381M,Latios (Mega Latios),80,130,100,160,120,110,700,116.67,Dragon,Psychic,3,Yes,http://img.pokemondb.net/artwork/latios-mega.jpg
+381M,Latios (Mega Latios),80,130,100,160,120,110,700,116.67,Dragon,Psychic,3,Yes,http://img.pokemondb.net/artwork/latios-mega.jpg
 382,Kyogre,100,100,90,150,140,90,670,111.67,Water,none,3,No,http://img.pokemondb.net/artwork/kyogre.jpg
-382P,Kyogre (Primal Kyogre),100,150,90,180,160,90,770,128.33,Water,none,3,Yes,http://img.pokemondb.net/artwork/kyogre-primal.jpg
+382P,Kyogre (Primal Kyogre),100,150,90,180,160,90,770,128.33,Water,none,3,Yes,http://img.pokemondb.net/artwork/kyogre-primal.jpg
 383,Groudon,100,150,140,100,90,90,670,111.67,Ground,none,3,No,http://img.pokemondb.net/artwork/groudon.jpg
-383P,Groudon (Primal Groudon),100,180,160,150,90,90,770,128.33,Ground,none,3,Yes,http://img.pokemondb.net/artwork/groudon-primal.jpg
+383P,Groudon (Primal Groudon),100,180,160,150,90,90,770,128.33,Ground,none,3,Yes,http://img.pokemondb.net/artwork/groudon-primal.jpg
 384,Rayquaza,105,150,90,150,90,95,680,113.33,Dragon,Flying,3,No,http://img.pokemondb.net/artwork/rayquaza.jpg
-384M,Rayquaza (Mega Rayquaza),105,180,100,180,100,115,780,130,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/rayquaza-mega.jpg
+384M,Rayquaza (Mega Rayquaza),105,180,100,180,100,115,780,130,Dragon,Flying,3,Yes,http://img.pokemondb.net/artwork/rayquaza-mega.jpg
 385,Jirachi,100,100,100,100,100,100,600,100,Steel,Psychic,3,No,http://img.pokemondb.net/artwork/jirachi.jpg
-386,Deoxys (Normal Forme),50,150,50,150,50,150,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-normal.jpg
-386,Deoxys (Attack Forme),50,180,20,180,20,150,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-attack.jpg
-386,Deoxys (Defense Forme),50,70,160,70,160,90,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-defense.jpg
-386,Deoxys (Speed Forme),50,95,90,95,90,180,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-speed.jpg
+386,Deoxys (Normal Forme),50,150,50,150,50,150,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-normal.jpg
+386,Deoxys (Attack Forme),50,180,20,180,20,150,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-attack.jpg
+386,Deoxys (Defense Forme),50,70,160,70,160,90,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-defense.jpg
+386,Deoxys (Speed Forme),50,95,90,95,90,180,600,100,Psychic,none,3,No,http://img.pokemondb.net/artwork/deoxys-speed.jpg
 387,Turtwig,55,68,64,45,55,31,318,53,Grass,none,4,No,http://img.pokemondb.net/artwork/turtwig.jpg
 388,Grotle,75,89,85,55,65,36,405,67.5,Grass,none,4,No,http://img.pokemondb.net/artwork/grotle.jpg
 389,Torterra,95,109,105,75,85,56,525,87.5,Grass,Ground,4,No,http://img.pokemondb.net/artwork/torterra.jpg
@@ -457,9 +457,9 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 410,Shieldon,30,42,118,42,88,30,350,58.33,Rock,Steel,4,No,http://img.pokemondb.net/artwork/shieldon.jpg
 411,Bastiodon,60,52,168,47,138,30,495,82.5,Rock,Steel,4,No,http://img.pokemondb.net/artwork/bastiodon.jpg
 412,Burmy,40,29,45,29,45,36,224,37.33,Bug,none,4,No,http://img.pokemondb.net/artwork/burmy.jpg
-413,Wormadam (Plant Cloak),60,59,85,79,105,36,424,70.67,Bug,Grass,4,No,http://img.pokemondb.net/artwork/wormadam-plant.jpg
-413,Wormadam (Sandy Cloak),60,79,105,59,85,36,424,70.67,Bug,Ground,4,No,http://img.pokemondb.net/artwork/wormadam-sandy.jpg
-413,Wormadam (Trash Cloak),60,69,95,69,95,36,424,70.67,Bug,Steel,4,No,http://img.pokemondb.net/artwork/wormadam-trash.jpg
+413,Wormadam (Plant Cloak),60,59,85,79,105,36,424,70.67,Bug,Grass,4,No,http://img.pokemondb.net/artwork/wormadam-plant.jpg
+413,Wormadam (Sandy Cloak),60,79,105,59,85,36,424,70.67,Bug,Ground,4,No,http://img.pokemondb.net/artwork/wormadam-sandy.jpg
+413,Wormadam (Trash Cloak),60,69,95,69,95,36,424,70.67,Bug,Steel,4,No,http://img.pokemondb.net/artwork/wormadam-trash.jpg
 414,Mothim,70,94,50,94,50,66,424,70.67,Bug,Flying,4,No,http://img.pokemondb.net/artwork/mothim.jpg
 415,Combee,30,30,42,30,42,70,244,40.67,Bug,Flying,4,No,http://img.pokemondb.net/artwork/combee.jpg
 416,Vespiquen,70,80,102,80,102,40,474,79,Bug,Flying,4,No,http://img.pokemondb.net/artwork/vespiquen.jpg
@@ -475,7 +475,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 426,Drifblim,150,80,44,90,54,80,498,83,Ghost,Flying,4,No,http://img.pokemondb.net/artwork/drifblim.jpg
 427,Buneary,55,66,44,44,56,85,350,58.33,Normal,none,4,No,http://img.pokemondb.net/artwork/buneary.jpg
 428,Lopunny,65,76,84,54,96,105,480,80,Normal,none,4,No,http://img.pokemondb.net/artwork/lopunny.jpg
-428M,Lopunny (Mega Lopunny),65,136,94,54,96,135,580,96.67,Normal,none,4,Yes,http://img.pokemondb.net/artwork/lopunny-mega.jpg
+428M,Lopunny (Mega Lopunny),65,136,94,54,96,135,580,96.67,Normal,none,4,Yes,http://img.pokemondb.net/artwork/lopunny-mega.jpg
 429,Mismagius,60,60,60,105,105,105,495,82.5,Ghost,none,4,No,http://img.pokemondb.net/artwork/mismagius.jpg
 430,Honchkrow,100,125,52,105,52,71,505,84.17,Dark,Flying,4,No,http://img.pokemondb.net/artwork/honchkrow.jpg
 431,Glameow,49,55,42,42,37,85,310,51.67,Normal,none,4,No,http://img.pokemondb.net/artwork/glameow.jpg
@@ -493,11 +493,11 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 443,Gible,58,70,45,40,45,42,300,50,Dragon,Ground,4,No,http://img.pokemondb.net/artwork/gible.jpg
 444,Gabite,68,90,65,50,55,82,410,68.33,Dragon,Ground,4,No,http://img.pokemondb.net/artwork/gabite.jpg
 445,Garchomp,108,130,95,80,85,102,600,100,Dragon,Ground,4,No,http://img.pokemondb.net/artwork/garchomp.jpg
-445M,Garchomp (Mega Garchomp),108,170,115,120,95,92,700,116.67,Dragon,Ground,4,Yes,http://img.pokemondb.net/artwork/garchomp-mega.jpg
+445M,Garchomp (Mega Garchomp),108,170,115,120,95,92,700,116.67,Dragon,Ground,4,Yes,http://img.pokemondb.net/artwork/garchomp-mega.jpg
 446,Munchlax,135,85,40,40,85,5,390,65,Normal,none,4,No,http://img.pokemondb.net/artwork/munchlax.jpg
 447,Riolu,40,70,40,35,40,60,285,47.5,Fighting,none,4,No,http://img.pokemondb.net/artwork/riolu.jpg
 448,Lucario,70,110,70,115,70,90,525,87.5,Fighting,Steel,4,No,http://img.pokemondb.net/artwork/lucario.jpg
-448M,Lucario (Mega Lucario),70,145,88,140,70,112,625,104.17,Fighting,Steel,4,Yes,http://img.pokemondb.net/artwork/lucario-mega.jpg
+448M,Lucario (Mega Lucario),70,145,88,140,70,112,625,104.17,Fighting,Steel,4,Yes,http://img.pokemondb.net/artwork/lucario-mega.jpg
 449,Hippopotas,68,72,78,38,42,32,330,55,Ground,none,4,No,http://img.pokemondb.net/artwork/hippopotas.jpg
 450,Hippowdon,108,112,118,68,72,47,525,87.5,Ground,none,4,No,http://img.pokemondb.net/artwork/hippowdon.jpg
 451,Skorupi,40,50,90,30,55,65,330,55,Poison,Bug,4,No,http://img.pokemondb.net/artwork/skorupi.jpg
@@ -510,7 +510,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 458,Mantyke,45,20,50,60,120,50,345,57.5,Water,Flying,4,No,http://img.pokemondb.net/artwork/mantyke.jpg
 459,Snover,60,62,50,62,60,40,334,55.67,Grass,Ice,4,No,http://img.pokemondb.net/artwork/snover.jpg
 460,Abomasnow,90,92,75,92,85,60,494,82.33,Grass,Ice,4,No,http://img.pokemondb.net/artwork/abomasnow.jpg
-460M,Abomasnow (Mega Abomasnow),90,132,105,132,105,30,594,99,Grass,Ice,4,Yes,http://img.pokemondb.net/artwork/abomasnow-mega.jpg
+460M,Abomasnow (Mega Abomasnow),90,132,105,132,105,30,594,99,Grass,Ice,4,Yes,http://img.pokemondb.net/artwork/abomasnow-mega.jpg
 461,Weavile,70,120,65,45,85,125,510,85,Dark,Ice,4,No,http://img.pokemondb.net/artwork/weavile.jpg
 462,Magnezone,70,70,115,130,90,60,535,89.17,Electric,Steel,4,No,http://img.pokemondb.net/artwork/magnezone.jpg
 463,Lickilicky,110,85,95,80,95,50,515,85.83,Normal,none,4,No,http://img.pokemondb.net/artwork/lickilicky.jpg
@@ -526,16 +526,16 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 473,Mamoswine,110,130,80,70,60,80,530,88.33,Ice,Ground,4,No,http://img.pokemondb.net/artwork/mamoswine.jpg
 474,Porygon-Z,85,80,70,135,75,90,535,89.17,Normal,none,4,No,http://img.pokemondb.net/artwork/porygon-z.jpg
 475,Gallade,68,125,65,65,115,80,518,86.33,Psychic,Fighting,4,No,http://img.pokemondb.net/artwork/gallade.jpg
-475M,Gallade (Mega Gallade),68,165,95,65,115,110,618,103,Psychic,Fighting,4,Yes,http://img.pokemondb.net/artwork/gallade-mega.jpg
+475M,Gallade (Mega Gallade),68,165,95,65,115,110,618,103,Psychic,Fighting,4,Yes,http://img.pokemondb.net/artwork/gallade-mega.jpg
 476,Probopass,60,55,145,75,150,40,525,87.5,Rock,Steel,4,No,http://img.pokemondb.net/artwork/probopass.jpg
 477,Dusknoir,45,100,135,65,135,45,525,87.5,Ghost,none,4,No,http://img.pokemondb.net/artwork/dusknoir.jpg
 478,Froslass,70,80,70,80,70,110,480,80,Ice,Ghost,4,No,http://img.pokemondb.net/artwork/froslass.jpg
-479,Rotom (Normal Rotom),50,50,77,95,77,91,440,73.33,Electric,Ghost,4,No,http://img.pokemondb.net/artwork/rotom-normal.jpg
-479,Rotom (Heat Rotom),50,65,107,105,107,86,520,86.67,Electric,Fire,4,No,http://img.pokemondb.net/artwork/rotom-heat.jpg
-479,Rotom (Wash Rotom),50,65,107,105,107,86,520,86.67,Electric,Water,4,No,http://img.pokemondb.net/artwork/rotom-wash.jpg
-479,Rotom (Frost Rotom),50,65,107,105,107,86,520,86.67,Electric,Ice,4,No,http://img.pokemondb.net/artwork/rotom-frost.jpg
-479,Rotom (Fan Rotom),50,65,107,105,107,86,520,86.67,Electric,Flying,4,No,http://img.pokemondb.net/artwork/rotom-fan.jpg
-479,Rotom (Mow Rotom),50,65,107,105,107,86,520,86.67,Electric,Grass,4,No,http://img.pokemondb.net/artwork/rotom-mow.jpg
+479,Rotom (Normal Rotom),50,50,77,95,77,91,440,73.33,Electric,Ghost,4,No,http://img.pokemondb.net/artwork/rotom-normal.jpg
+479,Rotom (Heat Rotom),50,65,107,105,107,86,520,86.67,Electric,Fire,4,No,http://img.pokemondb.net/artwork/rotom-heat.jpg
+479,Rotom (Wash Rotom),50,65,107,105,107,86,520,86.67,Electric,Water,4,No,http://img.pokemondb.net/artwork/rotom-wash.jpg
+479,Rotom (Frost Rotom),50,65,107,105,107,86,520,86.67,Electric,Ice,4,No,http://img.pokemondb.net/artwork/rotom-frost.jpg
+479,Rotom (Fan Rotom),50,65,107,105,107,86,520,86.67,Electric,Flying,4,No,http://img.pokemondb.net/artwork/rotom-fan.jpg
+479,Rotom (Mow Rotom),50,65,107,105,107,86,520,86.67,Electric,Grass,4,No,http://img.pokemondb.net/artwork/rotom-mow.jpg
 480,Uxie,75,75,130,75,130,95,580,96.67,Psychic,none,4,No,http://img.pokemondb.net/artwork/uxie.jpg
 481,Mesprit,80,105,105,105,105,80,580,96.67,Psychic,none,4,No,http://img.pokemondb.net/artwork/mesprit.jpg
 482,Azelf,75,125,70,125,70,115,580,96.67,Psychic,none,4,No,http://img.pokemondb.net/artwork/azelf.jpg
@@ -543,14 +543,14 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 484,Palkia,90,120,100,150,120,100,680,113.33,Water,Dragon,4,No,http://img.pokemondb.net/artwork/palkia.jpg
 485,Heatran,91,90,106,130,106,77,600,100,Fire,Steel,4,No,http://img.pokemondb.net/artwork/heatran.jpg
 486,Regigigas,110,160,110,80,110,100,670,111.67,Normal,none,4,No,http://img.pokemondb.net/artwork/regigigas.jpg
-487,Giratina (Altered Forme),150,100,120,100,120,90,680,113.33,Ghost,Dragon,4,No,http://img.pokemondb.net/artwork/giratina-altered.jpg
-487,Giratina (Origin Forme),150,120,100,120,100,90,680,113.33,Ghost,Dragon,4,No,http://img.pokemondb.net/artwork/giratina-origin.jpg
+487,Giratina (Altered Forme),150,100,120,100,120,90,680,113.33,Ghost,Dragon,4,No,http://img.pokemondb.net/artwork/giratina-altered.jpg
+487,Giratina (Origin Forme),150,120,100,120,100,90,680,113.33,Ghost,Dragon,4,No,http://img.pokemondb.net/artwork/giratina-origin.jpg
 488,Cresselia,120,70,120,75,130,85,600,100,Psychic,none,4,No,http://img.pokemondb.net/artwork/cresselia.jpg
 489,Phione,80,80,80,80,80,80,480,80,Water,none,4,No,http://img.pokemondb.net/artwork/phione.jpg
 490,Manaphy,100,100,100,100,100,100,600,100,Water,none,4,No,http://img.pokemondb.net/artwork/manaphy.jpg
 491,Darkrai,70,90,90,135,90,125,600,100,Dark,none,4,No,http://img.pokemondb.net/artwork/darkrai.jpg
-492,Shaymin (Land Forme),100,100,100,100,100,100,600,100,Grass,none,4,No,http://img.pokemondb.net/artwork/shaymin-land.jpg
-492,Shaymin (Sky Forme),100,103,75,120,75,127,600,100,Grass,Flying,4,No,http://img.pokemondb.net/artwork/shaymin-sky.jpg
+492,Shaymin (Land Forme),100,100,100,100,100,100,600,100,Grass,none,4,No,http://img.pokemondb.net/artwork/shaymin-land.jpg
+492,Shaymin (Sky Forme),100,103,75,120,75,127,600,100,Grass,Flying,4,No,http://img.pokemondb.net/artwork/shaymin-sky.jpg
 493,Arceus,120,120,120,120,120,120,720,120,Normal,none,4,No,http://img.pokemondb.net/artwork/arceus.jpg
 494,Victini,100,100,100,100,100,100,600,100,Psychic,Fire,5,No,http://img.pokemondb.net/artwork/victini.jpg
 495,Snivy,45,45,55,45,55,63,308,51.33,Grass,none,5,No,http://img.pokemondb.net/artwork/snivy.jpg
@@ -590,7 +590,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 529,Drilbur,60,85,40,30,45,68,328,54.67,Ground,none,5,No,http://img.pokemondb.net/artwork/drilbur.jpg
 530,Excadrill,110,135,60,50,65,88,508,84.67,Ground,Steel,5,No,http://img.pokemondb.net/artwork/excadrill.jpg
 531,Audino,103,60,86,60,86,50,445,74.17,Normal,none,5,No,http://img.pokemondb.net/artwork/audino.jpg
-531M,Audino (Mega Audino),103,60,126,80,126,50,545,90.83,Normal,none,5,Yes,http://img.pokemondb.net/artwork/audino-mega.jpg
+531M,Audino (Mega Audino),103,60,126,80,126,50,545,90.83,Normal,none,5,Yes,http://img.pokemondb.net/artwork/audino-mega.jpg
 532,Timburr,75,80,55,25,35,35,305,50.83,Fighting,none,5,No,http://img.pokemondb.net/artwork/timburr.jpg
 533,Gurdurr,85,105,85,40,50,40,405,67.5,Fighting,none,5,No,http://img.pokemondb.net/artwork/gurdurr.jpg
 534,Conkeldurr,105,140,95,55,65,45,505,84.17,Fighting,none,5,No,http://img.pokemondb.net/artwork/conkeldurr.jpg
@@ -614,8 +614,8 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 552,Krokorok,60,82,45,45,45,74,351,58.5,Ground,Dark,5,No,http://img.pokemondb.net/artwork/krokorok.jpg
 553,Krookodile,95,117,80,65,70,92,519,86.5,Ground,Dark,5,No,http://img.pokemondb.net/artwork/krookodile.jpg
 554,Darumaka,70,90,45,15,45,50,315,52.5,Fire,none,5,No,http://img.pokemondb.net/artwork/darumaka.jpg
-555,Darmanitan (Standard Mode),105,140,55,30,55,95,480,80,Fire,none,5,No,http://img.pokemondb.net/artwork/darmanitan-standard.jpg
-555,Darmanitan (Zen Mode),105,30,105,140,105,55,540,90,Fire,Psychic,5,No,http://img.pokemondb.net/artwork/darmanitan-zen.jpg
+555,Darmanitan (Standard Mode),105,140,55,30,55,95,480,80,Fire,none,5,No,http://img.pokemondb.net/artwork/darmanitan-standard.jpg
+555,Darmanitan (Zen Mode),105,30,105,140,105,55,540,90,Fire,Psychic,5,No,http://img.pokemondb.net/artwork/darmanitan-zen.jpg
 556,Maractus,75,86,67,106,67,60,461,76.83,Grass,none,5,No,http://img.pokemondb.net/artwork/maractus.jpg
 557,Dwebble,50,65,85,35,35,55,325,54.17,Bug,Rock,5,No,http://img.pokemondb.net/artwork/dwebble.jpg
 558,Crustle,70,95,125,65,75,45,475,79.17,Bug,Rock,5,No,http://img.pokemondb.net/artwork/crustle.jpg
@@ -701,20 +701,20 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 638,Cobalion,91,90,129,90,72,108,580,96.67,Steel,Fighting,5,No,http://img.pokemondb.net/artwork/cobalion.jpg
 639,Terrakion,91,129,90,72,90,108,580,96.67,Rock,Fighting,5,No,http://img.pokemondb.net/artwork/terrakion.jpg
 640,Virizion,91,90,72,90,129,108,580,96.67,Grass,Fighting,5,No,http://img.pokemondb.net/artwork/virizion.jpg
-641,Tornadus (Incarnate Forme),79,115,70,125,80,111,580,96.67,Flying,none,5,No,http://img.pokemondb.net/artwork/tornadus-incarnate.jpg
-641,Tornadus (Therian Forme),79,100,80,110,90,121,580,96.67,Flying,none,5,No,http://img.pokemondb.net/artwork/tornadus-therian.jpg
-642,Thundurus (Incarnate Forme),79,115,70,125,80,111,580,96.67,Electric,Flying,5,No,http://img.pokemondb.net/artwork/thundurus-incarnate.jpg
-642,Thundurus (Therian Forme),79,105,70,145,80,101,580,96.67,Electric,Flying,5,No,http://img.pokemondb.net/artwork/thundurus-therian.jpg
+641,Tornadus (Incarnate Forme),79,115,70,125,80,111,580,96.67,Flying,none,5,No,http://img.pokemondb.net/artwork/tornadus-incarnate.jpg
+641,Tornadus (Therian Forme),79,100,80,110,90,121,580,96.67,Flying,none,5,No,http://img.pokemondb.net/artwork/tornadus-therian.jpg
+642,Thundurus (Incarnate Forme),79,115,70,125,80,111,580,96.67,Electric,Flying,5,No,http://img.pokemondb.net/artwork/thundurus-incarnate.jpg
+642,Thundurus (Therian Forme),79,105,70,145,80,101,580,96.67,Electric,Flying,5,No,http://img.pokemondb.net/artwork/thundurus-therian.jpg
 643,Reshiram,100,120,100,150,120,90,680,113.33,Dragon,Fire,5,No,http://img.pokemondb.net/artwork/reshiram.jpg
 644,Zekrom,100,150,120,120,100,90,680,113.33,Dragon,Electric,5,No,http://img.pokemondb.net/artwork/zekrom.jpg
-645,Landorus (Incarnate Forme),89,125,90,115,80,101,600,100,Ground,Flying,5,No,http://img.pokemondb.net/artwork/landorus-incarnate.jpg
-645,Landorus (Therian Forme),89,145,90,105,80,91,600,100,Ground,Flying,5,No,http://img.pokemondb.net/artwork/landorus-therian.jpg
-646,Kyurem (Normal Kyurem),125,130,90,130,90,95,660,110,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-normal.jpg
-646,Kyurem (Black Kyurem),125,170,100,120,90,95,700,116.67,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-black.jpg
-646,Kyurem (White Kyurem),125,120,90,170,100,95,700,116.67,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-white.jpg
+645,Landorus (Incarnate Forme),89,125,90,115,80,101,600,100,Ground,Flying,5,No,http://img.pokemondb.net/artwork/landorus-incarnate.jpg
+645,Landorus (Therian Forme),89,145,90,105,80,91,600,100,Ground,Flying,5,No,http://img.pokemondb.net/artwork/landorus-therian.jpg
+646,Kyurem (Normal Kyurem),125,130,90,130,90,95,660,110,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-normal.jpg
+646,Kyurem (Black Kyurem),125,170,100,120,90,95,700,116.67,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-black.jpg
+646,Kyurem (White Kyurem),125,120,90,170,100,95,700,116.67,Dragon,Ice,5,No,http://img.pokemondb.net/artwork/kyurem-white.jpg
 647,Keldeo,91,72,90,129,90,108,580,96.67,Water,Fighting,5,No,http://img.pokemondb.net/artwork/keldeo.jpg
-648,Meloetta (Aria Forme),100,77,77,128,128,90,600,100,Normal,Psychic,5,No,http://img.pokemondb.net/artwork/meloetta-aria.jpg
-648,Meloetta (Pirouette Forme),100,128,90,77,77,128,600,100,Normal,Fighting,5,No,http://img.pokemondb.net/artwork/meloetta-pirouette.jpg
+648,Meloetta (Aria Forme),100,77,77,128,128,90,600,100,Normal,Psychic,5,No,http://img.pokemondb.net/artwork/meloetta-aria.jpg
+648,Meloetta (Pirouette Forme),100,128,90,77,77,128,600,100,Normal,Fighting,5,No,http://img.pokemondb.net/artwork/meloetta-pirouette.jpg
 649,Genesect,71,120,95,120,95,99,600,100,Bug,Steel,5,No,http://img.pokemondb.net/artwork/genesect.jpg
 650,Chespin,56,61,65,48,45,38,313,52.17,Grass,none,6,No,http://img.pokemondb.net/artwork/chespin.jpg
 651,Quilladin,61,78,95,56,58,57,405,67.5,Grass,none,6,No,http://img.pokemondb.net/artwork/quilladin.jpg
@@ -735,7 +735,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 666,Vivillon,80,52,50,90,50,89,411,68.5,Bug,Flying,6,No,http://img.pokemondb.net/artwork/vivillon.jpg
 667,Litleo,62,50,58,73,54,72,369,61.5,Fire,Normal,6,No,http://img.pokemondb.net/artwork/litleo.jpg
 668,Pyroar,86,68,72,109,66,106,507,84.5,Fire,Normal,6,No,http://img.pokemondb.net/artwork/pyroar.jpg
-669,Flabébé,44,38,39,61,79,42,303,50.5,Fairy,none,6,No,http://img.pokemondb.net/artwork/flabébé.jpg
+669,Flabb ,44,38,39,61,79,42,303,50.5,Fairy,none,6,No,http://img.pokemondb.net/artwork/flabï¿½bï¿½.jpg
 670,Floette,54,45,47,75,98,52,371,61.83,Fairy,none,6,No,http://img.pokemondb.net/artwork/floette.jpg
 671,Florges,78,65,68,112,154,75,552,92,Fairy,none,6,No,http://img.pokemondb.net/artwork/florges.jpg
 672,Skiddo,66,65,48,62,57,52,350,58.33,Grass,none,6,No,http://img.pokemondb.net/artwork/skiddo.jpg
@@ -747,8 +747,8 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 678,Meowstic,74,48,76,83,81,104,466,77.67,Psychic,none,6,No,http://img.pokemondb.net/artwork/meowstic.jpg
 679,Honedge,45,80,100,35,37,28,325,54.17,Steel,Ghost,6,No,http://img.pokemondb.net/artwork/honedge.jpg
 680,Doublade,59,110,150,45,49,35,448,74.67,Steel,Ghost,6,No,http://img.pokemondb.net/artwork/doublade.jpg
-681,Aegislash (Shield Forme),60,50,150,50,150,60,520,86.67,Steel,Ghost,6,No,http://img.pokemondb.net/artwork/aegislash-shield.jpg
-681B,Aegislash (Blade Forme),60,150,50,150,50,60,520,86.67,Steel,Ghost,6,Yes,http://img.pokemondb.net/artwork/aegislash-blade.jpg
+681,Aegislash (Shield Forme),60,50,150,50,150,60,520,86.67,Steel,Ghost,6,No,http://img.pokemondb.net/artwork/aegislash-shield.jpg
+681B,Aegislash (Blade Forme),60,150,50,150,50,60,520,86.67,Steel,Ghost,6,Yes,http://img.pokemondb.net/artwork/aegislash-blade.jpg
 682,Spritzee,78,52,60,63,65,23,341,56.83,Fairy,none,6,No,http://img.pokemondb.net/artwork/spritzee.jpg
 683,Aromatisse,101,72,72,99,89,29,462,77,Fairy,none,6,No,http://img.pokemondb.net/artwork/aromatisse.jpg
 684,Swirlix,62,48,66,59,57,49,341,56.83,Fairy,none,6,No,http://img.pokemondb.net/artwork/swirlix.jpg
@@ -777,14 +777,14 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 707,Klefki,57,80,91,80,87,75,470,78.33,Steel,Fairy,6,No,http://img.pokemondb.net/artwork/klefki.jpg
 708,Phantump,43,70,48,50,60,38,309,51.5,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/phantump.jpg
 709,Trevenant,85,110,76,65,82,56,474,79,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/trevenant.jpg
-710,Pumpkaboo (Small Size),44,66,70,44,55,56,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-average.jpg
-710,Pumpkaboo (Average Size),49,66,70,44,55,51,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-small.jpg
-710,Pumpkaboo (Large Size),54,66,70,44,55,46,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-large.jpg
-710,Pumpkaboo (Super Size),59,66,70,44,55,41,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-super.jpg
-711,Gourgeist (Small Size),55,85,122,58,75,99,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-small.jpg
-711,Gourgeist (Average Size),65,90,122,58,75,84,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-average.jpg
-711,Gourgeist (Large Size),75,95,122,58,75,69,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-large.jpg
-711,Gourgeist (Super Size),85,100,122,58,75,54,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-super.jpg
+710,Pumpkaboo (Small Size),44,66,70,44,55,56,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-average.jpg
+710,Pumpkaboo (Average Size),49,66,70,44,55,51,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-small.jpg
+710,Pumpkaboo (Large Size),54,66,70,44,55,46,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-large.jpg
+710,Pumpkaboo (Super Size),59,66,70,44,55,41,335,55.83,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/pumpkaboo-super.jpg
+711,Gourgeist (Small Size),55,85,122,58,75,99,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-small.jpg
+711,Gourgeist (Average Size),65,90,122,58,75,84,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-average.jpg
+711,Gourgeist (Large Size),75,95,122,58,75,69,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-large.jpg
+711,Gourgeist (Super Size),85,100,122,58,75,54,494,82.33,Ghost,Grass,6,No,http://img.pokemondb.net/artwork/gourgeist-super.jpg
 712,Bergmite,55,69,85,32,35,28,304,50.67,Ice,none,6,No,http://img.pokemondb.net/artwork/bergmite.jpg
 713,Avalugg,95,117,184,44,46,28,514,85.67,Ice,none,6,No,http://img.pokemondb.net/artwork/avalugg.jpg
 714,Noibat,40,30,35,45,40,55,245,40.83,Flying,Dragon,6,No,http://img.pokemondb.net/artwork/noibat.jpg
@@ -793,7 +793,7 @@ Number,Name,Health,Attack,Defense,Sp. Attack,Sp. Defense,Speed,Total,Average,Typ
 717,Yveltal,126,131,95,131,98,99,680,113.33,Dark,Flying,6,No,http://img.pokemondb.net/artwork/yveltal.jpg
 718,Zygarde,108,100,121,81,95,95,600,100,Dragon,Ground,6,No,http://img.pokemondb.net/artwork/zygarde.jpg
 719,Diancie,50,100,150,100,150,50,600,100,Rock,Fairy,6,No,http://img.pokemondb.net/artwork/diancie.jpg
-719M,Diancie (Mega Diancie),50,160,110,160,110,110,700,116.67,Rock,Fairy,6,Yes,http://img.pokemondb.net/artwork/diancie-mega.jpg
-720,Hoopa (Hoopa Confined),80,110,60,150,130,70,600,100,Psychic,Ghost,6,No,http://img.pokemondb.net/artwork/hoopa-confined.jpg
-720U,Hoopa (Hoopa Unbound),80,160,60,170,130,80,680,113.33,Psychic,Dark,6,Yes,http://img.pokemondb.net/artwork/hoopa-unbound.jpg
+719M,Diancie (Mega Diancie),50,160,110,160,110,110,700,116.67,Rock,Fairy,6,Yes,http://img.pokemondb.net/artwork/diancie-mega.jpg
+720,Hoopa (Hoopa Confined),80,110,60,150,130,70,600,100,Psychic,Ghost,6,No,http://img.pokemondb.net/artwork/hoopa-confined.jpg
+720U,Hoopa(Hoopa Unbound),80,160,60,170,130,80,680,113.33,Psychic,Dark,6,Yes,http://img.pokemondb.net/artwork/hoopa-unbound.jpg
 ,,,,,,,,,,,,,,

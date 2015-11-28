@@ -39,12 +39,11 @@ h2 {
   color: #202020;
   border-radius: 5px;
   position: absolute;
-  padding: 10px;
   pointer-events: none;
   text-align: left;
   opacity: .25;
-  width: 126px;
-  height: 176px;
+  width: 252px;
+  height: 352;
 }
 
 .scatterplot {
