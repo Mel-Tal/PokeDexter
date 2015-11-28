@@ -37,59 +37,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2">
-                <p>
-                    <select id="XAxis">
-                        <option value="Attack">Attack</option>
-                        <option value="Defense">Defense</option>
-                        <option value="Sp. Attack">Sp. Attack</option>
-                        <option value="Sp. Defense">Sp. Defense</option>
-                        <option value="Health">Health</option>
-                        <option value="Speed">Speed</option>
-                    </select>
-                    <select id="YAxis">
-                        <option value="Sp. Attack">Sp. Attack</option>
-                        <option value="Defense">Defense</option>
-                        <option value="Health">Health</option>
-                        <option value="Sp. Defense">Sp. Defense</option>
-                        <option value="Attack">Attack</option>
-                        <option value="Speed">Speed</option>
-                    </select>
-                    <select id="dotSize">
-                        <option value="Health">Health</option>
-                        <option value="Defense">Defense</option>
-                        <option value="Sp. Attack">Sp. Attack</option>
-                        <option value="Sp. Defense">Sp. Defense</option>
-                        <option value="Attack">Attack</option>
-                        <option value="Speed">Speed</option>
-                    </select>
-                    <select id="TypeSelector">
-                        <option value="All">All</option>
-                        <option value="Fire">Fire</option>
-                        <option value="Water">Water</option>
-                        <option value="Grass">Grass</option>
-                        <option value="Electric">Electric</option>
-                        <option value="Ground">Ground</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Bug">Bug</option>
-                        <option value="Poison">Poison</option>
-                        <option value="Psychic">Psychic</option>
-                        <option value="Ghost">Ghost</option>
-                        <option value="Flying">Flying</option>
-                        <option value="Fighting">Fighting</option>
-                        <option value="Dark">Dark</option>
-                        <option value="Steel">Steel</option>
-                        <option value="Dragon">Dragon</option>
-                        <option value="Fairy">Fairy</option>
-                        <option value="Ice">Ice</option>
-                    </select>
-                </p>
-            </div>
-            <div class="col-lg-7 wrap">
+            <div id="plot_container" class="col-lg-9 wrap">
                 <div class="scatterplot"></div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-1">
                 <div class="list-group">
                     <button type="button" class="list-group-item">Normal</button>
                     <button type="button" class="list-group-item">Bug</button>
@@ -110,6 +61,59 @@
                     <button type="button" class="list-group-item">Dark</button>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <p>
+                X Axis:
+                <select id="XAxis">
+                    <option value="Attack">Attack</option>
+                    <option value="Defense">Defense</option>
+                    <option value="Sp. Attack">Sp. Attack</option>
+                    <option value="Sp. Defense">Sp. Defense</option>
+                    <option value="Health">Health</option>
+                    <option value="Speed">Speed</option>
+                </select>
+                Y Axis:
+                <select id="YAxis">
+                    <option value="Sp. Attack">Sp. Attack</option>
+                    <option value="Defense">Defense</option>
+                    <option value="Health">Health</option>
+                    <option value="Sp. Defense">Sp. Defense</option>
+                    <option value="Attack">Attack</option>
+                    <option value="Speed">Speed</option>
+                </select>
+                Dot Radius:
+                <select id="dotSize">
+                    <option value="Health">Health</option>
+                    <option value="Defense">Defense</option>
+                    <option value="Sp. Attack">Sp. Attack</option>
+                    <option value="Sp. Defense">Sp. Defense</option>
+                    <option value="Attack">Attack</option>
+                    <option value="Speed">Speed</option>
+                </select>
+                Filter By Type: 
+                <select id="TypeSelector">
+                    <option value="All">All</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Fairy">Fairy</option>
+                    <option value="Ice">Ice</option>
+                </select>
+            </p>
         </div>
     </div>
 </body>
