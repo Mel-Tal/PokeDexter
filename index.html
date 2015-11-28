@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Document styling -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/stylesheets/styles.css">
-<link rel="stylesheet" href="assets/stylesheets/style.css">
-<script src="d3/d3.min.js"></script>
-<script src="assets/scripts/library.js"></script>
- <script src="assets/scripts/scatter.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Document styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheets/styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+</head>
+
+<!-- Document Scripts -->
 
 <body>
     <nav class="navbar navbar-default">
@@ -62,11 +63,11 @@
                         <option value="Attack">Attack</option>
                         <option value="Speed">Speed</option>
                     </select>
-                    <select id="TypeSelector"> 
+                    <select id="TypeSelector">
                         <option value="All">All</option>
                         <option value="Fire">Fire</option>
-                        <option value="Water">Water</option> 
-                        <option value="Grass">Grass</option> 
+                        <option value="Water">Water</option>
+                        <option value="Grass">Grass</option>
                         <option value="Electric">Electric</option>
                         <option value="Ground">Ground</option>
                         <option value="Normal">Normal</option>
@@ -86,7 +87,7 @@
                 </p>
             </div>
             <div class="col-lg-7 wrap">
-                <div class = "scatterplot"></div>
+                <div class="scatterplot"></div>
             </div>
             <div class="col-lg-3">
                 <div class="list-group">
@@ -112,3 +113,6 @@
         </div>
     </div>
 </body>
+<script src="d3/d3.min.js"></script>
+<script src="assets/scripts/library.js"></script>
+<script src="assets/scripts/scatter.js"></script>
