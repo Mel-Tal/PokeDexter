@@ -109,3 +109,9 @@
 .dragon {
     background-color: #6400E6;
 }
+
+.tooltip h1 {
+    margin: 5px 0px 5px 0px;
+    color:#000;
+    font-size: 1.2em;
+}

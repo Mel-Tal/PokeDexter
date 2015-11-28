@@ -1,6 +1,9 @@
-var margin = {top: 20, right: 20, bottom: 20, left: 30};
-var width = 1000 - margin.left - margin.right;
-var height = 700 - margin.top - margin.bottom;
+var margin = {top: 20, right: 300, bottom: 20, left: 30};
+var width = document.getElementById("plot_container").offsetWidth;
+var height = width*.6;
+
+console.log(width);
+console.log(height);
 
 // pre-cursors
 var sizeForCircle = function(d) {
@@ -26,8 +29,8 @@ var svg = d3.select(".scatterplot").append("svg")
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-	
-	
+
+
 // add the tooltip area to the webpage
 var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
@@ -38,7 +41,7 @@ var infobox = d3.select("body").append("div")
 	.style("opacity", 0);
 
 
-	
+
 // load data
 d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 	data = data.filter(function(d){
@@ -149,24 +152,27 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 			return "#6400E6";
 		}
 		})
-	  .style("opacity", .75)
+	  .style("opacity", .6)
       .on("mouseover", function(d) {
 
           // show the tool tip
           tooltip.transition()
                .duration(200)
-               .style("opacity", .75);
+               .style("opacity", 1);
 
           // fill to the tool tip with the appropriate data
-          tooltip.html("<strong>" + d["Name"] + "</strong><br/>"+document.getElementById("XAxis").value+ " " + xValue(d)
-          + "<br/>" + document.getElementById("YAxis").value + " " + yValue(d) + "<br/>" + document.getElementById("dotSize").value + " " + sizeForCircle(d) / 0.1)
-               .style("left", (d3.event.pageX + 5) + "px")
+          tooltip.html(
+            "<h1>" + d["Name"] + "</h1>" +
+                "<span style='padding-left:20px'><img src='" + d["Image"] + "' height='50px' width='63px'></span>" +
+                "<span style='display:inline;'><p>Type: " + d["Type1"] +
+                "<br>Generation: " + d["Gen"] + "</span></p>"
+                ).style("left", (d3.event.pageX + 5) + "px")
                .style("top", (d3.event.pageY - 28) + "px");
 
 
 
 
-          
+
 
       })
       .on("mouseout", function(d) {
@@ -180,7 +186,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 			.transition(200)
 			.style("opacity", 100);
 		infobox.html("<strong>" + d["Name"] + "</strong><br/>Type 1: " + d["Type1"] + " Type 2: "+ d["Type2"] +"<br/>Health: " + d["Health"]
-          + "<br/>Attack: " + d["Attack"] + "<br/>Defense: " + d["Defense"] + 
+          + "<br/>Attack: " + d["Attack"] + "<br/>Defense: " + d["Defense"] +
 		  "<br/>Sp. Attack: " + d["Sp. Attack"] + "<br/>Sp. Defense: " + d["Sp. Defense"]
 		  + "<br/>Speed: " + d["Speed"])
 			.style("right", 100+"px")
@@ -200,7 +206,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 	})
 	function filterType() {
 	svg.selectAll(".dot")
-	.filter(function(d) { return d["Type1"] != document.getElementById("TypeSelector").value 
+	.filter(function(d) { return d["Type1"] != document.getElementById("TypeSelector").value
 		&& d["Type2"] != document.getElementById("TypeSelector").value})
 	.transition()
 	.duration(200)
@@ -351,7 +357,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 
 
 
-          
+
 
       })
       .on("mouseout", function(d) {
@@ -365,7 +371,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 			.transition(200)
 			.style("opacity", 100);
 		infobox.html("<strong>" + d["Name"] + "</strong><br/>Type 1: " + d["Type1"] + " Type 2: "+ d["Type2"] +"<br/>Health: " + d["Health"]
-          + "<br/>Attack: " + d["Attack"] + "<br/>Defense: " + d["Defense"] + 
+          + "<br/>Attack: " + d["Attack"] + "<br/>Defense: " + d["Defense"] +
 		  "<br/>Sp. Attack: " + d["Sp. Attack"] + "<br/>Sp. Defense: " + d["Sp. Defense"]
 		  + "<br/>Speed: " + d["Speed"])
 			.style("right", 100+"px")
@@ -375,7 +381,3 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 	  }
 
 ;
-
-
-
-

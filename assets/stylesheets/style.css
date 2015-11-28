@@ -43,6 +43,8 @@ h2 {
   pointer-events: none;
   text-align: left;
   opacity: .25;
+  width: 126px;
+  height: 176px;
 }
 
 .scatterplot {
@@ -72,4 +74,3 @@ table {
 .arc path {
   stroke: #fff;
 }
-
