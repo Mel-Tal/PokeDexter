@@ -1,24 +1,29 @@
-.bar {
-  fill: steelblue;
-}
-.bar:hover {
-  fill: brown;
-}
-.axis {
-  font: 10px sans-serif;
-}
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-.x.axis path {
-  display: none;
-}
+/*
+ __________________
+|______Colors______|
+|Ice: #00FFFF      |
+|Water: #0000FF    |
+|Grass: #00FF00    |
+|Poison: #8B008B   |
+|Ground: #DAA520   |
+|Steel: #C0C0C0    |
+|Psychic: #FF1493  |
+|Rock: #8B4513     |
+|Fighting: #8B0000 |
+|Flying:#9370DB    |
+|Normal: #FFE4C4   |
+|Bug: #9ACD32      |
+|Electric: #FFFF00 |
+|Ghost: #483D8B    |
+|Dark: #2F2F2F     |
+|Fairy: #FFC0CB    |
+|Dragon: #6400E6   |
+|Fire: #FF0000     |
+|__________________|
+*/
 
 .navbar-header {
-    height: 75px;
+    height: 60px;
 }
 
 .navbar-brand {
@@ -35,4 +40,72 @@
 .nav-search {
     padding: 5px;
     padding-right: 15px;
+}
+
+.key {
+    font-size: 1.2em;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 25px 10px 25px;
+    opacity: .75;
+    color: #fff;
+    border-radius: 7px;
+    font-family: monospace;
+}
+
+.ice {
+    background-color: #00FFFF;
+    color: #000;
+}
+.fire {
+    background-color: #FF0000;
+}
+.water {
+    background-color: #0000FF;
+}
+.grass {
+    background-color: #00FF00;
+}
+.poison {
+    background-color: #8B008B;
+}
+.ground {
+    background-color: #DAA520;
+}
+.steel {
+    background-color: #C0C0C0;
+}
+.psychic {
+    background-color: #FF1493;
+}
+.rock {
+    background-color: #8B4513;
+}
+.fighting {
+    background-color: #8B0000;
+}
+.flying {
+    background-color: #9370DB;
+}
+.normal {
+    background-color: #FFE4C4;
+    color: #000;
+}
+.bug {
+    background-color: #9ACD32;
+}
+.electric {
+    background-color: #FFFF00;
+    color: #000;
+}
+.ghost {
+    background-color: #483D8B;
+}
+.dark {
+    background-color: #2F2F2F;
+}
+.fairy {
+    background-color: #FFC0CB;
+}
+.dragon {
+    background-color: #6400E6;
 }
