@@ -11,6 +11,11 @@
 <!-- Document Scripts -->
 
 <body>
+    <script type="text/javascript">
+        window.onload = function() {
+           localStorage.setItem("storageName","ivysaur");
+        }
+    </script>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -22,6 +27,7 @@
                         <input type="text" class="form-control nav-search" placeholder="Search for a Pokemon">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">Go!</button>
+                            <button class="btn btn-default" type="button" onclick="location.href = 'pokemonPage.html';">Next Page</button>
                         </span>
                     </div>
                 </form>
