@@ -72,3 +72,61 @@ function filterBars() {
       .attr("y", function(d) { return (y(d.frequency/2)); })
       .attr("height", function(d) { return (height - y(d.frequency))/2; });
 }
+
+function getTypeColor(d) {
+    //console.log(d);
+      if (d["Type1"] == "Fire") {
+          return "#FF0000";
+      }
+      else if (d["Type1"] == "Ice") {
+          return "#00FFFF";
+      }
+      else if (d["Type1"] == "Water") {
+          return "#0000FF";
+      }
+      else if (d["Type1"] == "Grass") {
+          return "#00FF00";
+      }
+      else if (d["Type1"] == "Poison") {
+          return "#8B008B";
+      }
+      else if (d["Type1"] == "Ground") {
+          return "#DAA520";
+      }
+      else if (d["Type1"] == "Steel") {
+          return "#C0C0C0";
+      }
+      else if (d["Type1"] == "Psychic") {
+          return "#FF1493";
+      }
+      else if (d["Type1"] == "Rock") {
+          return "#8B4513";
+      }
+      else if (d["Type1"] == "Fighting") {
+          return "#8B0000";
+      }
+      else if (d["Type1"] == "Flying") {
+          return "#9370DB";
+      }
+      else if (d["Type1"] == "Normal") {
+          return "#FFE4C4";
+      }
+      else if (d["Type1"] == "Bug") {
+          return "#9ACD32";
+      }
+      else if (d["Type1"] == "Electric") {
+          return "#FFFF00";
+      }
+      else if (d["Type1"] == "Ghost") {
+          return "#483D8B";
+      }
+      else if (d["Type1"] == "Dark") {
+          return "#2F2F2F";
+      }
+      else if (d["Type1"] == "Fairy") {
+          return "#FFC0CB";
+      }
+      else if (d["Type1"] == "Dragon") {
+          return "#6400E6";
+      }
+  }
