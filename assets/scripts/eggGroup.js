@@ -4,7 +4,7 @@ var pokeGroups;
 var comparingPokemon;
 
 var div = d3.select("body").append("div")	
-    .attr("class", "tooltip");
+    .attr("class", "pokeTooltip");
 
 d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
    eggGroupData = data;
