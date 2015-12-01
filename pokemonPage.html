@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Document styling -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/stylesheets/styles.css">
+<link rel="stylesheet" href="assets/stylesheets/style.css">
+<script src="d3/d3.min.js"></script>
+<script src="assets/scripts/library.js"></script>
+ <script src="assets/scripts/typeCompare.js"></script>
+ <script src="assets/scripts/eggGroup.js"></script>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="logo.png" style="height:100%">
+                </a
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group" style="padding: 20px; padding-right:10px;">
+                        <input type="text" class="form-control nav-search" placeholder="Search for a Pokemon">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="effectivenessModule" class="container-fluid" style="padding-left: 35px; padding-right: 25px;">
+        <select id="typeCompare" onchange="updateTypeCompare()">
+          <option value="Normal">Normal</option>
+          <option value="Fighting">Fighting</option>
+          <option value="Flying">Flying</option>
+          <option value="Poison">Poison</option>
+          <option value="Ground">Ground</option>
+          <option value="Rock">Rock</option>
+          <option value="Bug">Bug</option>
+          <option value="Ghost">Ghost</option>
+          <option value="Steel">Steel</option>
+          <option value="Fire">Fire</option>
+          <option value="Water">Water</option>
+          <option value="Grass">Grass</option>
+          <option value="Electric">Electric</option>
+          <option value="Psychic">Psychic</option>
+          <option value="Ice">Ice</option>
+          <option value="Dragon">Dragon</option>          
+          <option value="Dark">Dark</option>
+          <option value="Fairy">Fairy</option>
+        </select>
+    </div><br>
+    <div id="breedingModule" class="container-fluid">
+        <input id="eggGroupPokemon" type="text" name="eggGroupPokemon" onkeydown="if(event.keyCode == 13) { updateEggs(); }"><br><br>
+        <p id="canBreedText"></p>
+    </div>
+</body>

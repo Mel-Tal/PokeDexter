@@ -73,3 +73,30 @@ table {
 .arc path {
   stroke: #fff;
 }
+
+.th_n {
+    padding: 25px 2px;
+    transform: rotate(-90deg);
+}
+
+td {
+    padding: 1px 2px;
+    text-align: center;
+}
+
+.eggHeader {
+    padding: 20px 5px;
+    text-align: center;
+}
+
+div.tooltip { 
+    color: white;   
+    text-align: center;     
+    width: 60px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: lightsteelblue; 
+    border: 0px;
+    border-radius: 8px;   
+}
