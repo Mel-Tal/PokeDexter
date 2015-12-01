@@ -7,7 +7,7 @@ console.log(height);
 
 // pre-cursors
 var sizeForCircle = function(d) {
-    return 0.1 * d[document.getElementById("dotSize").value];
+    return Math.sqrt(0.8 * d[document.getElementById("dotSize").value]);
 }
 
 // setup x
@@ -214,6 +214,7 @@ function updateData() {
       .attr("transform", "translate(0," + height + ")")
       .attr("fill", "white")
       .call(xAxis)
+	  .style("opacity", 0)
     .append("text")
       .attr("class", "label")
       .attr("x", width)
@@ -227,6 +228,7 @@ function updateData() {
       .attr("class", "y axis")
       .attr("fill", "white")
       .call(yAxis)
+	  .style("opacity", 0)
     .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
@@ -247,7 +249,7 @@ function updateData() {
       .style("fill", function(d) {
           return getTypeColor(d);
       })
-	  .style("opacity", .75)
+	  .style("opacity", 0)
       .on("mouseover", function(d) {
 
           // show the tool tip
@@ -284,6 +286,10 @@ function updateData() {
 			.style("right", 100+"px")
 			.style("top", 100+"px");
 	  })
+	  svg.selectAll("g")
+	  .transition().duration(1000).style("opacity", 1);
+	  svg.selectAll("circle")
+	  .transition().duration(1000).style("opacity", .75);
 	  })
 }
 
