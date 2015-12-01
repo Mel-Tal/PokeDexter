@@ -1,11 +1,13 @@
 
-var pokeData, categories, selectVal;
+var pokeData, categories, selectVal, pokeType;
 d3.csv("assets/data/type_efficacy.csv", function(data) {
     pokeData = data;
     selectVal = document.getElementById("typeCompare").value;
+    var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
+    pokeType = pokemon.Type1;
     var temp = data[0].type;
     categories = new Array("", temp);
-    var comparing = ["Fire", selectVal];
+    var comparing = [pokeType, selectVal];
     data.forEach(function(d) {
         if(d.type != temp) categories.push(d.type);
         temp = d.type;
@@ -35,7 +37,7 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
         .data(function(row) {
             return categories.map(function(column) {
                 if(column === "") return {column: row, value: row};
-                else return {column: row, value: data[((categories.indexOf(row)-1) * 18) + categories.indexOf(column)].damage_factor};
+                else return {column: row, value: data[((categories.indexOf(row)-1) * 18) + categories.indexOf(column)].damage_factor/100 + "x"};
             });
         })
         .enter()

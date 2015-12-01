@@ -1,6 +1,5 @@
 var eggGroupData;
 var pokemon = localStorage.getItem("storageName");
-console.log(pokemon);
 var pokeGroups;
 var comparingPokemon;
 
