@@ -115,3 +115,22 @@
     color:#000;
     font-size: 1.2em;
 }
+
+.pokemon_image {
+    float:left;
+}
+
+.pokemon_info {
+    float:left;
+    padding-left: 25px;
+}
+
+.pokemon_info h1 {
+    margin-top: 0px;
+}
+
+.pokemon_info h2 {
+    margin: 10px 0px 0px 15px;
+    text-align:left;
+    font-size: 1.5em;
+}

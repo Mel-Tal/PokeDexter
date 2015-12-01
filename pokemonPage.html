@@ -9,13 +9,19 @@
 <script src="assets/scripts/library.js"></script>
 <script src="assets/scripts/typeCompare.js"></script>
 <script src="assets/scripts/eggGroup.js"></script>
-<script type="text/javascript">console.log(localStorage.getItem("storageName"));</script>
+<script type="text/javascript">
+    document.onload = function() {
+        console.log("Document loaded");
+        renderPokemonInfo();
+    }
+    console.log(localStorage.getItem("storageName"));
+</script>
 
-<body>
+<body onload="renderPokemonInfo()">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img alt="Brand" src="logo.png" style="height:100%">
                 </a
                 <form class="navbar-form navbar-right" role="search">
@@ -32,9 +38,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>
-                    Header info goes here
-                </p>
+                <div class-"row">
+                    <div id="picture" class="pokemon_image">
+                        <img src="" width="200px">
+                    </div>
+                    <div class="pokemon_info">
+                        <h1 id="name">???</h1>
+                        <h2 id="type">???</h2>
+                        <h2 id="generation">???</h2>
+                        <div id="abilities"></div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <p>

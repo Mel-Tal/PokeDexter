@@ -136,15 +136,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
                 .style("opacity", 0);
         })
 	    .on("click", function(d) {
-		    infobox.transition()
-			    .transition(200)
-			    .style("opacity", 100);
-		    infobox.html("<strong>" + d["Name"] + "</strong><br/>Type 1: " + d["Type1"] + " Type 2: "+ d["Type2"] +"<br/>Health: " + d["Health"]
-                + "<br/>Attack: " + d["Attack"] + "<br/>Defense: " + d["Defense"] +
-		        "<br/>Sp. Attack: " + d["Sp. Attack"] + "<br/>Sp. Defense: " + d["Sp. Defense"]
-		        + "<br/>Speed: " + d["Speed"])
-			.style("right", 100+"px")
-			.style("top", 150+"px");
+		    console.log(JSON.stringify(d));
 	    })
 
 	d3.select("body")
