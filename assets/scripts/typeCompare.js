@@ -1,5 +1,5 @@
 
-var pokeData, categories, selectVal, pokeType;
+var pokeData, categories, selectVal, pokeType, affected;
 d3.csv("assets/data/type_efficacy.csv", function(data) {
     pokeData = data;
     selectVal = document.getElementById("typeCompare").value;
@@ -12,7 +12,9 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
         if(d.type != temp) categories.push(d.type);
         temp = d.type;
       });
-
+    
+    affected = getAffectedCategories(categories, pokeType);
+    affected.concat(getAffectedCategories(categories, selectVal));
 // render the table
     var table = d3.select("#effectivenessModule").append("table"),
         thead = table.append("thead"),
@@ -21,7 +23,7 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
     // append the header row
     thead.append("tr")
         .selectAll("th")
-        .data(categories)
+        .data(affected)
         .enter()
         .append("th")
             .text(function(column) { return column; })
@@ -35,7 +37,7 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
     // create a cell in each row for each column
     var cells = rows.selectAll("td")
         .data(function(row) {
-            return categories.map(function(column) {
+            return affected.map(function(column) {
                 if(column === "") return {column: row, value: row};
                 else return {column: row, value: data[((categories.indexOf(row)-1) * 18) + categories.indexOf(column)].damage_factor/100 + "x"};
             });
@@ -59,6 +61,14 @@ function updateTypeCompare(){
      var cells = rows[2].getElementsByTagName("td");
     cells[0].innerHTML = document.getElementById("typeCompare").value;
     for(var i = 1; i < cells.length; i++){
-        cells[i].innerHTML = pokeData[(categories.indexOf(selectVal)-1)*18 + i - 1].damage_factor;
+        cells[i].innerHTML = pokeData[(categories.indexOf(selectVal)-1)*18 + i - 1].damage_factor/100 + "x";
     }
+}
+
+function getAffectedCategories(categories, pokemonType){
+    var affectedCategories = new Array("");
+    for(var i = 1; i < categories.length + 1; i++){
+        if(pokeData[(categories.indexOf(pokemonType) - 1)*18 + i - 1].damage_factor != 100) affectedCategories.push(categories[i-1]);   
+    }
+    return affectedCategories;
 }

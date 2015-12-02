@@ -75,7 +75,8 @@ table {
 }
 
 .th_n {
-    padding: 25px 2px;
+    padding: 30px 2px;
+    text-align: center;
     transform: rotate(-90deg);
 }
 
