@@ -75,7 +75,7 @@ function getEggGroup(pokemon){
 }
 
 function updateEggs(){
-    comparingPokemon = document.getElementById("eggGroupPokemon").value;
+    comparingPokemon = document.getElementById("eggGroupPokemon").value.toLowerCase();
     var table = d3.select("#breedingModule").select("table")[0][0],
             thead = table.tHead,
             tbody = table.tBody;

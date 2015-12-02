@@ -49,6 +49,9 @@ $("#search-input").autocomplete({
 	}
 });
 
+$("#eggGroupPokemon").autocomplete({
+	source: names
+});
 
 //validates search data
 function validate(data) {
