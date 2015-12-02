@@ -10,7 +10,6 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
    eggGroupData = data;
     pokeName = pokemon.Name.toLowerCase();
     pokeGroups = getEggGroup(pokeName);
-    console.log(pokeGroups);
     // render the table
     var table = d3.select("#breedingModule").append("table"),
         thead = table.append("thead"),
@@ -26,8 +25,11 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
             .attr("class", "eggHeader");
 
     // create a row for each object in the data
+    var newRows = new Array();
+    newRows.push("");
+    newRows.push("");
     var rows = tbody.selectAll("tr")
-        .data(pokeGroups)
+        .data(newRows)
         .enter()
         .append("tr")
 
@@ -37,21 +39,31 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     
     
     // create a cell in each row for each column
+    var newCells = new Array();
+   // for(var i = 0; i < 2; i++) test.push(pokeGroups[i]);
+    newCells.push("");
+    newCells.push("");
     var cells = rows.selectAll("td")
-        .data(function(row) {
-            return pokeGroups.map(function(column) {
-                return row; });
-        })
+        .data(newCells)
         .enter()
         .append("td")
         .attr("style", "font-family: Courier")
-            .html(function(d) { return d; })
+            .html(newCells[0])
             .on("mouseover", function(d) {		
                 div.transition()		
                     .duration(200)		
                     .style("opacity", .9);		
                 div.html(allInEggGroup(d));
                 });
+    var tableRows = d3.select("#breedingModule").select("table")[0][0].rows;
+    for(var i = 1; i < tableRows.length; i++){
+        var tempCells = tableRows[i].getElementsByTagName("td");
+        console.log(pokeGroups[i - 1]);
+        if(typeof pokeGroups[i - 1] != 'undefined') tempCells[0].innerHTML = pokeGroups[i - 1];
+        else tempCells[0].innerHTML = "";
+        
+    }
+    
 });
 
 function getEggGroup(pokemon){
@@ -98,7 +110,6 @@ function breedingOutcome(pokeA, pokeB){
 
 function allInEggGroup(type){
     var allInGrp = new Array();
-    console.log(eggGroupData);
     for(var i = 0; i < eggGroupData.length; i++){
         if(eggGroupData[i].egg_group == type) allInGrp.push(eggGroupData[i].species);
     }
