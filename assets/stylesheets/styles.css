@@ -118,11 +118,14 @@
 
 .pokemon_image {
     float:left;
+    width:50%;
 }
 
 .pokemon_info {
     float:left;
     padding-left: 25px;
+    width:50%;
+    height: 300px;
 }
 
 .pokemon_info h1 {
@@ -133,4 +136,20 @@
     margin: 10px 0px 0px 15px;
     text-align:left;
     font-size: 1.5em;
+}
+
+.bar rect {
+  fill: steelblue;
+}
+
+.bar text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+ bar.xText{
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
 }

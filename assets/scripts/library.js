@@ -131,9 +131,9 @@ function getTypeColor(d) {
 }
 
 function renderPokemonInfo() {
-    console.log("Rendering Pokemon Info");
+    //console.log("Rendering Pokemon Info");
     var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
-    console.log(pokemon);
+    //console.log(pokemon);
     document.getElementById("name").innerHTML= pokemon.Name;
     document.getElementById("type").innerHTML= "Type: " + pokemon.Type1;
     document.getElementById("generation").innerHTML= "Generation: " + pokemon.Gen;
