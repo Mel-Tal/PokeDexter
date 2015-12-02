@@ -27,12 +27,12 @@
                 <a class="navbar-brand" href="#">
                     <img alt="Brand" src="logo.png" style="height:100%">
                 </a>
-                <form class="navbar-form navbar-right" role="search">
+                <form id="search" class="navbar-form navbar-right" role="search">
                     <div class="input-group" style="padding: 20px; padding-right:10px;">
                         <input id="search-input" type="text" class="form-control nav-search" placeholder="Search for a Pokémon">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                            <button class="btn btn-default" type="button" onclick="location.href = 'pokemonPage.html';">Next Page</button>
+                            <button id="search-button" class="btn btn-default" disabled type="submit">Go!</button>
+                            <!--button class="btn btn-default" type="button" onclick="location.href = 'pokemonPage.html';">Next Page</button>-->
                         </span>
                     </div>
                 </form>
@@ -134,4 +134,5 @@
 <script src="assets/scripts/library.js"></script>
 <script src="assets/scripts/radar.js"></script>
 <script src="assets/scripts/scatter.js"></script>
+<script src="assets/scripts/pokemonNames.js"></script>
 <script src="assets/scripts/search.js"></script>
