@@ -1,15 +1,16 @@
 var eggGroupData;
-var pokemon = localStorage.getItem("storageName");
+var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
 var pokeGroups;
-var comparingPokemon;
+var comparingPokemon, pokeName;
 
 var div = d3.select("body").append("div")	
     .attr("class", "pokeTooltip");
 
 d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
    eggGroupData = data;
-
-    pokeGroups = getEggGroup(pokemon);
+    pokeName = pokemon.Name.toLowerCase();
+    pokeGroups = getEggGroup(pokeName);
+    console.log(pokeGroups);
     // render the table
     var table = d3.select("#breedingModule").append("table"),
         thead = table.append("thead"),
@@ -18,7 +19,7 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     // append the header row
     thead.append("tr")
         .selectAll("th")
-        .data([pokemon, comparingPokemon])
+        .data([pokeName, comparingPokemon])
         .enter()
         .append("th")
             .text(function(column) { return column; })
@@ -74,7 +75,7 @@ function updateEggs(){
         if(typeof groups[i - 1] != 'undefined') tempCells[1].innerHTML = groups[i - 1];
         else tempCells[1].innerHTML = "";
     }
-    breedingOutcome(pokemon, comparingPokemon);
+    breedingOutcome(pokeName, comparingPokemon);
 }
 
 function breedingOutcome(pokeA, pokeB){

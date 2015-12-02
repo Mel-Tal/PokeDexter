@@ -51,8 +51,7 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
 
 function updateTypeCompare(){
     selectVal = document.getElementById("typeCompare").value;
-    console.log(selectVal);
-    //how to get data and categories....?
+
     var table = d3.select("#effectivenessModule").select("table")[0][0],
             thead = table.tHead,
             tbody = table.tBody;
