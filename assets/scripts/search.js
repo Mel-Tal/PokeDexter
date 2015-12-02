@@ -1,11 +1,13 @@
 //on change in input, trigger filtration
 $("#search-input").on('input', function() {
 	var data = $("#search-input").val();
-	filterByName(data);
+	if (location.href == "index.html") {
+		filterDotsByName(data);
+	}
 	validate(data);
 });
 
-function filterByName(input) {
+function filterDotsByName(input) {
 	//removes pokemon whose name do not start with the inputted text
 	svg.selectAll(".dot")
 	.filter(function(d) {
@@ -68,3 +70,19 @@ function inArray(val, arr) {
 	}
 	return false;
  }
+ 
+//on search submit
+$("#search").submit(function (event) {
+	location.href = "pokemonPage.html";
+	var input = $("#search-input").val().toUpperCase();
+	d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
+	data = data.filter(function(d) {
+		var name = d["Name"].toUpperCase();
+		if (input == name) {
+			localStorage.setItem("storageJSON", JSON.stringify($("#search-input").val()));
+			localStorage.setItem("storageJSON", JSON.stringify(d));
+		}
+	});
+	});
+	event.preventDefault();
+});
