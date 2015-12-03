@@ -10,7 +10,7 @@ var svg = d3.select("#timelineModule").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
 var pokeID = pokemon.Number;
-var moveData, pokeMoveData, evolutionData;
+var moveData, pokeMoveData, speciesData, evolutionData;
 
 //loads in data about all moves
 d3.csv("/assets/data/moves.csv", function(data) {
@@ -26,9 +26,19 @@ d3.csv("/assets/data/pokemon_moves.csv", function(data) {
     }
 });
 
-//loads in data about pokémon's evolution chains
+//loads in data about pokémon's evolutions
 d3.csv("/assets/data/pokemon_evolution.csv", function(data) {
     evolutionData = data;
+});
+
+//loads in data about pokémon's evolution chains
+d3.csv("/assets/data/pokemon_species.csv", function(data) {
+    speciesData = data;
+    
+    var evolutions = getEvolutions(pokeID);
+    for (var i = 0; i < evolutions.length; i++) {
+        console.log(evolutions[i].evolved_species_id, evolutions[i].minimum_level);
+    }
 });
 
 
@@ -47,6 +57,34 @@ function getPokeMoves(id) {
 
 //returns the evolution chain of a pokémon based on its numerical id
 function getEvolutions(id) {
+    var speciesID;
+    
+    for (var i = 0; i < speciesData.length; i++) {
+        if (speciesData[i].id == id) {
+            speciesID = speciesData[i].evolution_chain_id;
+        }
+    }
+    
+    var evolutionIDs = new Array();
+    
+    for (var i = 0; i < speciesData.length; i++) {
+        if (speciesData[i].evolution_chain_id == speciesID) {
+            evolutionIDs.push(speciesData[i].id);
+        }
+    }
+    
+    var evolutions = new Array();
+    
+    for (var i = 0; i < evolutionData.length; i++) {
+        for (var j = 0; j < evolutionIDs.length; j++) {
+            if (evolutionData[i].evolved_species_id == evolutionIDs[j]) {
+                evolutions.push(evolutionData[i]);
+            }
+        }
+    }
+    
+    return evolutions;
+    
 }
 
 //returns the information about a move based on its numerical id
