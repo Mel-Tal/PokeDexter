@@ -1,16 +1,33 @@
 var margin = {top: 20, right: 300, bottom: 20, left: 30};
 var width = document.getElementById("timelineModule").offsetWidth;
 var height = 300;
+    
+var pokeID = pokemon.Number;
+var moveData, pokeMoveData, speciesData, evolutionData, triggerData;
 
+var xScale = d3.scale.linear()
+    .domain([0, 100])
+    .range([0, width]);
+var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+
+var yScale = d3.scale.linear()
+    .domain([0, 3])
+    .range([0, height]);
+var yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 var svg = d3.select("#timelineModule").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+svg.append("g")
+    .attr("class", "axis")
+    .call(xAxis);
     
-var pokeID = pokemon.Number;
-var moveData, pokeMoveData, speciesData, evolutionData;
+svg.append("g")
+    .attr("class", "axis")
+    .call(yAxis);
 
 //loads in data about all moves
 d3.csv("/assets/data/moves.csv", function(data) {
@@ -31,16 +48,20 @@ d3.csv("/assets/data/pokemon_evolution.csv", function(data) {
     evolutionData = data;
 });
 
+//loads in data about evolution triggers
+d3.csv("/assets/data/evolution_triggers.csv", function(data) {
+    triggerData = data;
+});
+
 //loads in data about pokémon's evolution chains
 d3.csv("/assets/data/pokemon_species.csv", function(data) {
     speciesData = data;
     
     var evolutions = getEvolutions(pokeID);
     for (var i = 0; i < evolutions.length; i++) {
-        console.log(evolutions[i].evolved_species_id, evolutions[i].minimum_level);
+        console.log(evolutions[i].evolved_species_id, evolutions[i].minimum_level, getEvolutionTrigger(evolutions[i].evolution_trigger_id));
     }
 });
-
 
 //returns the moveset of a pokémon based on its numerical id
 function getPokeMoves(id) {
@@ -85,6 +106,15 @@ function getEvolutions(id) {
     
     return evolutions;
     
+}
+
+//returns the evolution trigger text based on the trigger id
+function getEvolutionTrigger(id) {
+    for (var i = 0; i < triggerData.length; i++) {
+        if (triggerData[i].id == id) {
+            return triggerData[i].identifier;
+        }
+    }
 }
 
 //returns the information about a move based on its numerical id
