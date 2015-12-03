@@ -41,9 +41,9 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     
     // create a cell in each row for each column
     var newCells = new Array();
-   // for(var i = 0; i < 2; i++) test.push(pokeGroups[i]);
     newCells.push("");
     newCells.push("");
+
     var cells = rows.selectAll("td")
         .data(newCells)
         .enter()
@@ -53,9 +53,10 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
             .on("mouseover", function(d) {		
                 div.transition()		
                     .duration(200)		
-                    .style("opacity", .9);		
-                div.html(allInEggGroup(d));
+                    .style("opacity", .9);
+                div.html(allInEggGroup(this.innerHTML));
                 });
+
     var tableRows = d3.select("#breedingModule").select("table")[0][0].rows;
     for(var i = 1; i < tableRows.length; i++){
         var tempCells = tableRows[i].getElementsByTagName("td");
@@ -69,26 +70,33 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
 
 function getEggGroup(pokemon){
     var pokeGroups = new Array();
+
     for(var i = 0; i < eggGroupData.length; i++){
        if(eggGroupData[i].species == pokemon) pokeGroups.push(eggGroupData[i].egg_group);
    }
-   if(pokeGroups.length < 1) pokeGroups.push("unknown");
+
     return pokeGroups;
 }
 
 function updateEggs(){
     comparingPokemon = document.getElementById("eggGroupPokemon").value.toLowerCase();
+
     var table = d3.select("#breedingModule").select("table")[0][0],
             thead = table.tHead,
             tbody = table.tBody;
+
     var rows = table.rows;
+
     var groups = getEggGroup(comparingPokemon);
+
     rows[0].getElementsByTagName("th")[1].innerHTML = comparingPokemon;
+
     for(var i = 1; i < rows.length; i++){
         var tempCells = rows[i].getElementsByTagName("td");
         if(typeof groups[i - 1] != 'undefined') tempCells[1].innerHTML = groups[i - 1];
         else tempCells[1].innerHTML = "";
     }
+
     breedingOutcome(pokeName, comparingPokemon);
 }
 
@@ -96,6 +104,7 @@ function breedingOutcome(pokeA, pokeB){
     var pokeAEggGroup = getEggGroup(pokeA);
     var pokeBEggGroup = getEggGroup(pokeB);
     var breedingModuleText = document.getElementById("canBreedText");
+
     for(var i = 0; i < pokeAEggGroup.length; i++){
         for(var j = 0; j < pokeBEggGroup.length; j++){
             if(pokeAEggGroup[i] == pokeBEggGroup[j]){
@@ -105,16 +114,15 @@ function breedingOutcome(pokeA, pokeB){
             breedingModuleText.innerHTML = "These two Pokemon CANNOT breed."
         }
     }
-    //part of same egg group?
-    //not unown, Nidorina, Nidoqueen
-    //different genders...need to check this...?
 }
 
 function allInEggGroup(type){
     var allInGrp = new Array();
+
     for(var i = 0; i < eggGroupData.length; i++){
         if(eggGroupData[i].egg_group == type) allInGrp.push(eggGroupData[i].species);
     }
+
     return allInGrp;
 }
 
