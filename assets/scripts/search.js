@@ -1,9 +1,12 @@
 //on change in input, trigger filtration
+$("#search-input-scatter").on('input', function() {
+	var data = $("#search-input-scatter").val();
+	filterDotsByName(data);
+	validate(data);
+});
+
 $("#search-input").on('input', function() {
 	var data = $("#search-input").val();
-	if (location.href == "index.html") {
-		filterDotsByName(data);
-	}
 	validate(data);
 });
 
