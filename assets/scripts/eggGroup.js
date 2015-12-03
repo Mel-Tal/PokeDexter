@@ -9,6 +9,7 @@ var div = d3.select("body").append("div")
 d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
    eggGroupData = data;
     pokeName = pokemon.Name.toLowerCase();
+    pokeName = pokeName.split(" (")[0];
     pokeGroups = getEggGroup(pokeName);
     // render the table
     var table = d3.select("#breedingModule").append("table"),
@@ -71,6 +72,7 @@ function getEggGroup(pokemon){
     for(var i = 0; i < eggGroupData.length; i++){
        if(eggGroupData[i].species == pokemon) pokeGroups.push(eggGroupData[i].egg_group);
    }
+   if(pokeGroups.length < 1) pokeGroups.push("unknown");
     return pokeGroups;
 }
 
