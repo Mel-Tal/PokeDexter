@@ -53,9 +53,20 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
             .on("mouseover", function(d) {		
                 div.transition()		
                     .duration(200)		
-                    .style("opacity", .9);
-                div.html(allInEggGroup(this.innerHTML));
+                    .style("opacity", .9)
+                    .style("position", "absolute")
+                    .style("left", this.getBoundingClientRect().left + 350 + "px")
+                    .style("top", this.getBoundingClientRect().top + "px");
+                    var innerText = this.innerHTML;
+                div.html(function(d){
+                    var eggGrps = allInEggGroup(innerText);
+                    var eggGrpText = "";
+                    for(var i = 0; i < eggGrps.length; i++){
+                        eggGrpText += " " + eggGrps[i];
+                    }
+                    return eggGrpText;
                 });
+            });
 
     var tableRows = d3.select("#breedingModule").select("table")[0][0].rows;
     for(var i = 1; i < tableRows.length; i++){
