@@ -52,6 +52,13 @@ $("#search-input").autocomplete({
 	}
 });
 
+$("#search-input-scatter").autocomplete({
+	source: names,
+	select: function() {
+		$("#search-button").prop("disabled", false);
+	}
+});
+
 $("#eggGroupPokemon").autocomplete({
 	source: names
 });
