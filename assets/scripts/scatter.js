@@ -1,6 +1,11 @@
 var margin = {top: 20, right: 300, bottom: 20, left: 30};
 var width = document.getElementById("plot_container").offsetWidth;
-var height = width*.75;
+var height;
+if (width > 500) {
+    height = 500;
+} else {
+   height = .75 * width;  
+}
 
 console.log(width);
 console.log(height);
