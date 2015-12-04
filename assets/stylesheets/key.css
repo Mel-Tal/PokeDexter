@@ -22,34 +22,26 @@
 |__________________|
 */
 
-.navbar-header {
-    height: 60px;
-}
-
-.navbar-brand {
-    height: 100%;
-    padding: 5px;
-    padding-left: 15px;
-}
-
-.input-group .nav-search {
-    width: 250px;
-    float:right;
-}
-
-.nav-search {
-    padding: 5px;
-    padding-right: 15px;
-}
-
 .key {
-    font-size: 1.2em;
-    padding: 5px 0px 5px 0px;
-    margin: 10px 25px 10px 25px;
+    font-size: .9em;
+    padding: 2px 0px 2px 0px;
+    margin: 7px 25px 7px 25px;
     opacity: .75;
     color: #fff;
     border-radius: 7px;
     font-family: monospace;
+    text-align: center;
+    cursor: pointer;
+    background-color: #000;
+    color: #FFF;
+}
+
+.general {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: .05;
 }
 
 .ice {
@@ -108,48 +100,4 @@
 }
 .dragon {
     background-color: #6400E6;
-}
-
-.tooltip h1 {
-    margin: 5px 0px 5px 0px;
-    color:#000;
-    font-size: 1.2em;
-}
-
-.pokemon_image {
-    float:left;
-    width:50%;
-}
-
-.pokemon_info {
-    float:left;
-    padding-left: 25px;
-    width:50%;
-    height: 300px;
-}
-
-.pokemon_info h1 {
-    margin-top: 0px;
-}
-
-.pokemon_info h2 {
-    margin: 10px 0px 0px 15px;
-    text-align:left;
-    font-size: 1.5em;
-}
-
-.bar rect {
-  fill: steelblue;
-}
-
-.bar text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: middle;
-}
-
- bar.xText{
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: middle;
 }
