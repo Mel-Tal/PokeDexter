@@ -2,7 +2,7 @@
 	width: 46%;	
 	margin: 2%;
 	float: left;
-	background-color: #cccccc;
+	background-color: #aaaaaa;
 }
 
 .pokemon_image img {
@@ -28,11 +28,17 @@
 	margin-top: 10px;
 }
 
+#timelineModule {
+	margin-top: 20px;
+	height: 300px;
+}
+
 .bar {
-	fill: #202020;
+	fill: #aaaaaa;
 }
 
 .bar-text {
+	fill: #202020;
 	text-anchor: middle;
 	font-size: 12px;
 }

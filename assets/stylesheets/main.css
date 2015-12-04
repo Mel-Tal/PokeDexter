@@ -67,7 +67,7 @@ body {
 
 .axis path, .axis line {
 	fill: none;
-	stroke: #202020;
+	stroke: #cccccc;
 }
 
 .axis text {
@@ -81,7 +81,7 @@ body {
 	background: rgba(255, 255, 255, .9);
 	color: #202020;
 	border-radius: 20px;
-	border: solid #cccccc 6px;
+	border: solid #aaaaaa 6px;
 	position: absolute;
 	pointer-events: none;
 	text-align: left;
@@ -95,7 +95,7 @@ body {
 }
 
 .pokeImg {
-	border: solid #cccccc 5px;
+	border: solid #aaaaaa 5px;
 	max-height: 100px;
 	display: block;
 	margin: auto;
