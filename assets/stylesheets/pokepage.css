@@ -1,5 +1,5 @@
 .pokemon_image {
-	width: 46%;	
+	width: 46%;
 	margin: 2%;
 	float: left;
 	background-color: #aaaaaa;
@@ -89,4 +89,8 @@
 		left: 20px;
 		top: 17px;
 	}
+}
+
+#possible_moves {
+	margin-top: 10px;
 }

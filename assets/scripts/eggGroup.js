@@ -36,7 +36,7 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     toolDiv = d3.select("body").append("div")
     .attr("class", "pokeTooltip");
 
-    possibleMoves = d3.select("body").append("div").attr("class", "abilititesSection");
+    possibleMoves = document.getElementById('possible_moves');
 
     // create a cell in each row for each column
     var newCells = new Array();
@@ -74,11 +74,12 @@ function showPossibleAbilitites(pokeA, pokeB){
        if(eggGroupData[i].species_ability == pokeA) abilities.push(eggGroupData[i].ability);
        if(eggGroupData[i].species_ability == pokeB) abilities.push(eggGroupData[i].ability);
     }
-    var abilitiesStr = new Array("Possible Abilities: <br>");
+    var abilitiesStr = new Array("<li class='list-group-item'><strong>Possible Abilities: </strong><br>");
     for(var j = 0; j < abilities.length; j++){
         abilitiesStr += abilities[j] + "<br>";
     }
-    possibleMoves.html(abilitiesStr);
+    abilitiesStr += "</li>";
+    return abilitiesStr;
 }
 
 
@@ -111,8 +112,9 @@ function updateEggs(){
         else tempCells[1].innerHTML = "";
     }
 
-    breedingOutcome(pokeName, comparingPokemon);
-    showPossibleAbilitites(pokeName, comparingPokemon);
+    var row1 = breedingOutcome(pokeName, comparingPokemon);
+    var row2 = showPossibleAbilitites(pokeName, comparingPokemon);
+    possibleMoves.innerHTML = row1 + row2;
 }
 
 function breedingOutcome(pokeA, pokeB){
@@ -123,10 +125,9 @@ function breedingOutcome(pokeA, pokeB){
     for(var i = 0; i < pokeAEggGroup.length; i++){
         for(var j = 0; j < pokeBEggGroup.length; j++){
             if(pokeAEggGroup[i] == pokeBEggGroup[j]){
-                breedingModuleText.innerHTML = "These two Pokemon CAN breed!"
-                return;
+                return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
             }
-            breedingModuleText.innerHTML = "These two Pokemon CANNOT breed."
+            return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
         }
     }
 }
