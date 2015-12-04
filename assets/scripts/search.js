@@ -21,7 +21,7 @@ function filterDotsByName(input) {
 	.duration(200)
 	.delay(200)
 	.style("visibility", 'hidden');
-	
+
 	//returns pokemon whose names do start with the inputted text
 	svg.selectAll(".dot")
 	.filter(function(d) {
@@ -32,7 +32,7 @@ function filterDotsByName(input) {
 	.duration(200)
 	.delay(200)
 	.style("visibility", 'visible');
-	
+
 }
 
 //code borrowed from http://blog.miroslavpopovic.com/2012/06/23/jqueryui-autocomplete-filter-words-starting-with-term/
@@ -83,7 +83,7 @@ function inArray(val, arr) {
 	}
 	return false;
  }
- 
+
 //on search submit
 $("#search").submit(function (event) {
 	location.href = "pokemonPage.html";

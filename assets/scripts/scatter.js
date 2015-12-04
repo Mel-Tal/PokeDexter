@@ -126,7 +126,7 @@ function showAllDots() {
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
-        .style("opacity","1")
+        .style("visibility", 'visible');
 }
 
 function hideAllDots() {
@@ -137,7 +137,7 @@ function hideAllDots() {
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
-        .style("opacity","0")
+        .style("visibility", 'hidden');
 }
 
 function showType(t) {
@@ -149,8 +149,7 @@ function showType(t) {
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
-        .style("opacity","1")
-        .style("z-index","5")
+        .style("visibility", 'visible');
 }
 
 function hideType(t) {
@@ -162,7 +161,7 @@ function hideType(t) {
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
-        .style("opacity","0")
+        .style("visibility", 'hidden');
 }
 
 function updateData() {
