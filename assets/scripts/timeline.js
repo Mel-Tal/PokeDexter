@@ -75,8 +75,9 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                 var x = xMap(evolutions[i].minimum_level);
                 var y = (height - margin) / chain.length * (j - 1) + (.5 * ((height - margin) / chain.length));
                 
+                var evolution = evolutions[i];
                 svg.append("polygon")
-                    .attr("class", "timeline-evo")
+                    .attr("class", "timeline-evo " + "evo-" + i)
                     .attr("cx", x)
                     .attr("cy", y)
                     .attr("points", CalculateStarPoints(x, y, 5, 20, 10));
@@ -94,7 +95,17 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
             .attr("class", "timeline-text")
             .attr("x", 0)
             .attr("y", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
-            .text(getPokemonName(chain[i]));
+            .text(getPokemonStats(chain[i]).Name);
+            
+        svg.selectAll(".evo-0")   
+            .on("mouseover", function() {drawEvoTooltip(evolutions[0]);})
+            .on("mouseout", function() {hideEvoTooltip(evolutions[0]);})
+            .on("click", function() {viewPokemon(getPokemonStats(evolutions[0].evolved_species_id));});
+            
+        svg.selectAll(".evo-1")   
+            .on("mouseover", function() {drawEvoTooltip(evolutions[1]);})
+            .on("mouseout", function() {hideEvoTooltip(evolutions[1]);})
+            .on("click", function() {viewPokemon(getPokemonStats(evolutions[1].evolved_species_id));});
      }
     
     
@@ -119,6 +130,45 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
     
     });
 });
+
+// add the tooltip area to the webpage
+var evotooltip = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+
+function drawEvoTooltip(evolution) {
+    // show the tool tip
+    evotooltip.transition()
+        .duration(250)
+        .style("opacity", 1);
+     var pokemonStats = getPokemonStats(evolution.evolved_species_id);
+     if (pokemonStats["Type2"] != "none") {
+     evotooltip.html(
+        "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
+            "<h2> At level " + evolution.minimum_level + "</h2>" +
+            "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
+            "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + " / " + pokemonStats["Type2"] + "</p></span>"
+    ).style("left", (d3.event.pageX + 5) + "px")
+    .style("top", (d3.event.pageY - 28) + "px")
+     } else {
+         evotooltip.html(
+        "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
+            "<h2> At level " + evolution.minimum_level + "</h2>" +
+            "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
+            "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + "</p></span>"
+    ).style("left", (d3.event.pageX + 5) + "px")
+    .style("top", (d3.event.pageY - 28) + "px")
+     }
+}
+
+function hideEvoTooltip(evolution) {
+     // hide the tool tip
+    evotooltip.transition()
+        .duration(250)
+        .style("opacity", 0);
+}
+
 
 //code to draw star in svg borrowed from github gist https://gist.github.com/Dillie-O/4548290#file-gistfile1-js
 function CalculateStarPoints(x, y, arms, outer, inner) {
@@ -232,15 +282,14 @@ function getMoveData(id) {
     
 }
 
-//returns the pokemon's name based on its numerical id
-function getPokemonName(id) {
-    var name;
+
+//returns the pokemon's stats based on its numerical id
+function getPokemonStats(id) {
     for (var i = 0; i < nameData.length; i++) {
         if (nameData[i].Number == id) {
-            name = nameData[i].Name;
+           return nameData[i];
         }
     }
-    return name;
 }
 
 function orderIDSBasedOnChain(ids) {
@@ -265,4 +314,10 @@ function orderIDSBasedOnChain(ids) {
         }
     }
     return ids;
+}
+
+function viewPokemon(d) {
+        localStorage.setItem("storageJSON", JSON.stringify(d));
+        console.log(JSON.parse(localStorage.getItem("storageJSON")));
+        location.href = 'pokemonPage.html';
 }
