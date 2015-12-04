@@ -75,13 +75,15 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                 var x = xMap(evolutions[i].minimum_level);
                 var y = (height - margin) / chain.length * (j - 1) + (.5 * ((height - margin) / chain.length));
                 
-                var evolution = evolutions[i];
                 svg.append("polygon")
                     .attr("class", "timeline-evo " + "evo-" + i)
                     .attr("cx", x)
                     .attr("cy", y)
-                    .attr("points", CalculateStarPoints(x, y, 5, 20, 10));
-
+                    .attr("i", i)
+                    .attr("points", CalculateStarPoints(x, y, 5, 20, 10))
+                    .on("mouseover", function() {drawEvoTooltip(evolutions[this.getAttribute("i")]);})
+                    .on("mouseout", function() {hidetooltip();})
+                    .on("click", function() {viewPokemon(getPokemonStats(evolutions[this.getAttribute("i")].evolved_species_id));});
             }
         }
     }
@@ -96,17 +98,8 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
             .attr("x", 0)
             .attr("y", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
             .text(getPokemonStats(chain[i]).Name);
-            
-        svg.selectAll(".evo-0")   
-            .on("mouseover", function() {drawEvoTooltip(evolutions[0]);})
-            .on("mouseout", function() {hideEvoTooltip(evolutions[0]);})
-            .on("click", function() {viewPokemon(getPokemonStats(evolutions[0].evolved_species_id));});
-            
-        svg.selectAll(".evo-1")   
-            .on("mouseover", function() {drawEvoTooltip(evolutions[1]);})
-            .on("mouseout", function() {hideEvoTooltip(evolutions[1]);})
-            .on("click", function() {viewPokemon(getPokemonStats(evolutions[1].evolved_species_id));});
-     }
+        }
+    });
     
     
     //loads in data about individual pokémon's moves
@@ -119,32 +112,45 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
         
             for (var j = 0; j < moves.length; j++) {
                 
+                var move = moves[j];
+                var moveinfo = getMoveData(move.move_id);
+                var type = getType(moveinfo.type_id);
+                var level = move.level;
+                console.log(moveinfo.identifier, type, level);
                 //draws a circle at the level and evolutionary stage of the pokemon
                 svg.append("circle")
                     .attr("class", "timeline-move")
-                    .attr("cx", xMap(moves[j].level))
+                    .attr("i", i)
+                    .attr("j", j)
+                    .attr("cx", xMap(level))
                     .attr("cy", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
-                    .attr("fill", getTypeColor(getType(getMoveData(moves[j].move_id).type_id)));
+                    .attr("fill", getTypeColor(type))
+                    .on("mouseover", function() {
+                        var moves = getPokeMoves(chain[this.getAttribute('i')]);
+                        var move = moves[this.getAttribute('j')];
+                        var moveinfo = getMoveData(move.move_id);
+                        var type = getType(moveinfo.type_id);
+                        var level = move.level;
+                        drawMoveTooltip(moveinfo.identifier, type, level);});
             }
-    }});
-    
+        }
     });
 });
 
 // add the tooltip area to the webpage
-var evotooltip = d3.select("body").append("div")
+var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
 
 function drawEvoTooltip(evolution) {
     // show the tool tip
-    evotooltip.transition()
+    tooltip.transition()
         .duration(250)
         .style("opacity", 1);
      var pokemonStats = getPokemonStats(evolution.evolved_species_id);
      if (pokemonStats["Type2"] != "none") {
-     evotooltip.html(
+     tooltip.html(
         "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
             "<h2> At level " + evolution.minimum_level + "</h2>" +
             "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
@@ -152,7 +158,7 @@ function drawEvoTooltip(evolution) {
     ).style("left", (d3.event.pageX + 5) + "px")
     .style("top", (d3.event.pageY - 28) + "px")
      } else {
-         evotooltip.html(
+         tooltip.html(
         "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
             "<h2> At level " + evolution.minimum_level + "</h2>" +
             "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
@@ -162,13 +168,26 @@ function drawEvoTooltip(evolution) {
      }
 }
 
-function hideEvoTooltip(evolution) {
+function hidetooltip() {
      // hide the tool tip
-    evotooltip.transition()
+    tooltip.transition()
         .duration(250)
         .style("opacity", 0);
 }
 
+function drawMoveTooltip(movename, movetype, movelevel) {
+    // show the tool tip
+    tooltip.transition()
+        .duration(250)
+        .style("opacity", 1);
+        
+     tooltip.html(
+        "<div><h1> Learns " + movename + "</h1>" +
+            "<h2> At level " + movelevel + "</h2>" +
+            "<span style='display:inline;'><p>Type: " + movetype + "</p></span>"
+    ).style("left", (d3.event.pageX + 5) + "px")
+    .style("top", (d3.event.pageY - 28) + "px");
+ } 
 
 //code to draw star in svg borrowed from github gist https://gist.github.com/Dillie-O/4548290#file-gistfile1-js
 function CalculateStarPoints(x, y, arms, outer, inner) {
