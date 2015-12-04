@@ -4,8 +4,23 @@ var margin = 20;
 var evoKeyWidth = 160;
     
 var pokeID = pokemon.Number;
+pokeID = trimID(pokeID);
+console.log(pokeID);
 var nameData, moveData, pokeMoveData, speciesData, evolutionData, triggerData, types, contestTypes;
 
+function trimID(id) {
+    while (id.charAt(0) == 0){
+        id = id.substr(1, id.length - 1);
+    }
+    while (isLetter(id.charAt(id.length - 1))) {
+        id = id.substr(0, id.length - 1);
+    }
+    return id;
+}
+
+function isLetter(char) {
+    return (char.match(/[a-z]/i));
+}
 var xScale = d3.scale.linear()
     .domain([0, 100])
     .range([evoKeyWidth, width - margin]);
@@ -362,3 +377,4 @@ function viewPokemon(d) {
         console.log(JSON.parse(localStorage.getItem("storageJSON")));
         location.href = 'pokemonPage.html';
 }
+
