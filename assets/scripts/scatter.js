@@ -208,7 +208,7 @@ function updateData() {
       .attr("transform", "translate(0," + height + ")")
       .attr("fill", "white")
       .call(xAxis)
-	  .style("opacity", 0)
+	  .style("opacity", 1)
     .append("text")
       .attr("class", "label")
       .attr("x", width)
@@ -222,7 +222,7 @@ function updateData() {
       .attr("class", "y axis")
       .attr("fill", "white")
       .call(yAxis)
-	  .style("opacity", 0)
+	  .style("opacity", 1)
     .append("text")
       .attr("class", "label")
       .attr("transform", "rotate(-90)")
@@ -252,29 +252,40 @@ function updateData() {
                .style("opacity", .75);
 
           // fill to the tool tip with the appropriate data
-          tooltip.html("<strong>" + d["Name"] + "</strong><br/>"+document.getElementById("XAxis").value+ " " + xValue(d)
-          + "<br/>" + document.getElementById("YAxis").value + " " + yValue(d)  + "<br/>" + document.getElementById("dotSize").value + " " + sizeForCircle(d) / 0.1)
-               .style("left", (d3.event.pageX + 5) + "px")
-               .style("top", (d3.event.pageY - 28) + "px");
+          tooltip.html(
+                "<div style='width:252px;padding:5px;'><h1>" + d["Name"] + "</h1>" +
+                    "<span style='padding-left:22.5px'><img src='" + d["Image"] + "' height='75px' width='75px'></span>" +
+                    "<span style='display:inline;'><p>Type: " + d["Type1"] +
+                    "<br>Generation: " + d["Gen"] + "</span></p>" +
+                    "<div id='radar'</div>"
+            ).style("left", (d3.event.pageX + 5) + "px")
+            .style("top", (d3.event.pageY - 28) + "px")
+            .append("radar")
+            var radarD = [
+                [
+                    {axis:"HP",value:d["Health"]},
+                    {axis:"Attack",value:d["Attack"]},
+                    {axis:"Defense",value:d["Defense"]},
+                    {axis:"Speed",value:d["Speed"]},
+                    {axis:"Sp Attack",value:d["Sp. Attack"]},
+                    {axis:"Sp Defense",value:d["Sp. Defense"]}
+                ]];
 
-
-
-
-
-
-      })
-      .on("mouseout", function(d) {
-          // hide the tooltip
-          tooltip.transition()
-               .duration(500)
-               .style("opacity", 0);
-      })
-	  .on("click", function(d) {
-		localStorage.setItem("storageJSON", JSON.stringify(d));
-        console.log(JSON.parse(localStorage.getItem("storageJSON")));
-	  })
-	  svg.selectAll("g")
-	  .transition().duration(1000).style("opacity", 1);
+                RadarChart.draw("#radar", radarD);
+        })
+        .on("mouseout", function(d) {
+            // hide the tooltip
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        })
+	    .on("click", function(d) {
+            localStorage.setItem("storageJSON", JSON.stringify(d));
+            console.log(JSON.parse(localStorage.getItem("storageJSON")));
+            location.href = 'pokemonPage.html';
+	    })
+	  /*svg.selectAll("g")
+	  .transition().duration(1000).style("opacity", 1);*/
 	  svg.selectAll("circle")
 	  .transition().duration(1000).style("opacity", .75);
 	  })
