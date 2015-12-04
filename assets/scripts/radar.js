@@ -14,7 +14,7 @@ var RadarChart = {
 //        console.log(d);
 
         var cfg = {
-        	radius: 5,
+        	radius: 3,
         	w: 100,
         	h: 100,
         	factor: 1,
@@ -23,7 +23,7 @@ var RadarChart = {
         	maxValue: 0,
         	radians: 2 * Math.PI,
         	opacityArea: 0.5,
-        	ToRight: 5,
+        	ToRight: 0,
         	TranslateX: 65,
         	TranslateY: 30,
         	ExtraWidthX: 200,
@@ -39,7 +39,7 @@ var RadarChart = {
     	    }
     	}
 
-        cfg.maxValue = Math.max(cfg.maxValue, d3.max(d, function(i){return d3.max(i.map(function(o){return o.value;}))}));
+        cfg.maxValue = 250;
     	var allAxis = (d[0].map(function(i, j){return i.axis}));
     	var total = allAxis.length;
     	var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
@@ -85,7 +85,7 @@ var RadarChart = {
             .attr("y", function(d){return levelFactor*(1-cfg.factor*Math.cos(0));})
             .attr("class", "legend")
             .style("font-family", "sans-serif")
-            .style("font-size", "10px")
+            .style("font-size", "8px")
             .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
             .attr("fill", "#737373")
             .text(Format((j+1)*cfg.maxValue/cfg.levels));
@@ -112,12 +112,12 @@ var RadarChart = {
     		.attr("class", "legend")
     		.text(function(d){return d})
     		.style("font-family", "sans-serif")
-    		.style("font-size", "11px")
+    		.style("font-size", "10px")
     		.attr("text-anchor", "middle")
     		.attr("dy", "1.5em")
     		.attr("transform", function(d, i){return "translate(0, -10)"})
-    		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total);})
-    		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total);});
+    		.attr("x", function(d, i){return cfg.w/2*(1-(cfg.factorLegend)*Math.sin(i*cfg.radians/total))-60*.6*Math.sin(i*cfg.radians/total);})
+    		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*.6*Math.cos(i*cfg.radians/total);});
 
 
     	d.forEach(function(y, x){
@@ -136,7 +136,7 @@ var RadarChart = {
 			.enter()
 			.append("polygon")
 			.attr("class", "radar-chart-serie"+series)
-			.style("stroke-width", "2px")
+			.style("stroke-width", "1px")
 			.style("stroke", cfg.color(series))
 			.attr("points",function(d) {
     			var str="";
