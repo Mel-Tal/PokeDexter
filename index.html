@@ -79,57 +79,60 @@
                 </div>
             </div>
             <div class="col-lg-2">
+                <p>
+                    <h4>Edit Chart</h4>
+                    X Axis:
+                    <select id="XAxis" class="form-control" onchange="changeXAxis(this.value)">
+                        <option value="Attack">Attack</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Health">Health</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                    Y Axis:
+                    <select id="YAxis" class="form-control" onchange="changeYAxis(this.value)">
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Health">Health</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Attack">Attack</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                    Dot Radius:
+                    <select id="dotSize" class="form-control" onchange="changeRadius(this.value)">
+                        <option value="Health">Health</option>
+                        <option value="Defense">Defense</option>
+                        <option value="Sp. Attack">Sp. Attack</option>
+                        <option value="Sp. Defense">Sp. Defense</option>
+                        <option value="Attack">Attack</option>
+                        <option value="Speed">Speed</option>
+                    </select>
+                </p>
+                <div id="spacer"></div>
+                <h4>Show Types</h4>
+                <div class="key_toggle">
                     <div id="all" onClick="showAll()" class="key general">All</div>
                     <div id="none" onClick="showNone()" class="key general inactive">None</div>
-                    <div id="Bug" onClick="toggleType(this)" class="key bug">Bug</div>
-                    <div id="Dark" onClick="toggleType(this)" class="key dark">Dark</div>
-                    <div id="Dragon" onClick="toggleType(this)" class="key dragon">Dragon</div>
-                    <div id="Electric" onClick="toggleType(this)" class="key electric">Electric</div>
-                    <div id="Fighting"onClick="toggleType(this)"  class="key fighting">Fighting</div>
-                    <div id="Fire" onClick="toggleType(this)" class="key fire">Fire</div>
-                    <div id="Flying" onClick="toggleType(this)" class="key flying">Flying</div>
-                    <div id="Ghost" onClick="toggleType(this)" class="key ghost">Ghost</div>
-                    <div id="Grass" onClick="toggleType(this)" class="key grass">Grass</div>
-                    <div id="Ground" onClick="toggleType(this)" class="key ground">Ground</div>
-                    <div id="Ice" onClick="toggleType(this)" class="key ice">Ice</div>
-                    <div id="Normal" onClick="toggleType(this)" class="key normal">Normal</div>
-                    <div id="Poison" onClick="toggleType(this)" class="key poison">Poison</div>
-                    <div id="Psychic" onClick="toggleType(this)" class="key psychic">Psychic</div>
-                    <div id="Rock" onClick="toggleType(this)" class="key rock">Rock</div>
-                    <div id="Steel" onClick="toggleType(this)" class="key steel">Steel</div>
-                    <div id="Water" onClick="toggleType(this)" class="key water">Water</div>
+                </div>
+                <div id="Bug" onClick="toggleType(this)" class="key bug">Bug</div>
+                <div id="Dark" onClick="toggleType(this)" class="key dark">Dark</div>
+                <div id="Dragon" onClick="toggleType(this)" class="key dragon">Dragon</div>
+                <div id="Electric" onClick="toggleType(this)" class="key electric">Electric</div>
+                <div id="Fighting"onClick="toggleType(this)"  class="key fighting">Fighting</div>
+                <div id="Fire" onClick="toggleType(this)" class="key fire">Fire</div>
+                <div id="Flying" onClick="toggleType(this)" class="key flying">Flying</div>
+                <div id="Ghost" onClick="toggleType(this)" class="key ghost">Ghost</div>
+                <div id="Grass" onClick="toggleType(this)" class="key grass">Grass</div>
+                <div id="Ground" onClick="toggleType(this)" class="key ground">Ground</div>
+                <div id="Ice" onClick="toggleType(this)" class="key ice">Ice</div>
+                <div id="Normal" onClick="toggleType(this)" class="key normal">Normal</div>
+                <div id="Poison" onClick="toggleType(this)" class="key poison">Poison</div>
+                <div id="Psychic" onClick="toggleType(this)" class="key psychic">Psychic</div>
+                <div id="Rock" onClick="toggleType(this)" class="key rock">Rock</div>
+                <div id="Steel" onClick="toggleType(this)" class="key steel">Steel</div>
+                <div id="Water" onClick="toggleType(this)" class="key water">Water</div>
             </div>
-        </div>
-        <div class="row">
-            <p>
-                X Axis:
-                <select id="XAxis" onchange="changeXAxis(this.value)">
-                    <option value="Attack">Attack</option>
-                    <option value="Defense">Defense</option>
-                    <option value="Sp. Attack">Sp. Attack</option>
-                    <option value="Sp. Defense">Sp. Defense</option>
-                    <option value="Health">Health</option>
-                    <option value="Speed">Speed</option>
-                </select>
-                Y Axis:
-                <select id="YAxis" onchange="changeYAxis(this.value)">
-                    <option value="Sp. Attack">Sp. Attack</option>
-                    <option value="Defense">Defense</option>
-                    <option value="Health">Health</option>
-                    <option value="Sp. Defense">Sp. Defense</option>
-                    <option value="Attack">Attack</option>
-                    <option value="Speed">Speed</option>
-                </select>
-                Dot Radius:
-                <select id="dotSize" onchange="changeRadius(this.value)">
-                    <option value="Health">Health</option>
-                    <option value="Defense">Defense</option>
-                    <option value="Sp. Attack">Sp. Attack</option>
-                    <option value="Sp. Defense">Sp. Defense</option>
-                    <option value="Attack">Attack</option>
-                    <option value="Speed">Speed</option>
-                </select>
-            </p>
         </div>
     </div>
 </body>

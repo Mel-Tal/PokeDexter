@@ -105,3 +105,7 @@ body {
 	stroke: #aaaaaa;
 	stroke-width: 1;
 }
+
+#spacer {
+	height: 5px;
+}

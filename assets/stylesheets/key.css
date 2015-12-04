@@ -37,6 +37,11 @@
     transition: margin 1s, color 1s;
 }
 
+.inactive {
+    margin-left: 50px;
+    margin-right:50px;
+}
+
 .general {
     opacity: 1;
 }
@@ -235,7 +240,20 @@
    */color: #000;
 }
 
-.inactive {
-    margin-left: 50px;
-    margin-right:50px;
+#all {
+    float: left;
+    margin: 0px 0px 0px 25px;
+    padding: 2px 10px 2px 10px;
+    width:33%;
+}
+#none {
+    float:right;
+    margin: 0px 25px 0px 0px;
+    padding: 2px 15px 2px 15px;
+    width:33%;
+}
+
+.key_toggle {
+    height:22px;
+    margin: 7px 0px 7px 0px;
 }
