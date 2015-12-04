@@ -2,7 +2,7 @@ function barGraph() {
     console.log("Drawing bar graph");
     //Setting the size of our canvas
     var width = document.getElementById("bar_container").offsetWidth;
-    var height = 290;
+    var height = 160;
 
     console.log("h: " + height + ", w: " + width);
     //Creating our chart and grabbing attributes from ".chart" in header
@@ -13,28 +13,26 @@ function barGraph() {
 
     //Pulling data from JSON object
     var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
-    console.log(pokemon);
     var data = [{"key": "HP", "value": pokemon.Health},
                 {"key": "Attack", "value": pokemon.Attack},
                 {"key": "Defense", "value": pokemon.Defense},
-                //"key": "Sp Attack", "value": pokemon.Sp. Attack,
-                //"key": "Sp Defense", "value": pokemon.Sp. Defense,
+                {"key": "Sp Attack", "value": pokemon["Sp. Attack"]},
+                {"key": "Sp Defense", "value": pokemon["Sp. Defense"]},
                 {"key": "Speed", "value": pokemon.Speed}
             ];
-    console.log(data);
 
     //Set our scale domains
     var x = d3.scale.ordinal().rangeRoundBands([0, width*.95], .1);
-    var y = d3.scale.linear().range([height, 250]);
+    var y = d3.scale.linear().domain([0, 200]).range([height, 0]);
 
     x.domain(data.map(function(d) {return d.key; }));
-    y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
     //Grabbing data and binding it to the bars
     var bars = svg.selectAll("g")
         .data(data)
         .enter()
         .append("g")
+        .attr("class", "bar")
         .attr("transform", function(d) {return "translate(" + x(d.key) + ", 0)";});
 
     //Logging data to the console so we can make sure the data is bound
@@ -47,6 +45,7 @@ function barGraph() {
         .attr("width", x.rangeBand());
 
     bars.append("text")
+        .attr("class", "bar-text")
         .attr("x", x.rangeBand() / 2)
         .attr("y", height - 10)
         .text(function(d) {return d.key;});
@@ -57,6 +56,7 @@ function barGraph() {
         .text(function(d) {return d.value;});
 
     bars.append("title")
+        .attr("class", "bar-text")
         .text(function(d) {return d.value - 10;});
 
 }

@@ -23,3 +23,12 @@
 .pokemon_info h2 {
 	font-size: 16px;
 }
+
+.bar {
+	fill: #202020;
+}
+
+.bar-text {
+	fill: white;
+	text-anchor: middle;
+}
