@@ -28,7 +28,7 @@
     <div class="nav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a href="index.html"> 
+                <a href="index.html">
                 <svg class="large-dot">
                     <circle class="blue-dot"/>
                 </svg>
@@ -41,8 +41,8 @@
                 </svg>
                 <svg class="small-dot">
                     <circle class="green-dot"/>
-                </svg>   
-                <a href="index.html">           
+                </svg>
+                <a href="index.html">
                 <i class="back fa fa-arrow-left"></i>
                 </a>
                 <form id="search" class="nav-right" role="search">
@@ -74,13 +74,14 @@
             </div>
         </div>
         <div class="row">
-            <div id="timelineModule" class="col-md-12">               
+            <div id="timelineModule" class="col-md-12">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
+                <h2>Type Effectiveness</h2>
                 <div id="effectivenessModule" class="container-fluid">
-                    <select id="typeCompare" onchange="updateTypeCompare()">
+                    <select id="typeCompare" class="form-control" onchange="updateTypeCompare()">
                       <option value="Normal">Normal</option>
                       <option value="Fighting">Fighting</option>
                       <option value="Flying">Flying</option>
@@ -103,7 +104,8 @@
                 </div><br>
             </div>
             <div id="breedingModule" class="col-md-6">
-                <input id="eggGroupPokemon" type="text" name="eggGroupPokemon" onkeydown="if(event.keyCode == 13) { updateEggs(); }"><br><br>
+                <h2>Breeding</h2>
+                <input id="eggGroupPokemon" type="text" class="form-control" name="eggGroupPokemon" placeholder="Enter a Pokemon" onkeydown="if(event.keyCode == 13) { updateEggs(); }">
                     <p id="canBreedText"></p>
             </div>
         </div>

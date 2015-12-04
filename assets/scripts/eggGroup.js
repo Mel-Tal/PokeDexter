@@ -13,11 +13,11 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     var table = d3.select("#breedingModule").append("table"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
-
+    table.attr("class", "table");
     // append the header row
     thead.append("tr")
         .selectAll("th")
-        .data([pokeName, comparingPokemon])
+        .data([pokemon.Name + "'s Egg Groups", comparingPokemon])
         .enter()
         .append("th")
             .text(function(column) { return column; })
@@ -32,10 +32,10 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
         .enter()
         .append("tr")
 
-    
-    toolDiv = d3.select("body").append("div")	
+
+    toolDiv = d3.select("body").append("div")
     .attr("class", "pokeTooltip");
-    
+
     possibleMoves = d3.select("body").append("div").attr("class", "abilititesSection");
 
     // create a cell in each row for each column
@@ -49,9 +49,9 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
         .append("td")
         .attr("style", "font-family: Courier")
             .html(newCells[0])
-            .on("mouseover", function(d) {		
-                toolDiv.transition()		
-                    .duration(200)		
+            .on("mouseover", function(d) {
+                toolDiv.transition()
+                    .duration(200)
                     .style("opacity", 1)
                     .style("position", "absolute")
                     .style("left", this.getBoundingClientRect().left + 350 + "px")
@@ -74,9 +74,9 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
 
         if(typeof pokeGroups[i - 1] != 'undefined') tempCells[0].innerHTML = pokeGroups[i - 1];
         else tempCells[0].innerHTML = "";
-        
+
     }
-    
+
 });
 
 function testing(pokeA, pokeB){
@@ -121,7 +121,7 @@ function updateEggs(){
 
     var groups = getEggGroup(comparingPokemon);
 
-    rows[0].getElementsByTagName("th")[1].innerHTML = comparingPokemon;
+    rows[0].getElementsByTagName("th")[1].innerHTML = document.getElementById("eggGroupPokemon").value + "'s Egg Groups'";
 
     for(var i = 1; i < rows.length; i++){
         var tempCells = rows[i].getElementsByTagName("td");
@@ -158,4 +158,3 @@ function allInEggGroup(type){
 
     return allInGrp;
 }
-

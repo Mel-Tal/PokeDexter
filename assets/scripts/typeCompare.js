@@ -12,14 +12,14 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
         if(d.type != temp) categories.push(d.type);
         temp = d.type;
       });
-    
+
     affected = getAffectedCategories(categories, pokeType);
     affected.concat(getAffectedCategories(categories, selectVal));
 // render the table
     var table = d3.select("#effectivenessModule").append("table"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
-
+    table.attr("class", "table");
     // append the header row
     thead.append("tr")
         .selectAll("th")
@@ -67,7 +67,7 @@ function updateTypeCompare(){
 function getAffectedCategories(categories, pokemonType){
     var affectedCategories = new Array("");
     for(var i = 1; i < categories.length + 1; i++){
-        if(pokeData[(categories.indexOf(pokemonType) - 1)*18 + i - 1].damage_factor != 100) affectedCategories.push(categories[i-1]);   
+        if(pokeData[(categories.indexOf(pokemonType) - 1)*18 + i - 1].damage_factor != 100) affectedCategories.push(categories[i-1]);
     }
     return affectedCategories;
 }
