@@ -1,7 +1,7 @@
 function barGraph() {
     console.log("Drawing bar graph");
     //Setting the size of our canvas
-    var width = document.getElementById("bar_container").offsetWidth;
+    var width = document.getElementById("bar_container").offsetWidth - 30;
     var height = 220;
     var barheight = 180;
 
@@ -23,7 +23,7 @@ function barGraph() {
             ];
 
     //Set our scale domains
-    var x = d3.scale.ordinal().rangeRoundBands([0, width*.95], .1);
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
     var y = d3.scale.linear().domain([0, 255]).range([barheight, 0]);
 
     x.domain(data.map(function(d) {return d.key; }));

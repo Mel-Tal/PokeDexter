@@ -37,6 +37,12 @@
 	font-size: 12px;
 }
 
+@media (max-width: 480px) {
+	.bar-text {
+		font-size: 10px;
+	}
+}
+
 .white {
 	fill: white;
 }
