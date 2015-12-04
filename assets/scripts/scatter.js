@@ -1,8 +1,8 @@
 var margin = {top: 20, right: 300, bottom: 20, left: 30};
 var width = document.getElementById("plot_container").offsetWidth;
 var height;
-if (width > 500) {
-    height = 500;
+if (width > 600) {
+    height = 600;
 } else {
    height = .75 * width;  
 }
