@@ -111,7 +111,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
             tooltip.html(
                 "<div style='width:252px;padding:5px;'><h1>" + d["Name"] + "</h1>" +
                     "<span style='padding-left:22.5px'><img src='" + d["Image"] + "' height='75px' width='75px'></span>" +
-                    "<span style='display:inline;'><p>Type: " + d["Type1"] +
+                    "<span style='display:inline;'><p>Type: " + d["Type1"] + ", " + d["Type2"] +
                     "<br>Generation: " + d["Gen"] + "</span></p>" +
                     "<div id='radar'</div>"
             ).style("left", (d3.event.pageX + 5) + "px")
@@ -255,7 +255,7 @@ function updateData() {
           tooltip.html(
                 "<div style='width:252px;padding:5px;'><h1>" + d["Name"] + "</h1>" +
                     "<span style='padding-left:22.5px'><img src='" + d["Image"] + "' height='75px' width='75px'></span>" +
-                    "<span style='display:inline;'><p>Type: " + d["Type1"] +
+                    "<span style='display:inline;'><p>Type: " + d["Type1"] + ", " + d["Type2"] +
                     "<br>Generation: " + d["Gen"] + "</span></p>" +
                     "<div id='radar'</div>"
             ).style("left", (d3.event.pageX + 5) + "px")
