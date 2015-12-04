@@ -97,8 +97,14 @@ function renderPokemonInfo() {
     //console.log("Rendering Pokemon Info");
     var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
     //console.log(pokemon);
+    var typeText;
+    if (pokemon.Type2 != "none") {
+        typeText = "Type: " + pokemon.Type1 + " / " + pokemon.Type2;
+    } else {
+        typeText = "Type: " + pokemon.Type1;
+    }
     document.getElementById("name").innerHTML= pokemon.Name;
-    document.getElementById("type").innerHTML= "Type: " + pokemon.Type1;
+    document.getElementById("type").innerHTML= typeText ;
     document.getElementById("generation").innerHTML= "Generation: " + pokemon.Gen;
     document.getElementById("picture").innerHTML= "<img src=" + pokemon.Image + " width='200px'>";
 
