@@ -100,3 +100,8 @@ body {
 	display: block;
 	margin: auto;
 }
+
+.dot {
+	stroke: #aaaaaa;
+	stroke-width: 1;
+}
