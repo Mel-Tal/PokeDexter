@@ -1,61 +1,3 @@
-function drawBars(data) {
-
-  /**
-   * Play with the D3 filter method and understand how it works.
-   *
-   **/
-  svg.selectAll(".bar")
-      .data(data)
-      .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d.number); })
-      .attr("width", x.rangeBand())
-      .attr("y", function(d) { return y(d.gpa); })
-      .attr("height", function(d) { return height - y(d.gpa); });
-}
-
-function drawXAxis(){
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
-}
-
-function drawYAxis() {
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-      .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("GPA");
-}
-
-/**
- * Create a preprocessing filter method to remove data for
- * the letter B from the data set
- *
- **/
-function isTypeSelected(datum) {
-  // console.log("Is course " + datum.department + " " + datum.number + " in department " + dept + "?");
-  // console.log(datum.department != dept);
-  return true;
-}
-
-function filterType() {
-    console.log("Showing Only Department " + dept);
-    svg.selectAll(".bar")
-        .style("fill","steelblue")
-        .filter(function(d) { return isTypeSelected(d); })
-        .transition()
-        .duration(function(d) { return Math.random() * 1000; } )
-        .delay(function(d) { return d.Gen; })
-        .style("opacity","0");
-
-}
-
 /**
  * Supporting the onclick event, write a function that can filter data
  * using the already bound DOM elements, and change the bar's height back
@@ -162,6 +104,11 @@ function showNone() {
     document.getElementById("Rock").className = "key rock inactive";
     document.getElementById("Steel").className = "key steel inactive";
     document.getElementById("Water").className = "key water inactive";
+    // for (var t in hiddenTypes) {
+    //     hiddenTypes[t].hidden = true;
+    // }
+    // console.log(hiddenTypes);
+    hideAllDots();
 }
 
 function showAll() {
@@ -185,15 +132,20 @@ function showAll() {
     document.getElementById("Rock").className = "key rock";
     document.getElementById("Steel").className = "key steel";
     document.getElementById("Water").className = "key water";
+    // for (var t in hiddenTypes) {
+    //     hiddenTypes[t].hidden = false;
+    // }
+    //console.log(hiddenTypes);
+    showAllDots();
 }
 
 function toggleType(html) {
-    console.log(html.id);
+    //console.log(html.id);
     document.getElementById("all").className = "key general inactive";
     document.getElementById("none").className = "key general inactive";
     var element = document.getElementById(html.id);
     var classes = element.className.split(" ");
-    console.log(classes);
+    //console.log(classes);
     var newClass = "";
     var active = true;
     for (var c in classes) {
@@ -207,6 +159,6 @@ function toggleType(html) {
         newClass += "inactive";
     }
     element.className = newClass;
-    console.log(element.className);
-
+    //console.log(element.className);
+    filterAll();
 }

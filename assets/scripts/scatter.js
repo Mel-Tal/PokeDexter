@@ -103,7 +103,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
             tooltip.transition()
                 .duration(250)
                 .style("opacity", 1);
-                
+
             if (d.Type2 != "none") {
 
             // fill to the tool tip with the appropriate data
@@ -126,7 +126,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
             ).style("left", (d3.event.pageX + 5) + "px")
             .style("top", (d3.event.pageY - 28) + "px")
             .append("radar");
-                
+
             }
             var radarD = [
                 [
@@ -168,6 +168,38 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
     d3.select("body")
 		.append("p4")
 })
+
+function isTypeHidden(datum) {
+    console.log("Datum Types: 1-" + datum["Type1"] + " 2-" + datum["Type2"]);
+  for (var t in hiddenTypes) {
+      if ((hiddenTypes[t].type == datum["Type1"]) || (hiddenTypes[t].type == datum['Type2'])) {
+          console.log("Datum is " + hiddenTypes[t].type);
+          console.log("Datum hidden? " + hiddenTypes[t].hidden);
+          return hiddenTypes[t].hidden;
+      } else {
+          console.log("Datum is not " + hiddenTypes[t].type);
+      }
+
+  }
+  console.log("ERROR: Type not found");
+  return false;
+}
+
+function showAllDots() {
+    svg.selectAll(".dot")
+        .transition()
+        .duration(function(d) { return Math.random() * 1000; } )
+        .delay(function(d) { return d.Gen + 50; })
+        .style("opacity","1")
+}
+
+function hideAllDots() {
+    svg.selectAll(".dot")
+        .transition()
+        .duration(function(d) { return Math.random() * 1000; } )
+        .delay(function(d) { return d.Gen + 50; })
+        .style("opacity","0")
+}
 
 function filterType() {
 	svg.selectAll(".dot")
