@@ -1,13 +1,14 @@
 var width = document.getElementById("timelineModule").offsetWidth - 30;
 var height = 300;
-var margin = 30;
+var margin = 20;
+var evoKeyWidth = 120;
     
 var pokeID = pokemon.Number;
-var moveData, pokeMoveData, speciesData, evolutionData, triggerData;
+var nameData, moveData, pokeMoveData, speciesData, evolutionData, triggerData;
 
 var xScale = d3.scale.linear()
     .domain([0, 100])
-    .range([margin, width - margin]);
+    .range([evoKeyWidth, width - margin]);
 var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
 var yScale = d3.scale.ordinal()
@@ -24,14 +25,18 @@ svg.append("g")
     .call(xAxis)
     .attr("transform", "translate(0," + (height - 2 * margin) + ")");
     
-svg.append("g")
-    .attr("class", "axis")
-    .call(yAxis);
+
+//loads in data about pokemon names
+d3.csv("/assets/data/pokemon_stats.csv", function(data) {
+    nameData = data;
+});
+
 
 //loads in data about all moves
 d3.csv("/assets/data/moves.csv", function(data) {
     moveData = data;
 });
+
 
 //loads in data about individual pokémon's moves
 d3.csv("/assets/data/pokemon_moves.csv", function(data) {
@@ -56,9 +61,14 @@ d3.csv("/assets/data/evolution_triggers.csv", function(data) {
 d3.csv("/assets/data/pokemon_species.csv", function(data) {
     speciesData = data;
     
-    var evolutions = getEvolutions(pokeID);
-    for (var i = 0; i < evolutions.length; i++) {
-        console.log(evolutions[i].evolved_species_id, evolutions[i].minimum_level, getEvolutionTrigger(evolutions[i].evolution_trigger_id));
+    var chain = orderIDSBasedOnChain(getAllPokemonInChain(pokeID));
+    
+    for (var i = 0; i < chain.length; i++) {
+        svg.append("text")
+            .attr("class", "timeline-text")
+            .attr("x", 0)
+            .attr("y", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
+            .text(getPokemonName(chain[i]));
     }
 });
 
@@ -77,21 +87,8 @@ function getPokeMoves(id) {
 
 //returns the evolution chain of a pokémon based on its numerical id
 function getEvolutions(id) {
-    var speciesID;
-    
-    for (var i = 0; i < speciesData.length; i++) {
-        if (speciesData[i].id == id) {
-            speciesID = speciesData[i].evolution_chain_id;
-        }
-    }
-    
-    var evolutionIDs = new Array();
-    
-    for (var i = 0; i < speciesData.length; i++) {
-        if (speciesData[i].evolution_chain_id == speciesID) {
-            evolutionIDs.push(speciesData[i].id);
-        }
-    }
+
+    var evolutionIDs = getAllPokemonInChain(id);
     
     var evolutions = new Array();
     
@@ -116,6 +113,28 @@ function getEvolutionTrigger(id) {
     }
 }
 
+function getAllPokemonInChain(id){
+     var speciesID;
+    
+    for (var i = 0; i < speciesData.length; i++) {
+        if (speciesData[i].id == id) {
+            speciesID = speciesData[i].evolution_chain_id;
+        }
+    }
+    
+    var evolutionIDs = new Array();
+    
+    for (var i = 0; i < speciesData.length; i++) {
+        if (speciesData[i].evolution_chain_id == speciesID) {
+           evolutionIDs.push(speciesData[i].id);
+            
+        }
+    }
+    
+    return evolutionIDs;
+    
+}
+
 //returns the information about a move based on its numerical id
 function getMoveData(id) {
     var move;
@@ -126,4 +145,39 @@ function getMoveData(id) {
     }
     return move;
     
+}
+
+//returns the pokemon's name based on its numerical id
+function getPokemonName(id) {
+    var name;
+    for (var i = 0; i < nameData.length; i++) {
+        if (nameData[i].Number == id) {
+            name = nameData[i].Name;
+        }
+    }
+    return name;
+}
+
+function orderIDSBasedOnChain(ids) {
+    var expectedPrev = "";
+    for (var i = 0; i < ids.length; i++) {       
+        var prevPokemon;
+        for (var j = 0; j < speciesData.length; j++) {
+            if (ids[i] == speciesData[j].id) {
+                prevPokemon = speciesData[j].evolves_from_species_id;
+            }
+        }      
+        if (prevPokemon != expectedPrev) {
+            for (var k = 0; k < ids.length; k++) {
+                if (ids[k] == prevPokemon) {
+                    ids.splice(k, 1);
+                }
+            }
+            ids.splice(i, 0, prevPokemon);
+            expectedPrev = prevPokemon;
+        } else {
+            expectedPrev = ids[i];
+        }
+    }
+    return ids;
 }
