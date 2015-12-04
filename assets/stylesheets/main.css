@@ -75,3 +75,28 @@ body {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-size: 12px;
 }
+
+.tooltip {
+  	width: 250px;
+	background: rgba(255, 255, 255, .9);
+	color: #202020;
+	border-radius: 20px;
+	border: solid #cccccc 6px;
+	position: absolute;
+	pointer-events: none;
+	text-align: left;
+	padding: 10px;
+}
+
+.tooltip h1 {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.pokeImg {
+	border: solid #cccccc 5px;
+	max-height: 100px;
+	display: block;
+	margin: auto;
+}

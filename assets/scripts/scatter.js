@@ -57,20 +57,18 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
     });
 
     // don't want dots overlapping axis, so add in buffer to data domain
-    xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
-    yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
+    xScale.domain([0, 200]);
+    yScale.domain([0, 200]);
 
     // x-axis
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .attr("fill", "white")
         .call(xAxis)
     .append("text")
         .attr("class", "label")
         .attr("x", width)
         .attr("y", -6)
-        .attr("fill", "white")
         .style("text-anchor", "end")
         .text(document.getElementById("XAxis").value);
 
@@ -99,24 +97,37 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
         .style("fill", function(d) {
             return getTypeColor(d);
         })
-	    .style("opacity", .6)
         .on("mouseover", function(d) {
 
             // show the tool tip
             tooltip.transition()
                 .duration(250)
                 .style("opacity", 1);
+                
+            if (d.Type2 != "none") {
 
             // fill to the tool tip with the appropriate data
             tooltip.html(
-                "<div style='width:252px;padding:5px;'><h1>" + d["Name"] + "</h1>" +
-                    "<span style='padding-left:22.5px'><img src='" + d["Image"] + "' height='75px' width='75px'></span>" +
-                    "<span style='display:inline;'><p>Type: " + d["Type1"] + ", " + d["Type2"] +
+                "<div><h1>" + d["Name"] + "</h1>" +
+                    "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
+                    "<span style='display:inline;'><p>Type: " + d["Type1"] + " / " + d["Type2"] +
                     "<br>Generation: " + d["Gen"] + "</span></p>" +
                     "<div id='radar'</div>"
             ).style("left", (d3.event.pageX + 5) + "px")
             .style("top", (d3.event.pageY - 28) + "px")
-            .append("radar")
+            .append("radar");
+            } else {
+            tooltip.html(
+                "<div><h1>" + d["Name"] + "</h1>" +
+                    "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
+                    "<span style='display:inline;'><p>Type: " + d["Type1"] +
+                    "<br>Generation: " + d["Gen"] + "</span></p>" +
+                    "<div id='radar'</div>"
+            ).style("left", (d3.event.pageX + 5) + "px")
+            .style("top", (d3.event.pageY - 28) + "px")
+            .append("radar");
+                
+            }
             var radarD = [
                 [
                     {axis:"HP",value:d["Health"]},

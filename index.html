@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Document styling -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/stylesheets/styles.css">
-    <link rel="stylesheet" href="assets/stylesheets/style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
 </head>
 
 <!-- Document Scripts -->
@@ -21,14 +20,25 @@
            localStorage.setItem("storageJSON", defaultPokemonStr);
         }
     </script>
-    <nav class="navbar navbar-default">
+    <div class="nav">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img alt="Brand" src="logo.png" style="height:100%">
+                <a href="index.html"> 
+                <svg class="large-dot">
+                    <circle class="blue-dot"/>
+                </svg>
                 </a>
-                <form id="search-scatter" class="navbar-form navbar-right" role="search">
-                    <div class="input-group" style="padding: 20px; padding-right:10px;">
+                <svg class="small-dot">
+                    <circle class="red-dot"/>
+                </svg>
+                <svg class="small-dot">
+                    <circle class="yellow-dot"/>
+                </svg>
+                <svg class="small-dot">
+                    <circle class="green-dot"/>
+                </svg>   
+                <form id="search" class="nav-right" role="search">
+                    <div class="input-group">
                         <input id="search-input-scatter" type="text" class="form-control nav-search" placeholder="Search for a Pokémon">
                         <span class="input-group-btn">
                             <button id="search-button" class="btn btn-default" disabled type="submit">Go!</button>
@@ -37,15 +47,8 @@
                 </form>
             </div>
         </div>
-    </nav>
+    </div>
     <div class="container-fluid" style="padding-left: 35px; padding-right: 25px;">
-        <div class="row">
-            <div class="col-lg-9">
-                <h3 style="margin-top:0px;">Displaying ALL Pokemon</h3>
-            </div>
-            <div class="col-lg-3">
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-10" style="padding-right:50px">
                 <div id="plot_container" style="width:100%">
