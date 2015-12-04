@@ -50,15 +50,6 @@ h2 {
   float: left;
 }
 
-.infobox {
-	background: #fff;
-	color: #202020;
-	position: absolute;
-	padding: 10px
-	text-align: left;
-	opacity: .75;
-}
-
 .wrap {
   width: 1050px;
   margin: 0 auto 0;
@@ -90,7 +81,7 @@ td {
     text-align: center;
 }
 
-.pokeTooltip { 
+.pokeTooltip {
   background: #fff;
   color: #202020;
   border-radius: 5px;
@@ -98,7 +89,7 @@ td {
   text-align: left;
   opacity: .25;
   width: 252px;
-  height: 352; 
+  height: 352;
 }
 
 .abilititesSection {

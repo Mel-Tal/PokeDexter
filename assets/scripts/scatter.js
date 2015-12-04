@@ -36,19 +36,10 @@ var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-var infobox = d3.select("body").append("div")
-	.attr("class", "infobox")
-	.style("opacity", 0);
-
 
 
 // load data
 d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
-	data = data.filter(function(d){
-		if("All" == document.getElementById("TypeSelector").value) {return true}
-		else if(d["Type1"] != document.getElementById("TypeSelector").value && d["Type2"] != document.getElementById("TypeSelector").value) {return false}
-		return true;
-	});
     // change string (from CSV) into number format
     data.forEach(function(d) {
         d[document.getElementById("XAxis").value] = +d[document.getElementById("XAxis").value];
@@ -101,12 +92,6 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
         .on("mouseout", function(d) {hideTooltip(d);})
 	    .on("click", function(d) {viewPokemon(d)})
 
-	d3.select("body")
-		.append("p1")
-		.append("button")
-		//.on("click", filterType)
-		.text("Update Data")
-
 
 	d3.select("body")
 		.append("p2")
@@ -120,9 +105,6 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 
 function showAllDots() {
     svg.selectAll(".dot")
-        .on("mouseover", function(d) {drawTooltip(d);})
-        .on("mouseout", function(d) {hideTooltip(d);})
-        .on("click", function(d) {viewPokemon(d)})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
@@ -131,9 +113,6 @@ function showAllDots() {
 
 function hideAllDots() {
     svg.selectAll(".dot")
-        .on("mouseover", function(d) {doNothing();})
-        .on("mouseout", function(d) {doNothing();})
-        .on("click", function(d) {doNothing();})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
@@ -143,9 +122,6 @@ function hideAllDots() {
 function showType(t) {
     svg.selectAll(".dot")
         .filter(function(d) { return (d["Type1"] == t) || (d["Type2"] == t);})
-        .on("mouseover", function(d) {drawTooltip(d);})
-        .on("mouseout", function(d) {hideTooltip(d);})
-	    .on("click", function(d) {viewPokemon(d)})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
@@ -155,24 +131,45 @@ function showType(t) {
 function hideType(t) {
     svg.selectAll(".dot")
         .filter(function(d) { return (d["Type1"] == t) || (d["Type2"] == t);})
-        .on("mouseover", function(d) {doNothing();})
-        .on("mouseout", function(d) {doNothing();})
-        .on("click", function(d) {doNothing();})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
         .style("visibility", 'hidden');
 }
 
+function changeRadius(value) {
+    console.log(value);
+    svg.selectAll(".dot")
+        .transition()
+        .duration(function(d) { return Math.random() * 1000; } )
+        .delay(function(d) { return d.Gen + 50; })
+        .attr("r", function(d) {return Math.sqrt(0.8 * d[value]);})
+}
+
+// function changeXAxis(value) {
+//     console.log(value);
+//     svg.selectAll(".dot")
+//         .transition()
+//         .duration(function(d) { return Math.random() * 1000; } )
+//         .delay(function(d) { return d.Gen + 50; })
+//         .attr("cx", function(d) {return d[value];})
+// }
+//
+// function changeYAxis(value) {
+//     console.log(value);
+//     svg.selectAll("y axis")
+//         .
+//     svg.selectAll(".dot")
+//         .transition()
+//         .duration(function(d) { return Math.random() * 1000; } )
+//         .delay(function(d) { return d.Gen + 50; })
+//         .attr("cy", function(d) {return d[value];})
+// }
+
 function updateData() {
 	svg.selectAll(".dot").remove();
 	svg.selectAll("g").remove();
 	d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
-	data = data.filter(function(d){
-		if("All" == document.getElementById("TypeSelector").value) {return true}
-		else if(d["Type1"] != document.getElementById("TypeSelector").value && d["Type2"] != document.getElementById("TypeSelector").value) {return false}
-		return true;
-	});
   // change string (from CSV) into number format
   data.forEach(function(d) {
     d[document.getElementById("XAxis").value] = +d[document.getElementById("XAxis").value];
@@ -327,10 +324,6 @@ function viewPokemon(d) {
         localStorage.setItem("storageJSON", JSON.stringify(d));
         console.log(JSON.parse(localStorage.getItem("storageJSON")));
         location.href = 'pokemonPage.html';
-}
-
-function doNothing() {
-        var x;
 }
 
 ;

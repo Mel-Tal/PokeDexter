@@ -103,7 +103,7 @@
         <div class="row">
             <p>
                 X Axis:
-                <select id="XAxis">
+                <select id="XAxis" onchange="changeXAxis(this.value)">
                     <option value="Attack">Attack</option>
                     <option value="Defense">Defense</option>
                     <option value="Sp. Attack">Sp. Attack</option>
@@ -112,7 +112,7 @@
                     <option value="Speed">Speed</option>
                 </select>
                 Y Axis:
-                <select id="YAxis">
+                <select id="YAxis" onchange="changeYAxis(this.value)">
                     <option value="Sp. Attack">Sp. Attack</option>
                     <option value="Defense">Defense</option>
                     <option value="Health">Health</option>
@@ -121,35 +121,13 @@
                     <option value="Speed">Speed</option>
                 </select>
                 Dot Radius:
-                <select id="dotSize">
+                <select id="dotSize" onchange="changeRadius(this.value)">
                     <option value="Health">Health</option>
                     <option value="Defense">Defense</option>
                     <option value="Sp. Attack">Sp. Attack</option>
                     <option value="Sp. Defense">Sp. Defense</option>
                     <option value="Attack">Attack</option>
                     <option value="Speed">Speed</option>
-                </select>
-                Filter By Type:
-                <select id="TypeSelector">
-                    <option value="All">All</option>
-                    <option value="Fire">Fire</option>
-                    <option value="Water">Water</option>
-                    <option value="Grass">Grass</option>
-                    <option value="Electric">Electric</option>
-                    <option value="Ground">Ground</option>
-                    <option value="Normal">Normal</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Bug">Bug</option>
-                    <option value="Poison">Poison</option>
-                    <option value="Psychic">Psychic</option>
-                    <option value="Ghost">Ghost</option>
-                    <option value="Flying">Flying</option>
-                    <option value="Fighting">Fighting</option>
-                    <option value="Dark">Dark</option>
-                    <option value="Steel">Steel</option>
-                    <option value="Dragon">Dragon</option>
-                    <option value="Fairy">Fairy</option>
-                    <option value="Ice">Ice</option>
                 </select>
             </p>
         </div>

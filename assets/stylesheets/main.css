@@ -73,7 +73,7 @@ body {
 .axis text {
 	fill: #202020;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .tooltip {
