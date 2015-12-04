@@ -7,6 +7,7 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	padding: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -20,10 +21,10 @@ body {
 	float: right;
 	width: 60%;
 	margin: 13px;
-	
 }
 
 .large-dot {
+	margin-left: 10px;
 	width: 40px;
 	height: 60px;
 }

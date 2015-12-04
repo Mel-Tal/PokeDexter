@@ -1,0 +1,25 @@
+.pokemon_image {
+	width: 46%;	
+	margin: 2%;
+	float: left;
+	background-color: #cccccc;
+}
+
+.pokemon_image img {
+	width: 90%;
+	margin: 5%;
+}
+
+.pokemon_info {
+	width: 46%;
+	margin: 2%;
+	float: left;
+}
+
+.pokemon_info h1 {
+	font-size: 24px;
+}
+
+.pokemon_info h2 {
+	font-size: 16px;
+}
