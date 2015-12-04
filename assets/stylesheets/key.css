@@ -34,70 +34,208 @@
     cursor: pointer;
     background-color: #000;
     color: #FFF;
+    transition: margin 1s, color 1s;
 }
 
 .general {
     opacity: 1;
 }
 
-.inactive {
-    opacity: .05;
+#none {
+    margin-bottom: 20px;
+}
+
+.general.inactive {
+    background-color: rgba(0, 0, 0, 0.2);
+    /*border: 1px solid black;
+   */color: #000;
 }
 
 .ice {
-    background-color: #00FFFF;
-    color: #000;
+    background-color: rgba(0, 255, 255, 1);
+   color: #000;
 }
+
+.ice.inactive {
+    background-color: rgba(0, 255, 255, 0.2);
+    /*border: 1px solid rgba(0, 255, 255, 1);
+   */color: #000;
+}
+
 .fire {
     background-color: #FF0000;
 }
+
+.fire.inactive{
+    background-color: rgba(255, 0, 0, 0.2);
+    /*border: 1px solid #FF0000;
+   */color: #000;
+}
+
+
 .water {
     background-color: #0000FF;
 }
+
+.water.inactive {
+    background-color: rgba(0, 0, 255, 0.2);
+    /*border: 1px solid #0000FF;
+   */color: #000;
+}
+
 .grass {
     background-color: #00FF00;
 }
+
+.grass.inactive {
+    background-color: rgba(0, 255, 0, 0.2);
+    /*border: 1px solid #00FF00;
+   */color: #000;
+}
+
 .poison {
     background-color: #8B008B;
 }
+
+.poison.inactive {
+    background-color: rgba(139, 0, 139, 0.2);
+    /*border: 1px solid #8B008B;
+   */color: #000;
+}
+
 .ground {
     background-color: #DAA520;
 }
+
+.ground.inactive {
+    background-color: rgba(218, 165, 32, 0.2);
+    /*border: 1px solid #DAA520;
+   */color: #000;
+}
+
 .steel {
     background-color: #C0C0C0;
 }
+
+.steel.inactive {
+    background-color: rgba(192, 192, 192, 0.2);
+    /*border: 1px solid #C0C0C0;
+   */color: #000;
+}
+
 .psychic {
     background-color: #FF1493;
 }
+
+.psychic.inactive {
+    background-color: rgba(255, 20, 147, 0.2);
+    /*border: 1px solid #FF1493;
+   */color: #000;
+}
+
 .rock {
     background-color: #8B4513;
 }
-.fighting {
+
+.rock.inactive {
+    background-color: rgba(139, 69, 19, 0.2);
+    /*border: 1px solid #8B4513;
+   */color: #000;
+}
+
+.fight {
     background-color: #8B0000;
 }
+
+.fight.inactive {
+    background-color: rgba(139, 0, 0, 0.2);
+    /*border: 1px solid #8B0000;
+   */color: #000;
+}
+
 .flying {
     background-color: #9370DB;
 }
+
+.flying.inactive {
+    background-color: rgba(147, 112, 219, 0.2);
+    /*border: 1px solid #9370DB;
+   */color: #000;
+}
+
 .normal {
     background-color: #FFE4C4;
-    color: #000;
+   color: #000;
 }
+
+.normal.inactive {
+    background-color: rgba(255, 228, 196, 0.2);
+    /*border: 1px solid #FFE4C4;
+   */color: #000;
+}
+
 .bug {
     background-color: #9ACD32;
 }
+
+.bug.inactive {
+    background-color: rgba(154, 205, 50, 0.2);
+    /*border: 1px solid #9ACD32;
+   */color: #000;
+}
+
 .electric {
     background-color: #FFFF00;
-    color: #000;
+   color: #000;
 }
+
+.electric.inactive {
+    background-color: rgba(255, 255, 0, 0.2);
+    /*border: 1px solid #FFFF00;
+   */color: #000;
+}
+
 .ghost {
     background-color: #483D8B;
 }
+
+.ghost.inactive {
+    background-color: rgba(72, 61, 139, 0.2);
+    /*border: 1px solid #483D8B;
+   */color: #000;
+}
+
 .dark {
     background-color: #2F2F2F;
 }
+
+.dark.inactive {
+    background-color: rgba(47, 47, 47, 0.2);
+    /*border: 1px solid #2F2F2F;
+   */color: #000;
+}
+
 .fairy {
     background-color: #FFC0CB;
 }
+
+.fairy.inactive {
+    background-color: rgba(255, 192, 203, 0.2);
+    /*border: 1px solid #FFC0CB;
+   */color: #000;
+}
+
 .dragon {
     background-color: #6400E6;
+}
+
+.dragon.inactive {
+    background-color: rgba(100, 0, 230, 0.2);
+    /*border: 1px solid #6400E6;
+   */color: #000;
+}
+
+.inactive {
+    margin-left: 50px;
+    margin-right:50px;
 }

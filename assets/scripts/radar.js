@@ -11,7 +11,7 @@
 var RadarChart = {
     draw: function(id, d, options){
 
-        console.log(d);
+//        console.log(d);
 
         var cfg = {
         	radius: 5,

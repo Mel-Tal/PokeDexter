@@ -21,23 +21,23 @@
            localStorage.setItem("storageJSON", defaultPokemonStr);
         }
         var activeTypes = {
-            "normal":"true";
-            "bug":"true";
-            "fighting":"true";
-            "ghost":"true";
-            "electric":"true";
-            "flying":"true";
-            "steel":"true";
-            "psychic":"true";
-            "poison":"true";
-            "fire":"true";
-            "ice":"true";
-            "ground":"true";
-            "water":"true";
-            "dragon":"true";
-            "rock":"true";
-            "grass":"true";
-            "dark":"true";
+            "normal":"true",
+            "bug":"true",
+            "fighting":"true",
+            "ghost":"true",
+            "electric":"true",
+            "flying":"true",
+            "steel":"true",
+            "psychic":"true",
+            "poison":"true",
+            "fire":"true",
+            "ice":"true",
+            "ground":"true",
+            "water":"true",
+            "dragon":"true",
+            "rock":"true",
+            "grass":"true",
+            "dark":"true"
         }
     </script>
     <div class="nav">
@@ -76,25 +76,25 @@
                 </div>
             </div>
             <div class="col-lg-2">
-                    <div class="key general">All</div>
-                    <div class="key general inactive">None</div>
-                    <div class="key normal">Normal</div>
-                    <div class="key bug">Bug</div>
-                    <div class="key fight">Fight</div>
-                    <div class="key ghost">Ghost</div>
-                    <div class="key electric">Electric</div>
-                    <div class="key flying">Flying</div>
-                    <div class="key steel">Steel</div>
-                    <div class="key psychic">Psychic</div>
-                    <div class="key poison">Poison</div>
-                    <div class="key fire">Fire</div>
-                    <div class="key ice">Ice</div>
-                    <div class="key ground">Ground</div>
-                    <div class="key water">Water</div>
-                    <div class="key dragon">Dragon</div>
-                    <div class="key rock">Rock</div>
-                    <div class="key grass">Grass</div>
-                    <div class="key dark">Dark</div>
+                    <div id="all" onClick="showAll()" class="key general">All</div>
+                    <div id="none" onClick="showNone()" class="key general inactive">None</div>
+                    <div id="Bug" onClick="toggleType(this)" class="key bug">Bug</div>
+                    <div id="Dark" onClick="toggleType(this)" class="key dark">Dark</div>
+                    <div id="Dragon" onClick="toggleType(this)" class="key dragon">Dragon</div>
+                    <div id="Electric" onClick="toggleType(this)" class="key electric">Electric</div>
+                    <div id="Fight"onClick="toggleType(this)"  class="key fight">Fight</div>
+                    <div id="Fire" onClick="toggleType(this)" class="key fire">Fire</div>
+                    <div id="Flying" onClick="toggleType(this)" class="key flying">Flying</div>
+                    <div id="Ghost" onClick="toggleType(this)" class="key ghost">Ghost</div>
+                    <div id="Grass" onClick="toggleType(this)" class="key grass">Grass</div>
+                    <div id="Ground" onClick="toggleType(this)" class="key ground">Ground</div>
+                    <div id="Ice" onClick="toggleType(this)" class="key ice">Ice</div>
+                    <div id="Normal" onClick="toggleType(this)" class="key normal">Normal</div>
+                    <div id="Poison" onClick="toggleType(this)" class="key poison">Poison</div>
+                    <div id="Psychic" onClick="toggleType(this)" class="key psychic">Psychic</div>
+                    <div id="Rock" onClick="toggleType(this)" class="key rock">Rock</div>
+                    <div id="Steel" onClick="toggleType(this)" class="key steel">Steel</div>
+                    <div id="Water" onClick="toggleType(this)" class="key water">Water</div>
             </div>
         </div>
         <div class="row">

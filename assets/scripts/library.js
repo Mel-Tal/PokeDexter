@@ -140,3 +140,73 @@ function renderPokemonInfo() {
     document.getElementById("picture").innerHTML= "<img src=" + pokemon.Image + " width='200px'>";
 
 }
+
+function showNone() {
+    console.log("Show no types");
+    document.getElementById("all").className = "key general inactive";
+    document.getElementById("none").className = "key general";
+    document.getElementById("Bug").className = "key bug inactive";
+    document.getElementById("Dark").className = "key dark inactive";
+    document.getElementById("Dragon").className = "key dragon inactive";
+    document.getElementById("Electric").className = "key electric inactive";
+    document.getElementById("Fight").className = "key fight inactive";
+    document.getElementById("Fire").className = "key fire inactive";
+    document.getElementById("Flying").className = "key flying inactive";
+    document.getElementById("Ghost").className = "key ghost inactive";
+    document.getElementById("Grass").className = "key grass inactive";
+    document.getElementById("Ground").className = "key ground inactive";
+    document.getElementById("Ice").className = "key ice inactive";
+    document.getElementById("Normal").className = "key normal inactive";
+    document.getElementById("Poison").className = "key poison inactive";
+    document.getElementById("Psychic").className = "key psychic inactive";
+    document.getElementById("Rock").className = "key rock inactive";
+    document.getElementById("Steel").className = "key steel inactive";
+    document.getElementById("Water").className = "key water inactive";
+}
+
+function showAll() {
+    console.log("Show all types");
+    document.getElementById("all").className = "key general";
+    document.getElementById("none").className = "key general inactive";
+    document.getElementById("Bug").className = "key bug";
+    document.getElementById("Dark").className = "key dark";
+    document.getElementById("Dragon").className = "key dragon";
+    document.getElementById("Electric").className = "key electric";
+    document.getElementById("Fight").className = "key fight";
+    document.getElementById("Fire").className = "key fire";
+    document.getElementById("Flying").className = "key flying";
+    document.getElementById("Ghost").className = "key ghost";
+    document.getElementById("Grass").className = "key grass";
+    document.getElementById("Ground").className = "key ground";
+    document.getElementById("Ice").className = "key ice";
+    document.getElementById("Normal").className = "key normal";
+    document.getElementById("Poison").className = "key poison";
+    document.getElementById("Psychic").className = "key psychic";
+    document.getElementById("Rock").className = "key rock";
+    document.getElementById("Steel").className = "key steel";
+    document.getElementById("Water").className = "key water";
+}
+
+function toggleType(html) {
+    console.log(html.id);
+    document.getElementById("all").className = "key general inactive";
+    document.getElementById("none").className = "key general inactive";
+    var element = document.getElementById(html.id);
+    var classes = element.className.split(" ");
+    console.log(classes);
+    var newClass = "";
+    var active = true;
+    for (var c in classes) {
+        if (classes[c] == "inactive") {
+            active = false;
+        } else {
+            newClass += classes[c] + " ";
+        }
+    }
+    if (active) {
+        newClass += "inactive";
+    }
+    element.className = newClass;
+    console.log(element.className);
+
+}
