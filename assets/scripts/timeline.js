@@ -53,6 +53,38 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
     
     //gets all of the pokemon in the chain
     var chain = orderIDSBasedOnChain(getAllPokemonInChain(pokeID));
+    
+    var evolutions = getEvolutions(pokeID);
+    
+    for (var i = 0; i < chain.length; i++) {
+        //draw rectangle indicating current Pokemon
+                if (chain[i] == pokeID) {                      
+                    svg.append("rect")
+                        .attr("class", "current-timeline-pokemon")
+                        .attr("cx", 0)
+                        .attr("y", (height - margin) / chain.length * i + (.25 * ((height - margin) / chain.length)))
+                        .attr("width", width)
+                        .attr("height", (height - margin) / chain.length - 50);
+                }
+    }
+
+    for (var i = 0; i < evolutions.length; i++) {
+        for (var j = 0; j < chain.length; j++) {
+                
+            if (evolutions[i].evolved_species_id == chain[j]) {
+                var x = xMap(evolutions[i].minimum_level);
+                var y = (height - margin) / chain.length * (j - 1) + (.5 * ((height - margin) / chain.length));
+                
+                svg.append("polygon")
+                    .attr("class", "timeline-evo")
+                    .attr("cx", x)
+                    .attr("cy", y)
+                    .attr("points", CalculateStarPoints(x, y, 5, 20, 10));
+
+            }
+        }
+    }
+    
     //appends the names to the left
     //loads in data about pokemon names
     d3.csv("/assets/data/pokemon_stats.csv", function(data) {
@@ -70,23 +102,52 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
     d3.csv("/assets/data/pokemon_moves.csv", function(data) {
         pokeMoveData = data;
         
+        
         for (var i = 0; i < chain.length; i++) {
         var moves = getPokeMoves(chain[i]);
-        for (var j = 0; j < moves.length; j++) {
-            
-            svg.append("circle")
-                .attr("class", "timeline-move")
-                .attr("cx", xMap(moves[j].level))
-                .attr("cy", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
-                .attr("fill", getTypeColor(getType(getMoveData(moves[j].move_id).type_id)));
+        
+            for (var j = 0; j < moves.length; j++) {
+                
+                //draws a circle at the level and evolutionary stage of the pokemon
+                svg.append("circle")
+                    .attr("class", "timeline-move")
+                    .attr("cx", xMap(moves[j].level))
+                    .attr("cy", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
+                    .attr("fill", getTypeColor(getType(getMoveData(moves[j].move_id).type_id)));
             }
-        }
-    });
-    
+    }});
     
     });
 });
 
+//code to draw star in svg borrowed from github gist https://gist.github.com/Dillie-O/4548290#file-gistfile1-js
+function CalculateStarPoints(x, y, arms, outer, inner) {
+     var results = "";
+
+     var angle = Math.PI / arms;
+
+    for (var i = 0; i < 2 * arms; i++)
+    {
+        // Use outer or inner radius depending on what iteration we are in.
+        var r = (i & 1) == 0 ? outer: inner;
+        
+        var currX = x + Math.cos(i * angle) * r;
+        var currY = y + Math.sin(i * angle) * r;
+    
+        // Our first time we simply append the coordinates, subsequet times
+        // we append a ", " to distinguish each coordinate pair.
+        if (i == 0)
+        {
+            results = currX + "," + currY;
+        }
+        else
+        {
+            results += ", " + currX + "," + currY;
+        }
+    }
+    
+    return results;
+}
 //returns the moveset of a pokémon based on its numerical id
 function getPokeMoves(id) {
      var pokeMoves = new Array();
