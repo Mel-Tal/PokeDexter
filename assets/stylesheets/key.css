@@ -143,11 +143,11 @@
    */color: #000;
 }
 
-.fight {
+.fighting {
     background-color: #8B0000;
 }
 
-.fight.inactive {
+.fighting.inactive {
     background-color: rgba(139, 0, 0, 0.2);
     /*border: 1px solid #8B0000;
    */color: #000;

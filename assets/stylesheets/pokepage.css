@@ -28,10 +28,6 @@
 	margin-top: 10px;
 }
 
-#timelineModule {
-	margin-top: 20px;
-	height: 300px;
-}
 
 .bar {
 	fill: #aaaaaa;
@@ -47,6 +43,20 @@
 	.bar-text {
 		font-size: 10px;
 	}
+}
+
+
+#timelineModule {
+	margin-top: 20px;
+	height: 300px;
+}
+
+.timeline-text {
+	font-size: 12px;
+}
+
+.timeline-move {
+	r: 5px;
 }
 
 .white {

@@ -86,7 +86,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
         .attr("cx", xMap)
         .attr("cy", yMap)
         .style("fill", function(d) {
-            return getTypeColor(d);
+            return getTypeColor(d["Type1"]);
         })
         .on("mouseover", function(d) {drawTooltip(d);})
         .on("mouseout", function(d) {hideTooltip(d);})

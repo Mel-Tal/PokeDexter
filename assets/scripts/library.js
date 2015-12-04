@@ -15,62 +15,65 @@ function filterBars() {
       .attr("height", function(d) { return (height - y(d.frequency))/2; });
 }
 
-function getTypeColor(d) {
-    if (d["Type1"] == "Fire") {
+function getTypeColor(type) {
+    type = type.toUpperCase();
+    if (type == "FIRE") {
         return "#FF0000";
     }
-    else if (d["Type1"] == "Ice") {
+    else if (type == "ICE") {
         return "#00FFFF";
     }
-    else if (d["Type1"] == "Water") {
+    else if (type == "WATER") {
         return "#0000FF";
     }
-    else if (d["Type1"] == "Grass") {
+    else if (type == "GRASS") {
         return "#00FF00";
     }
-    else if (d["Type1"] == "Poison") {
+    else if (type == "POISON") {
         return "#8B008B";
     }
-    else if (d["Type1"] == "Ground") {
+    else if (type == "GROUND") {
         return "#DAA520";
     }
-    else if (d["Type1"] == "Steel") {
+    else if (type == "STEEL") {
         return "#C0C0C0";
     }
-    else if (d["Type1"] == "Psychic") {
+    else if (type == "PSYCHIC") {
         return "#FF1493";
     }
-    else if (d["Type1"] == "Rock") {
+    else if (type == "ROCK") {
         return "#8B4513";
     }
-    else if (d["Type1"] == "Fighting") {
+    else if (type == "FIGHTING") {
         return "#8B0000";
     }
-    else if (d["Type1"] == "Flying") {
+    else if (type == "FLYING") {
         return "#9370DB";
     }
-    else if (d["Type1"] == "Normal") {
+    else if (type == "NORMAL") {
         return "#FFE4C4";
     }
-    else if (d["Type1"] == "Bug") {
+    else if (type == "BUG") {
         return "#9ACD32";
     }
-    else if (d["Type1"] == "Electric") {
+    else if (type == "ELECTRIC") {
         return "#FFFF00";
     }
-    else if (d["Type1"] == "Ghost") {
+    else if (type == "GHOST") {
         return "#483D8B";
     }
-    else if (d["Type1"] == "Dark") {
+    else if (type == "DARK") {
         return "#2F2F2F";
     }
-    else if (d["Type1"] == "Fairy") {
+    else if (type == "FAIRY") {
         return "#FFC0CB";
     }
-    else if (d["Type1"] == "Dragon") {
+    else if (type == "DRAGON") {
         return "#6400E6";
     }
 }
+
+
 
 function renderPokemonInfo() {
     //console.log("Rendering Pokemon Info");
@@ -91,7 +94,7 @@ function showNone() {
     document.getElementById("Dark").className = "key dark inactive";
     document.getElementById("Dragon").className = "key dragon inactive";
     document.getElementById("Electric").className = "key electric inactive";
-    document.getElementById("Fight").className = "key fight inactive";
+    document.getElementById("Fighting").className = "key fighting inactive";
     document.getElementById("Fire").className = "key fire inactive";
     document.getElementById("Flying").className = "key flying inactive";
     document.getElementById("Ghost").className = "key ghost inactive";
@@ -119,7 +122,7 @@ function showAll() {
     document.getElementById("Dark").className = "key dark";
     document.getElementById("Dragon").className = "key dragon";
     document.getElementById("Electric").className = "key electric";
-    document.getElementById("Fight").className = "key fight";
+    document.getElementById("Fighting").className = "key fighting";
     document.getElementById("Fire").className = "key fire";
     document.getElementById("Flying").className = "key flying";
     document.getElementById("Ghost").className = "key ghost";
