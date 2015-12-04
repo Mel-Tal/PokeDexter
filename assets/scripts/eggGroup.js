@@ -36,7 +36,7 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     toolDiv = d3.select("body").append("div")	
     .attr("class", "pokeTooltip");
     
-    possibleMoves = d3.select("body").append("div").attr("class", "abilititesSection").html("test");
+    possibleMoves = d3.select("body").append("div").attr("class", "abilititesSection");
 
     // create a cell in each row for each column
     var newCells = new Array();
@@ -85,7 +85,7 @@ function showPossibleAbilitites(pokeA, pokeB){
        if(eggGroupData[i].species_ability == pokeA) abilities.push(eggGroupData[i].ability);
        if(eggGroupData[i].species_ability == pokeB) abilities.push(eggGroupData[i].ability);
     }
-    var abilitiesStr = new Array();
+    var abilitiesStr = new Array("Possible Abilities: <br>");
     for(var j = 0; j < abilities.length; j++){
         abilitiesStr += abilities[j] + "<br>";
     }
@@ -123,6 +123,7 @@ function updateEggs(){
     }
 
     breedingOutcome(pokeName, comparingPokemon);
+    showPossibleAbilitites(pokeName, comparingPokemon);
 }
 
 function breedingOutcome(pokeA, pokeB){
