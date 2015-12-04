@@ -4,7 +4,7 @@ var margin = 20;
 var evoKeyWidth = 160;
     
 var pokeID = pokemon.Number;
-var nameData, moveData, pokeMoveData, speciesData, evolutionData, triggerData, types;
+var nameData, moveData, pokeMoveData, speciesData, evolutionData, triggerData, types, contestTypes;
 
 var xScale = d3.scale.linear()
     .domain([0, 100])
@@ -47,14 +47,20 @@ d3.csv("/assets/data/types.csv", function(data) {
     types = data;
 });
 
+d3.csv("/assets/data/contest_types.csv", function(data) {
+    contestTypes = data;
+});
+
+var chain, evolutions;
+
 //loads in data about pokémon's evolution chains
 d3.csv("/assets/data/pokemon_species.csv", function(data) {
     speciesData = data;
     
     //gets all of the pokemon in the chain
-    var chain = orderIDSBasedOnChain(getAllPokemonInChain(pokeID));
+    chain = orderIDSBasedOnChain(getAllPokemonInChain(pokeID));
     
-    var evolutions = getEvolutions(pokeID);
+    evolutions = getEvolutions(pokeID);
     
     for (var i = 0; i < chain.length; i++) {
         //draw rectangle indicating current Pokemon
@@ -149,23 +155,19 @@ function drawEvoTooltip(evolution) {
         .duration(250)
         .style("opacity", 1);
      var pokemonStats = getPokemonStats(evolution.evolved_species_id);
+     var typeLine;
      if (pokemonStats["Type2"] != "none") {
+         typeLine = "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + " / " + pokemonStats["Type2"] + "</p></span>";
+     } else {
+         typeLine = "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + "</p></span>";
+     }
      tooltip.html(
         "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
             "<h2> At level " + evolution.minimum_level + "</h2>" +
             "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
-            "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + " / " + pokemonStats["Type2"] + "</p></span>"
+            typeLine
     ).style("left", (d3.event.pageX + 5) + "px")
-    .style("top", (d3.event.pageY - 28) + "px")
-     } else {
-         tooltip.html(
-        "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
-            "<h2> At level " + evolution.minimum_level + "</h2>" +
-            "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
-            "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + "</p></span>"
-    ).style("left", (d3.event.pageX + 5) + "px")
-    .style("top", (d3.event.pageY - 28) + "px")
-     }
+    .style("top", (d3.event.pageY - 28) + "px");
 }
 
 function hidetooltip() {
@@ -235,6 +237,14 @@ function getType(id) {
     for (var i = 0; i < types.length; i++) {
         if (id == types[i].id) {
             return types[i].identifier;
+        }
+    }
+}
+
+function getContestType(id) {
+    for (var i = 0; i < contestTypes.length; i++) {
+        if (id == contestTypes[i].id) {
+            return contestTypes[i].identifier;
         }
     }
 }

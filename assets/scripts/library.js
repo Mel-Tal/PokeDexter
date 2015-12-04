@@ -71,6 +71,24 @@ function getTypeColor(type) {
     else if (type == "DRAGON") {
         return "#6400E6";
     }
+    
+    //CONTEST TYPES
+    else if (type == "COOL") {
+        return "#AB221A";
+        
+    } 
+    else if (type == "BEAUTY") {
+        return "#2640C2";
+    }
+    else if (type == "SMART") {
+        return "#3D9444";
+    }
+    else if (type == "CUTE") {
+        return "#FF89CC";
+    }
+    else if (type == "TOUGH") {
+        return "#E5CB45";
+    }
 }
 
 
