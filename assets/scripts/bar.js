@@ -1,8 +1,9 @@
 function barGraph() {
     console.log("Drawing bar graph");
     //Setting the size of our canvas
-    var width = document.getElementById("bar_container").offsetWidth;
-    var height = 160;
+    var width = document.getElementById("bar_container").offsetWidth - 30;
+    var height = 220;
+    var barheight = 180;
 
     console.log("h: " + height + ", w: " + width);
     //Creating our chart and grabbing attributes from ".chart" in header
@@ -22,8 +23,8 @@ function barGraph() {
             ];
 
     //Set our scale domains
-    var x = d3.scale.ordinal().rangeRoundBands([0, width*.95], .1);
-    var y = d3.scale.linear().domain([0, 200]).range([height, 0]);
+    var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+    var y = d3.scale.linear().domain([0, 255]).range([barheight, 0]);
 
     x.domain(data.map(function(d) {return d.key; }));
 
@@ -40,19 +41,19 @@ function barGraph() {
 
     //Generating rectangle SVG elements for our data
     bars.append("rect")
-        .attr("y", function(d) {return y(d.value);})
-        .attr("height", function(d) { return height - y(d.value); })
+        .attr("y", function(d) {return height - barheight + y(d.value) - 20;})
+        .attr("height", function(d) { return barheight - y(d.value); })
         .attr("width", x.rangeBand());
 
     bars.append("text")
-        .attr("class", "bar-text white")
+        .attr("class", "bar-text")
         .attr("x", x.rangeBand() / 2)
-        .attr("y", height - 10)
+        .attr("y", height - 2)
         .text(function(d) {return d.key;});
 
     bars.append("text")
         .attr("class", "bar-text")
         .attr("x", x.rangeBand() / 2)
-        .attr("y", function(d) {return y(d.value) - 10;})
+        .attr("y", function(d) {return height - barheight + y(d.value) - 30;})
         .text(function(d) {return d.value;});
 }

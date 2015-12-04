@@ -57,8 +57,8 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
     });
 
     // don't want dots overlapping axis, so add in buffer to data domain
-    xScale.domain([0, 200]);
-    yScale.domain([0, 200]);
+    xScale.domain([0, d3.max(data, xValue)]);
+    yScale.domain([0, d3.max(data, yValue)]);
 
     // x-axis
     svg.append("g")
@@ -210,8 +210,8 @@ function updateData() {
   });
 
   // don't want dots overlapping axis, so add in buffer to data domain
-  xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
-  yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
+  xScale.domain([0, d3.max(data, xValue)]);
+  yScale.domain([0, d3.max(data, yValue)]);
 
   // x-axis
   svg.append("g")

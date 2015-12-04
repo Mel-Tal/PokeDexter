@@ -1,29 +1,28 @@
-var margin = {top: 20, right: 300, bottom: 20, left: 30};
-var width = document.getElementById("timelineModule").offsetWidth;
+var width = document.getElementById("timelineModule").offsetWidth - 30;
 var height = 300;
+var margin = 30;
     
 var pokeID = pokemon.Number;
 var moveData, pokeMoveData, speciesData, evolutionData, triggerData;
 
 var xScale = d3.scale.linear()
     .domain([0, 100])
-    .range([0, width]);
+    .range([margin, width - margin]);
 var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
-var yScale = d3.scale.linear()
+var yScale = d3.scale.ordinal()
     .domain([0, 3])
-    .range([0, height]);
-var yAxis = d3.svg.axis().scale(yScale).orient("left");
-
+    .range([margin, height - margin]);
+    
 var svg = d3.select("#timelineModule").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("width", width)
+    .attr("height", height)
+    .append("g");
 
 svg.append("g")
     .attr("class", "axis")
-    .call(xAxis);
+    .call(xAxis)
+    .attr("transform", "translate(0," + (height - 2 * margin) + ")");
     
 svg.append("g")
     .attr("class", "axis")
