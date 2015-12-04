@@ -97,65 +97,14 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
         .style("fill", function(d) {
             return getTypeColor(d);
         })
-        .on("mouseover", function(d) {
-
-            // show the tool tip
-            tooltip.transition()
-                .duration(250)
-                .style("opacity", 1);
-
-            if (d.Type2 != "none") {
-
-            // fill to the tool tip with the appropriate data
-            tooltip.html(
-                "<div><h1>" + d["Name"] + "</h1>" +
-                    "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
-                    "<span style='display:inline;'><p>Type: " + d["Type1"] + " / " + d["Type2"] +
-                    "<br>Generation: " + d["Gen"] + "</span></p>" +
-                    "<div id='radar'</div>"
-            ).style("left", (d3.event.pageX + 5) + "px")
-            .style("top", (d3.event.pageY - 28) + "px")
-            .append("radar");
-            } else {
-            tooltip.html(
-                "<div><h1>" + d["Name"] + "</h1>" +
-                    "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
-                    "<span style='display:inline;'><p>Type: " + d["Type1"] +
-                    "<br>Generation: " + d["Gen"] + "</span></p>" +
-                    "<div id='radar'</div>"
-            ).style("left", (d3.event.pageX + 5) + "px")
-            .style("top", (d3.event.pageY - 28) + "px")
-            .append("radar");
-
-            }
-            var radarD = [
-                [
-                    {axis:"HP",value:d["Health"]},
-                    {axis:"Attack",value:d["Attack"]},
-                    {axis:"Defense",value:d["Defense"]},
-                    {axis:"Speed",value:d["Speed"]},
-                    {axis:"Sp Attack",value:d["Sp. Attack"]},
-                    {axis:"Sp Defense",value:d["Sp. Defense"]}
-                ]];
-
-                RadarChart.draw("#radar", radarD);
-        })
-        .on("mouseout", function(d) {
-            // hide the tooltip
-            tooltip.transition()
-                .duration(500)
-                .style("opacity", 0);
-        })
-	    .on("click", function(d) {
-            localStorage.setItem("storageJSON", JSON.stringify(d));
-            console.log(JSON.parse(localStorage.getItem("storageJSON")));
-            location.href = 'pokemonPage.html';
-	    })
+        .on("mouseover", function(d) {drawTooltip(d);})
+        .on("mouseout", function(d) {hideTooltip(d);})
+	    .on("click", function(d) {viewPokemon(d)})
 
 	d3.select("body")
 		.append("p1")
 		.append("button")
-		.on("click", filterType)
+		//.on("click", filterType)
 		.text("Update Data")
 
 
@@ -169,24 +118,11 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
 		.append("p4")
 })
 
-function isTypeHidden(datum) {
-    console.log("Datum Types: 1-" + datum["Type1"] + " 2-" + datum["Type2"]);
-  for (var t in hiddenTypes) {
-      if ((hiddenTypes[t].type == datum["Type1"]) || (hiddenTypes[t].type == datum['Type2'])) {
-          console.log("Datum is " + hiddenTypes[t].type);
-          console.log("Datum hidden? " + hiddenTypes[t].hidden);
-          return hiddenTypes[t].hidden;
-      } else {
-          console.log("Datum is not " + hiddenTypes[t].type);
-      }
-
-  }
-  console.log("ERROR: Type not found");
-  return false;
-}
-
 function showAllDots() {
     svg.selectAll(".dot")
+        .on("mouseover", function(d) {drawTooltip(d);})
+        .on("mouseout", function(d) {hideTooltip(d);})
+        .on("click", function(d) {viewPokemon(d)})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
@@ -195,34 +131,38 @@ function showAllDots() {
 
 function hideAllDots() {
     svg.selectAll(".dot")
+        .on("mouseover", function(d) {doNothing();})
+        .on("mouseout", function(d) {doNothing();})
+        .on("click", function(d) {doNothing();})
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
         .delay(function(d) { return d.Gen + 50; })
         .style("opacity","0")
 }
 
-function filterType() {
-	svg.selectAll(".dot")
-	.filter(function(d) { return d["Type1"] != document.getElementById("TypeSelector").value
-		&& d["Type2"] != document.getElementById("TypeSelector").value})
-	.transition()
-	.duration(200)
-	.delay(200)
-	.style("opacity", 0)
-	svg.selectAll(".dot")
-	.filter(function(d) { return d["Type1"] == document.getElementById("TypeSelector").value
-		|| d["Type2"] == document.getElementById("TypeSelector").value})
-	.transition()
-	.duration(200)
-	.delay(200)
-	.style("opacity", 0.75)
-	svg.selectAll(".dot")
-	.filter(function(d) { return "All" == document.getElementById("TypeSelector").value})
-	.transition()
-	.duration(200)
-	.delay(200)
-	.style("opacity", 0.75)
-	updateData();
+function showType(t) {
+    svg.selectAll(".dot")
+        .filter(function(d) { return (d["Type1"] == t) || (d["Type2"] == t);})
+        .on("mouseover", function(d) {drawTooltip(d);})
+        .on("mouseout", function(d) {hideTooltip(d);})
+	    .on("click", function(d) {viewPokemon(d)})
+        .transition()
+        .duration(function(d) { return Math.random() * 1000; } )
+        .delay(function(d) { return d.Gen + 50; })
+        .style("opacity","1")
+        .style("z-index","5")
+}
+
+function hideType(t) {
+    svg.selectAll(".dot")
+        .filter(function(d) { return (d["Type1"] == t) || (d["Type2"] == t);})
+        .on("mouseover", function(d) {doNothing();})
+        .on("mouseout", function(d) {doNothing();})
+        .on("click", function(d) {doNothing();})
+        .transition()
+        .duration(function(d) { return Math.random() * 1000; } )
+        .delay(function(d) { return d.Gen + 50; })
+        .style("opacity","0")
 }
 
 function updateData() {
@@ -332,6 +272,66 @@ function updateData() {
 	  svg.selectAll("circle")
 	  .transition().duration(1000).style("opacity", .75);
 	  })
+}
+
+function drawTooltip(d) {
+    // show the tool tip
+    tooltip.transition()
+        .duration(250)
+        .style("opacity", 1);
+
+    if (d.Type2 != "none") {
+
+    // fill to the tool tip with the appropriate data
+    tooltip.html(
+        "<div><h1>" + d["Name"] + "</h1>" +
+            "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
+            "<span style='display:inline;'><p>Type: " + d["Type1"] + " / " + d["Type2"] +
+            "<br>Generation: " + d["Gen"] + "</span></p>" +
+            "<div id='radar'</div>"
+    ).style("left", (d3.event.pageX + 5) + "px")
+    .style("top", (d3.event.pageY - 28) + "px")
+    .append("radar");
+    } else {
+    tooltip.html(
+        "<div><h1>" + d["Name"] + "</h1>" +
+            "<span><img class='pokeImg' src='" + d["Image"] + "'></span>" +
+            "<span style='display:inline;'><p>Type: " + d["Type1"] +
+            "<br>Generation: " + d["Gen"] + "</span></p>" +
+            "<div id='radar'</div>"
+    ).style("left", (d3.event.pageX + 5) + "px")
+    .style("top", (d3.event.pageY - 28) + "px")
+    .append("radar");
+
+    }
+    var radarD = [
+        [
+            {axis:"HP",value:d["Health"]},
+            {axis:"Attack",value:d["Attack"]},
+            {axis:"Defense",value:d["Defense"]},
+            {axis:"Speed",value:d["Speed"]},
+            {axis:"Sp Attack",value:d["Sp. Attack"]},
+            {axis:"Sp Defense",value:d["Sp. Defense"]}
+        ]];
+
+        RadarChart.draw("#radar", radarD);
+}
+
+function hideTooltip(d) {
+    // hide the tooltip
+    tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
+}
+
+function viewPokemon(d) {
+        localStorage.setItem("storageJSON", JSON.stringify(d));
+        console.log(JSON.parse(localStorage.getItem("storageJSON")));
+        location.href = 'pokemonPage.html';
+}
+
+function doNothing() {
+        var x;
 }
 
 ;

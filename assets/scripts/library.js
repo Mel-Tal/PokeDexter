@@ -157,8 +157,10 @@ function toggleType(html) {
     }
     if (active) {
         newClass += "inactive";
+        hideType(html.id);
+    } else{
+        showType(html.id);
     }
     element.className = newClass;
     //console.log(element.className);
-    filterAll();
 }
