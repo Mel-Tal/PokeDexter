@@ -10,7 +10,7 @@ var xScale = d3.scale.linear()
     .range([0, width]);
 var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
-var yScale = d3.scale.linear()
+var yScale = d3.scale.ordinal()
     .domain([0, 3])
     .range([0, height]);
 var yAxis = d3.svg.axis().scale(yScale).orient("left");
