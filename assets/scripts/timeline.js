@@ -137,7 +137,8 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                         var moveinfo = getMoveData(move.move_id);
                         var type = getType(moveinfo.type_id);
                         var level = move.level;
-                        drawMoveTooltip(moveinfo.identifier, type, level);});
+                        drawMoveTooltip(moveinfo.identifier, type, level);})
+                   .on("mouseout", function() {hidetooltip();});
             }
         }
     });
