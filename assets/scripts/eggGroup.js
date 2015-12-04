@@ -1,10 +1,8 @@
 var eggGroupData;
 var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
 var pokeGroups;
-var comparingPokemon, pokeName;
+var comparingPokemon, pokeName, toolDiv, possibleMoves, pokeAbilities;
 
-var div = d3.select("body").append("div")	
-    .attr("class", "pokeTooltip");
 
 d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
    eggGroupData = data;
@@ -35,10 +33,11 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
         .append("tr")
 
     
-    var div = d3.select("body").append("div")	
-    .attr("class", "tooltip");
+    toolDiv = d3.select("body").append("div")	
+    .attr("class", "pokeTooltip");
     
-    
+    possibleMoves = d3.select("body").append("div").attr("class", "abilititesSection").html("test");
+
     // create a cell in each row for each column
     var newCells = new Array();
     newCells.push("");
@@ -51,18 +50,19 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
         .attr("style", "font-family: Courier")
             .html(newCells[0])
             .on("mouseover", function(d) {		
-                div.transition()		
+                toolDiv.transition()		
                     .duration(200)		
-                    .style("opacity", .9)
+                    .style("opacity", 1)
                     .style("position", "absolute")
                     .style("left", this.getBoundingClientRect().left + 350 + "px")
                     .style("top", this.getBoundingClientRect().top + "px");
-                    var innerText = this.innerHTML;
-                div.html(function(d){
+                var innerText = this.innerHTML;
+                toolDiv.html(function(d){
                     var eggGrps = allInEggGroup(innerText);
-                    var eggGrpText = "";
+                    var eggGrpText = '';
                     for(var i = 0; i < eggGrps.length; i++){
-                        eggGrpText += " " + eggGrps[i];
+                        var onclickStr = "showPossibleAbilitites('" + pokeName + "','" + eggGrps[i] + "')";
+                        eggGrpText += ' <a href="#" onclick=' + onclickStr + '>' + eggGrps[i] + "</a>";
                     }
                     return eggGrpText;
                 });
@@ -71,13 +71,27 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     var tableRows = d3.select("#breedingModule").select("table")[0][0].rows;
     for(var i = 1; i < tableRows.length; i++){
         var tempCells = tableRows[i].getElementsByTagName("td");
-        console.log(pokeGroups[i - 1]);
+
         if(typeof pokeGroups[i - 1] != 'undefined') tempCells[0].innerHTML = pokeGroups[i - 1];
         else tempCells[0].innerHTML = "";
         
     }
     
 });
+
+function showPossibleAbilitites(pokeA, pokeB){
+    var abilities = new Array();
+    for(var i = 0; i < eggGroupData.length; i++){
+       if(eggGroupData[i].species_ability == pokeA) abilities.push(eggGroupData[i].ability);
+       if(eggGroupData[i].species_ability == pokeB) abilities.push(eggGroupData[i].ability);
+    }
+    var abilitiesStr = new Array();
+    for(var j = 0; j < abilities.length; j++){
+        abilitiesStr += abilities[j] + "<br>";
+    }
+    possibleMoves.html(abilitiesStr);
+}
+
 
 function getEggGroup(pokemon){
     var pokeGroups = new Array();

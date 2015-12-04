@@ -90,14 +90,21 @@ td {
     text-align: center;
 }
 
-div.pokeTooltip { 
-    color: white;   
-    text-align: center;     
-    width: 60px;          
-    height: 28px;         
-    padding: 2px;       
-    font: 12px sans-serif;    
-    background: lightsteelblue; 
-    border: 0px;
-    border-radius: 8px;   
+.pokeTooltip { 
+  background: #fff;
+  color: #202020;
+  border-radius: 5px;
+  position: absolute;
+  text-align: left;
+  opacity: .25;
+  width: 252px;
+  height: 352; 
+}
+
+.abilititesSection {
+  background: white;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 1;
 }
