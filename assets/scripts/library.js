@@ -38,21 +38,21 @@ function drawYAxis() {
  * the letter B from the data set
  *
  **/
-function isNotDepartment(datum, dept) {
-  console.log("Is course " + datum.department + " " + datum.number + " in department " + dept + "?");
-  console.log(datum.department != dept);
-  return datum.department != dept;
+function isTypeSelected(datum) {
+  // console.log("Is course " + datum.department + " " + datum.number + " in department " + dept + "?");
+  // console.log(datum.department != dept);
+  return true;
 }
 
-function filterDept(dept) {
+function filterType() {
     console.log("Showing Only Department " + dept);
     svg.selectAll(".bar")
         .style("fill","steelblue")
-        .filter(function(d) { return isNotDepartment(d, dept); })
+        .filter(function(d) { return isTypeSelected(d); })
         .transition()
         .duration(function(d) { return Math.random() * 1000; } )
-        .delay(function(d) { return d.gpa; })
-        .style("fill","white");
+        .delay(function(d) { return d.Gen; })
+        .style("opacity","0");
 
 }
 
