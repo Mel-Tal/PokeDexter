@@ -29,6 +29,27 @@
 }
 
 .bar-text {
-	fill: white;
 	text-anchor: middle;
+	font-size: 12px;
+}
+
+.white {
+	fill: white;
+}
+.back {
+	color: white;
+	font-size: 24px !important;
+	position: absolute;
+	left: 34px;
+	top: 17px;
+}
+
+@media (max-width: 768px) {
+	.back {
+		color: white;
+		font-size: 24px !important;
+		position: absolute;
+		left: 20px;
+		top: 17px;
+	}
 }

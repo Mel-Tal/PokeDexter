@@ -45,18 +45,14 @@ function barGraph() {
         .attr("width", x.rangeBand());
 
     bars.append("text")
-        .attr("class", "bar-text")
+        .attr("class", "bar-text white")
         .attr("x", x.rangeBand() / 2)
         .attr("y", height - 10)
         .text(function(d) {return d.key;});
 
     bars.append("text")
+        .attr("class", "bar-text")
         .attr("x", x.rangeBand() / 2)
         .attr("y", function(d) {return y(d.value) - 10;})
         .text(function(d) {return d.value;});
-
-    bars.append("title")
-        .attr("class", "bar-text")
-        .text(function(d) {return d.value - 10;});
-
 }
