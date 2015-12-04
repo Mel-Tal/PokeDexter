@@ -61,6 +61,14 @@
 	stroke-width: 1.5;
 }
 
+.timeline-evo {
+	fill: #202020;
+}
+
+.current-timeline-pokemon {
+	fill: #cccccc;
+}
+
 
 .white {
 	fill: white;
