@@ -137,7 +137,7 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                         var moveinfo = getMoveData(move.move_id);
                         var type = getType(moveinfo.type_id);
                         var level = move.level;
-                        drawMoveTooltip(moveinfo.identifier, type, level);})
+                        drawMoveTooltip(moveinfo, moveinfo.identifier, type, level);})
                    .on("mouseout", function() {hidetooltip();});
             }
         }
@@ -162,9 +162,21 @@ function drawEvoTooltip(evolution) {
      } else {
          typeLine = "<span style='display:inline;'><p>Type: " + pokemonStats["Type1"] + "</p></span>";
      }
+     var levelText;
+        if (evolution.minimum_level != "") {
+            levelText = "<h2> At level " + evolution.minimum_level + "</h2>";
+        } else if (getEvolutionTrigger(evolution.evolution_trigger_id) == "level-up") {
+            levelText = "<h2> When level-up conditions are met </h2>";
+        } else if (getEvolutionTrigger(evolution.evolution_trigger_id) == "use-item") {
+            levelText = "<h2> When an item is used </h2>";
+        } else if (getEvolutionTrigger(evolution.evolution_trigger_id) == "trade") {
+            levelText = "<h2> When traded </h2>";
+        } else if (getEvolutionTrigger(evolution.evolution_trigger_id) == "shed") {
+            levelText = "<h2> When shed conditions are met </h2>";
+        }
      tooltip.html(
         "<div><h1> Evolves into " + pokemonStats.Name + "</h1>" +
-            "<h2> At level " + evolution.minimum_level + "</h2>" +
+            levelText +
             "<span><img class='pokeImg' src='" + pokemonStats.Image + "'></span>" +
             typeLine
     ).style("left", (d3.event.pageX + 5) + "px")
@@ -178,12 +190,11 @@ function hidetooltip() {
         .style("opacity", 0);
 }
 
-function drawMoveTooltip(movename, movetype, movelevel) {
+function drawMoveTooltip(movedata, movename, movetype, movelevel) {
     // show the tool tip
     tooltip.transition()
         .duration(250)
         .style("opacity", 1);
-        
      tooltip.html(
         "<div><h1> Learns " + movename + "</h1>" +
             "<h2> At level " + movelevel + "</h2>" +

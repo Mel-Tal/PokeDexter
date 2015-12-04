@@ -98,7 +98,7 @@
                                     var moveinfo = getMoveData(move.move_id);
                                     var type = getType(moveinfo.type_id);
                                     var level = move.level;
-                                    drawMoveTooltip(moveinfo.identifier, type, level);})
+                                    drawMoveTooltip(moveinfo, moveinfo.identifier, type, level);})
                                     .on("mouseout", function() {hidetooltip();});
                                
                          console.log("checked on");
@@ -119,7 +119,7 @@
                                     var moveinfo = getMoveData(move.move_id);
                                     var type = getContestType(moveinfo.contest_type_id);
                                     var level = move.level;
-                                    drawMoveTooltip(moveinfo.identifier, type, level);})
+                                    drawMoveTooltip(moveinfo, moveinfo.identifier, type, level);})
                                     .on("mouseout", function() {hidetooltip();});
                              
                              console.log("checked off");
