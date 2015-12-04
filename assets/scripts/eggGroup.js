@@ -61,7 +61,7 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
                     var eggGrps = allInEggGroup(innerText);
                     var eggGrpText = '';
                     for(var i = 0; i < eggGrps.length; i++){
-                        var onclickStr = "showPossibleAbilitites('" + pokeName + "','" + eggGrps[i] + "')";
+                        var onclickStr = "testing('" + eggGrps[i] + "','" + pokeName + "');";
                         eggGrpText += ' <a href="#" onclick=' + onclickStr + '>' + eggGrps[i] + "</a>";
                     }
                     return eggGrpText;
@@ -78,6 +78,13 @@ d3.csv("/assets/data/pokemon_egg_groups.csv", function(data){
     }
     
 });
+
+function testing(pokeA, pokeB){
+    document.getElementById('eggGroupPokemon').value = pokeA;
+    showPossibleAbilitites(pokeA, pokeB);
+    updateEggs();
+
+}
 
 function showPossibleAbilitites(pokeA, pokeB){
     var abilities = new Array();
