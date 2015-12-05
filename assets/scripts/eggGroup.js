@@ -113,8 +113,12 @@ function updateEggs(){
     }
 
     var row1 = breedingOutcome(pokeName, comparingPokemon);
-    var row2 = showPossibleAbilitites(pokeName, comparingPokemon);
-    possibleMoves.innerHTML = row1 + row2;
+    if (row1 == "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>") {
+        var row2 = showPossibleAbilitites(pokeName, comparingPokemon);
+        possibleMoves.innerHTML = row1 + row2;
+    } else {
+        possibleMoves.innerHTML = row1;
+    }
 }
 
 function breedingOutcome(pokeA, pokeB){
