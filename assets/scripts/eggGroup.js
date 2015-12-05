@@ -128,12 +128,13 @@ function breedingOutcome(pokeA, pokeB){
 
     for(var i = 0; i < pokeAEggGroup.length; i++){
         for(var j = 0; j < pokeBEggGroup.length; j++){
-            if(pokeAEggGroup[i] == pokeBEggGroup[j]){
+            if (pokeAEggGroup[i] == pokeBEggGroup[j]){
                 return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
             }
-            return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
         }
     }
+    
+    return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
 }
 
 function allInEggGroup(type){
