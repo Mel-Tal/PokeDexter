@@ -125,16 +125,17 @@ function breedingOutcome(pokeA, pokeB){
     var pokeAEggGroup = getEggGroup(pokeA);
     var pokeBEggGroup = getEggGroup(pokeB);
     var breedingModuleText = document.getElementById("canBreedText");
-
-    for(var i = 0; i < pokeAEggGroup.length; i++){
-        for(var j = 0; j < pokeBEggGroup.length; j++){
-            if (pokeAEggGroup[i] == pokeBEggGroup[j]){
-                return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
+    if(pokeAEggGroup != 'no-eggs' && pokeBEggGroup != 'no-eggs'){
+        for(var i = 0; i < pokeAEggGroup.length; i++){
+            for(var j = 0; j < pokeBEggGroup.length; j++){
+                if (pokeAEggGroup[i] == pokeBEggGroup[j]){
+                    return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
+                }
             }
         }
+    } else{
+        return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
     }
-    
-    return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
 }
 
 function allInEggGroup(type){
