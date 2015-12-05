@@ -133,9 +133,8 @@ function breedingOutcome(pokeA, pokeB){
                 }
             }
         }
-    } else{
-        return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
-    }
+    } 
+    return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
 }
 
 function allInEggGroup(type){
