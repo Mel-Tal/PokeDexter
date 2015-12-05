@@ -83,9 +83,9 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                     svg.append("rect")
                         .attr("class", "current-timeline-pokemon")
                         .attr("cx", 0)
-                        .attr("y", (height - margin) / chain.length * i + (.25 * ((height - margin) / chain.length)))
+                        .attr("y", (height - margin) / chain.length * i)
                         .attr("width", timelinewidth)
-                        .attr("height", (height - margin) / chain.length - 50);
+                        .attr("height", (height - margin) / chain.length);
                 }
     }
 
@@ -118,7 +118,11 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
             .attr("class", "timeline-text")
             .attr("x", 0)
             .attr("y", (height - margin) / chain.length * i + (.5 * ((height - margin) / chain.length)))
-            .text(getPokemonStats(chain[i]).Name);
+            .attr("i", i)
+            .text(getPokemonStats(chain[i]).Name)         
+            .on("click", function() {
+                 viewPokemon(getPokemonStats(chain[this.getAttribute("i")]));
+               });
         }
     });
     
