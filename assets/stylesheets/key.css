@@ -29,7 +29,7 @@
     opacity: .75;
     color: #fff;
     border-radius: 7px;
-    font-family: monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     cursor: pointer;
     background-color: #000;
@@ -57,18 +57,16 @@
 }
 
 .ice {
-    background-color: rgba(0, 255, 255, 1);
-   color: #000;
+    background-color: #00C9AA;
 }
 
 .ice.inactive {
     background-color: rgba(0, 255, 255, 0.2);
-    /*border: 1px solid rgba(0, 255, 255, 1);
-   */color: #000;
+    color: #000;
 }
 
 .fire {
-    background-color: #FF0000;
+    background-color: #CC0100;
 }
 
 .fire.inactive{
@@ -79,7 +77,7 @@
 
 
 .water {
-    background-color: #0000FF;
+    background-color: #2640C2;
 }
 
 .water.inactive {
@@ -89,7 +87,7 @@
 }
 
 .grass {
-    background-color: #00FF00;
+    background-color: #057D0A;
 }
 
 .grass.inactive {
@@ -99,7 +97,7 @@
 }
 
 .poison {
-    background-color: #8B008B;
+    background-color: #863D94;
 }
 
 .poison.inactive {
@@ -109,7 +107,7 @@
 }
 
 .ground {
-    background-color: #DAA520;
+    background-color: #A18138;
 }
 
 .ground.inactive {
@@ -119,7 +117,7 @@
 }
 
 .steel {
-    background-color: #C0C0C0;
+    background-color: #5B6B69;
 }
 
 .steel.inactive {
@@ -129,7 +127,7 @@
 }
 
 .psychic {
-    background-color: #FF1493;
+    background-color: #C74F9C;
 }
 
 .psychic.inactive {
@@ -139,7 +137,7 @@
 }
 
 .rock {
-    background-color: #8B4513;
+    background-color: #5C442A;
 }
 
 .rock.inactive {
@@ -149,7 +147,7 @@
 }
 
 .fighting {
-    background-color: #8B0000;
+    background-color: #5C281E;
 }
 
 .fighting.inactive {
@@ -159,7 +157,7 @@
 }
 
 .flying {
-    background-color: #9370DB;
+    background-color: #647DB8;
 }
 
 .flying.inactive {
@@ -169,7 +167,7 @@
 }
 
 .normal {
-    background-color: #FFE4C4;
+    background-color: #BDB196;
    color: #000;
 }
 
@@ -180,7 +178,7 @@
 }
 
 .bug {
-    background-color: #9ACD32;
+    background-color: #4E8513;
 }
 
 .bug.inactive {
@@ -190,7 +188,7 @@
 }
 
 .electric {
-    background-color: #FFFF00;
+    background-color: #E5CB45;
    color: #000;
 }
 
@@ -201,7 +199,7 @@
 }
 
 .ghost {
-    background-color: #483D8B;
+    background-color: #30226E;
 }
 
 .ghost.inactive {
@@ -221,21 +219,20 @@
 }
 
 .fairy {
-    background-color: #FFC0CB;
+    background-color: #FF7085;
 }
 
 .fairy.inactive {
-    background-color: rgba(255, 192, 203, 0.2);
-    /*border: 1px solid #FFC0CB;
-   */color: #000;
+    background-color: rgba(200, 60, 60, 0.2);
+    color: #000;
 }
 
 .dragon {
-    background-color: #6400E6;
+    background-color: #138572;
 }
 
 .dragon.inactive {
-    background-color: rgba(100, 0, 230, 0.2);
+    background-color: rgba(0, 50, 50, 0.2);
     /*border: 1px solid #6400E6;
    */color: #000;
 }

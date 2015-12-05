@@ -1,10 +1,9 @@
 var margin = {top: 20, right: 300, bottom: 20, left: 30};
 var width = document.getElementById("plot_container").offsetWidth;
-var height;
-if (width > 600) {
-    height = 600;
-} else {
-   height = .75 * width;  
+var height = .75 * width;  
+
+if (height > window.innerHeight - 100) {
+    height = window.innerHeight - 150;
 }
 
 console.log(width);
@@ -59,7 +58,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
     // x-axis
     svg.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(5," + height + ")")
         .call(xAxis)
     .append("text")
         .attr("class", "label")
@@ -73,6 +72,7 @@ d3.csv("assets/data/pokemon_stats.csv", function(error, data) {
     svg.append("g")
         .attr("class", "y axis")
         .attr("fill", "white")
+        .attr("transform", "translate(5, 0)")
         .call(yAxis)
     .append("text")
       .attr("class", "label")

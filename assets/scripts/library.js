@@ -18,73 +18,73 @@ function filterBars() {
 function getTypeColor(type) {
     type = type.toUpperCase();
     if (type == "FIRE") {
-        return "#FF0000";
+        return "#CC0100";
     }
     else if (type == "ICE") {
-        return "#00FFFF";
+        return "#00C9AA";
     }
     else if (type == "WATER") {
-        return "#0000FF";
+        return "#2640C2";
     }
     else if (type == "GRASS") {
-        return "#00FF00";
+        return "#057D0A";
     }
     else if (type == "POISON") {
-        return "#8B008B";
+        return "#863D94";
     }
     else if (type == "GROUND") {
-        return "#DAA520";
+        return "#A18138";
     }
     else if (type == "STEEL") {
-        return "#C0C0C0";
+        return "#5B6B69";
     }
     else if (type == "PSYCHIC") {
-        return "#FF1493";
+        return "#C74F9C";
     }
     else if (type == "ROCK") {
-        return "#8B4513";
+        return "#5C442A";
     }
     else if (type == "FIGHTING") {
-        return "#8B0000";
+        return "#5C281E";
     }
     else if (type == "FLYING") {
-        return "#9370DB";
+        return "#647DB8";
     }
     else if (type == "NORMAL") {
-        return "#FFE4C4";
+        return "#BDB196";
     }
     else if (type == "BUG") {
-        return "#9ACD32";
+        return "#4E8513";
     }
     else if (type == "ELECTRIC") {
-        return "#FFFF00";
+        return "#E5CB45";
     }
     else if (type == "GHOST") {
-        return "#483D8B";
+        return "#30226E";
     }
     else if (type == "DARK") {
         return "#2F2F2F";
     }
     else if (type == "FAIRY") {
-        return "#FFC0CB";
+        return "#FF7085";
     }
     else if (type == "DRAGON") {
-        return "#6400E6";
+        return "#138572";
     }
     
     //CONTEST TYPES
     else if (type == "COOL") {
-        return "#AB221A";
+        return "#CC0100";
         
     } 
     else if (type == "BEAUTY") {
-        return "#2640C2";
+        return "##2640C2";
     }
     else if (type == "SMART") {
-        return "#3D9444";
+        return "#057D0A";
     }
     else if (type == "CUTE") {
-        return "#FF89CC";
+        return "#FF7085";
     }
     else if (type == "TOUGH") {
         return "#E5CB45";
@@ -130,7 +130,8 @@ function showNone() {
     document.getElementById("Psychic").className = "key psychic inactive";
     document.getElementById("Rock").className = "key rock inactive";
     document.getElementById("Steel").className = "key steel inactive";
-    document.getElementById("Water").className = "key water inactive";
+    document.getElementById("Water").className = "key water inactive";  
+    document.getElementById("Fairy").className = "key fairy inactive";
     // for (var t in hiddenTypes) {
     //     hiddenTypes[t].hidden = true;
     // }
@@ -158,7 +159,8 @@ function showAll() {
     document.getElementById("Psychic").className = "key psychic";
     document.getElementById("Rock").className = "key rock";
     document.getElementById("Steel").className = "key steel";
-    document.getElementById("Water").className = "key water";
+    document.getElementById("Water").className = "key water";  
+    document.getElementById("Fairy").className = "key fairy";
     // for (var t in hiddenTypes) {
     //     hiddenTypes[t].hidden = false;
     // }
