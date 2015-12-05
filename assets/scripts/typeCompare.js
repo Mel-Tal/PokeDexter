@@ -1,20 +1,17 @@
 
-var pokeData, categories, selectVal, pokeType, affected;
+var width = document.getElementById("effectivenessModule").offsetWidth;
+
+var pokeData, typeNames, categories, selectVal, pokeType1, pokeType2, affected;
 d3.csv("assets/data/type_efficacy.csv", function(data) {
     pokeData = data;
-    selectVal = document.getElementById("typeCompare").value;
+    d3.csv("assets/data/types.csv", function(data) {
+    typeNames  = data;
     var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
-    pokeType = pokemon.Type1;
-    var temp = data[0].type;
-    categories = new Array("", temp);
-    var comparing = [pokeType, selectVal];
-    data.forEach(function(d) {
-        if(d.type != temp) categories.push(d.type);
-        temp = d.type;
-      });
+    pokeType1 = pokemon.Type1;
+    pokeType2 = pokemon.Type2;
 
-    affected = getAffectedCategories(categories, pokeType);
-    affected.concat(getAffectedCategories(categories, selectVal));
+    affected = getAffectedTypes(pokeType1, pokeType2);
+    
 // render the table
     var table = d3.select("#effectivenessModule").append("table"),
         thead = table.append("thead"),
@@ -22,31 +19,96 @@ d3.csv("assets/data/type_efficacy.csv", function(data) {
     table.attr("class", "table");
     // append the header row
     thead.append("tr")
-        .selectAll("th")
+        .selectAll("td")
         .data(affected)
         .enter()
-        .append("th")
-            .text(function(column) { return column; })
-            .attr("class", "th_n");
+        .append("td")      
+            .text(function(d) { return d; })          
+            .style("color", function(d) {return getTypeColor(d);});
     // create a row for each object in the data
-    var rows = tbody.selectAll("tr")
-        .data(comparing)
-        .enter()
-        .append("tr");
-
-    // create a cell in each row for each column
-    var cells = rows.selectAll("td")
-        .data(function(row) {
-            return affected.map(function(column) {
-                if(column === "") return {column: row, value: row};
-                else return {column: row, value: data[((categories.indexOf(row)-1) * 18) + categories.indexOf(column)].damage_factor/100 + "x"};
-            });
-        })
-        .enter()
+    var rows;
+    var t1rowData = getEfficacies(pokeType1, affected);
+    t1rowData[0] = pokeType1;
+    thead.append("tr")
+        .selectAll("td")
+        .data(t1rowData).enter()
         .append("td")
-        .attr("style", "font-family: Courier")
-            .html(function(d) { return d.value; });
+            .text(function(d) {
+                if (isType(d)) {
+                    return d;
+                } else {
+                    if (d / 100 == .5) {
+                        return "1/2X";
+                    } 
+                    return d / 100 + "X";
+                }
+                })
+            .style("color", function(d) {
+                if (isType(d)) {                        
+                    return getTypeColor(d);
+                } else {
+                    if (d == 200) {
+                        return "#18AB2C";
+                    }
+                    if (d == 100) {
+                        return "#aaaaaa";
+                    }
+                    if (d == 50) {
+                        return "#CF3D32";
+                    }
+                    if (d == 0) {
+                        return "#202020";
+                    }
+                }
+            });
+            
+    if (pokeType2 != "none") {      
+        var t2rowData = getEfficacies(pokeType2, affected);
+        t2rowData[0] = pokeType2;
+        thead.append("tr")
+            .selectAll("td")
+            .data(t2rowData).enter()
+                .append("td")
+                .text(function(d) {
+                    if (isType(d)) {
+                        return d;
+                    } else {
+                        if (d / 100 == .5) {
+                            return "1/2X";
+                        } 
+                        return d / 100 + "X";
+                    }})
+                .style("color", function(d) {
+                    if (isType(d)) {                        
+                        return getTypeColor(d);
+                    } else {
+                        if (d == 200) {
+                            return "#18AB2C";
+                        }
+                        if (d == 100) {
+                            return "#aaaaaa";
+                        }
+                        if (d == 50) {
+                            return "#CF3D32";
+                        }
+                        if (d == 0) {
+                            return "#202020";
+                        }
+                    }
+                });
+                    
+        }
+    
 });
+});
+
+function getEfficacies(type, types) {
+    var efficacies = new Array();
+    for (var i = 0; i < types.length; i++) {
+        efficacies.push(getTypeEfficacy(type, types[i]));
+    }
+    return efficacies;
+}
 
 
 function updateTypeCompare(){
@@ -65,9 +127,52 @@ function updateTypeCompare(){
 }
 
 function getAffectedCategories(categories, pokemonType){
-    var affectedCategories = new Array("");
+    var affectedCategories = new Array();
     for(var i = 1; i < categories.length + 1; i++){
         if(pokeData[(categories.indexOf(pokemonType) - 1)*18 + i - 1].damage_factor != 100) affectedCategories.push(categories[i-1]);
     }
     return affectedCategories;
+}
+
+
+function getAffectedTypes(t1, t2) {
+    var affectedTypes= new Array("");
+    for (var i = 0; i < pokeData.length; i++) {
+        if (pokeData[i].type == t1 || pokeData[i].type == t2) {
+            if (pokeData[i].damage_factor != 100) {
+                if ($.inArray(getTypeName(pokeData[i].target_type_id), affectedTypes) == -1) {
+                    affectedTypes.push(getTypeName(pokeData[i].target_type_id));
+                }
+            }
+        }
+    }
+    return affectedTypes;
+}
+
+function getTypeName(typeID) {
+    for (var i = 0; i < typeNames.length; i++) {
+        if (typeID == typeNames[i].id) {
+            return typeNames[i].identifier;
+        }
+    }
+}
+
+function getTypeEfficacy(t1, t2) {
+    for (var i = 0; i < pokeData.length; i++) {
+        if (pokeData[i].type == t1) {
+            if (getTypeName(pokeData[i].target_type_id) == t2) {
+                return pokeData[i].damage_factor;
+            }
+        }
+    }
+}
+
+function isType(str) {
+    str = str.toLowerCase();
+    for (var i = 0; i < typeNames.length; i++) {
+        if (str == typeNames[i].identifier) {
+            return true;
+        }
+    }
+    return false;
 }

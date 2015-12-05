@@ -1,11 +1,11 @@
-var width = document.getElementById("timelineModule").offsetWidth - 30;
+var timelinewidth = document.getElementById("timelineModule").offsetWidth - 30;
 var height = 300;
 var margin = 20;
 var evoKeyWidth = 160;
-    
+
+var pokemon = JSON.parse(localStorage.getItem("storageJSON"));
 var pokeID = pokemon.Number;
 pokeID = trimID(pokeID);
-console.log(pokeID);
 var nameData, moveData, pokeMoveData, speciesData, evolutionData, triggerData, types, contestTypes;
 
 function trimID(id) {
@@ -23,7 +23,7 @@ function isLetter(char) {
 }
 var xScale = d3.scale.linear()
     .domain([0, 100])
-    .range([evoKeyWidth, width - margin]);
+    .range([evoKeyWidth, timelinewidth - margin]);
 var xMap = function(d) { return xScale(d);} // data -> display
 var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
@@ -32,7 +32,7 @@ var yScale = d3.scale.ordinal()
     .range([margin, height - margin]);
     
 var svg = d3.select("#timelineModule").append("svg")
-    .attr("width", width)
+    .attr("width", timelinewidth)
     .attr("height", height)
     .append("g");
 
@@ -84,7 +84,7 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                         .attr("class", "current-timeline-pokemon")
                         .attr("cx", 0)
                         .attr("y", (height - margin) / chain.length * i + (.25 * ((height - margin) / chain.length)))
-                        .attr("width", width)
+                        .attr("width", timelinewidth)
                         .attr("height", (height - margin) / chain.length - 50);
                 }
     }
@@ -137,7 +137,6 @@ d3.csv("/assets/data/pokemon_species.csv", function(data) {
                 var moveinfo = getMoveData(move.move_id);
                 var type = getType(moveinfo.type_id);
                 var level = move.level;
-                console.log(moveinfo.identifier, type, level);
                 //draws a circle at the level and evolutionary stage of the pokemon
                 svg.append("circle")
                     .attr("class", "timeline-move")
