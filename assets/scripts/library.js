@@ -78,7 +78,7 @@ function getTypeColor(type) {
         
     } 
     else if (type == "BEAUTY") {
-        return "##2640C2";
+        return "#2640C2";
     }
     else if (type == "SMART") {
         return "#057D0A";
