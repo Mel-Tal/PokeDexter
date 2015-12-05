@@ -71,8 +71,8 @@ function testing(pokeA, pokeB){
 function showPossibleAbilitites(pokeA, pokeB){
     var abilities = new Array();
     for(var i = 0; i < eggGroupData.length; i++){
-       if(eggGroupData[i].species_ability == pokeA) abilities.push(eggGroupData[i].ability);
-       if(eggGroupData[i].species_ability == pokeB) abilities.push(eggGroupData[i].ability);
+       if(eggGroupData[i].species_ability == pokeA && abilities.indexOf(eggGroupData[i].ability) < 0) abilities.push(eggGroupData[i].ability);
+       if(eggGroupData[i].species_ability == pokeB && abilities.indexOf(eggGroupData[i].ability) < 0) abilities.push(eggGroupData[i].ability);
     }
     var abilitiesStr = new Array("<li class='list-group-item'><strong>Possible Abilities: </strong><br>");
     for(var j = 0; j < abilities.length; j++){
