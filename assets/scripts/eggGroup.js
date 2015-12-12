@@ -134,6 +134,12 @@ function breedingOutcome(pokeA, pokeB){
             }
         }
     } 
+	if (pokeAEggGroup == 'ditto' && pokeBEggGroup != 'ditto' && pokeBEggGroup != 'no-eggs') {
+		return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
+	}
+	if (pokeAEggGroup != 'no-eggs' && pokeAEggGroup != 'ditto' && pokeBEggGroup == 'ditto') {
+		return "<li class='list-group-item list-group-item-success'>These two Pokemon CAN breed.</li>";
+	}
     return "<li class='list-group-item list-group-item-danger'>These two Pokemon CANNOT breed.</li>";
 }
 
