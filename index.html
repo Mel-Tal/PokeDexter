@@ -133,6 +133,18 @@
                 <div id="Steel" onClick="toggleType(this)" class="key steel">Steel</div>
                 <div id="Water" onClick="toggleType(this)" class="key water">Water</div>
                 <div id="Fairy" onClick="toggleType(this)" class="key fairy">Fairy</div>
+				<div id="spacer"></div>
+			   <p>
+					<h4> Select Generation </h4>
+					<select id="Generation" class="form-control" onchange="updateGen(this.value)">
+                        <option value="6">Generation 6 </option>
+                        <option value="5">Generation 5</option>
+                        <option value="4">Generation 4</option>
+                        <option value="3">Generation 3</option>
+                        <option value="2">Generation 2</option>
+                        <option value="1">Generation 1</option>
+					</select>
+				</p>
             </div>
         </div>
     </div>

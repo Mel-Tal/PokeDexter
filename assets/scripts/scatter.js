@@ -173,6 +173,29 @@ function changeYAxis(value) {
         .attr("cy", function(d) {return yScale(d[value]);})
 }
 
+function showGen(g) {
+	svg.selectAll(".dot")
+	.filter (function(d) { return (d["Gen"] <= g);})
+	.transition()
+    .duration(function(d) { return Math.random() * 1000; } )
+    .delay(function(d) { return d.Gen + 50; })
+	.style("visibility", 'visible');
+}
+
+function hideGen(g) {
+	svg.selectAll(".dot")
+	.filter (function(d) { return (d["Gen"] > g);})
+	.transition()
+	.duration(function(d) { return Math.random() * 1000; } )
+    .delay(function(d) { return d.Gen + 50; })
+	.style("visibility", 'hidden');
+}
+
+function updateGen(g) {
+	showGen(g)
+	hideGen(g);
+}
+
 function drawTooltip(d) {
     // show the tool tip
     tooltip.transition()
